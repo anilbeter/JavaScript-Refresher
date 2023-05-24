@@ -11,7 +11,7 @@
 // console.log(lastName);
 
 // let PI = 3.1415;
-
+/*
 let javascriptIsFun = true;
 console.log(javascriptIsFun);
 
@@ -36,3 +36,13 @@ console.log(typeof anilJob);
 anilJob = 'Programmer!';
 console.log(anilJob);
 console.log(typeof anilJob);
+*/
+let age = 23;
+age = 26;
+// this is totally legal! I can change let variable (reassing)
+let myJob;
+myJob = 'Software Engineer';
+
+//but there is a variable called conts. You cant reassing const variables!
+const birthYear = 1999;
+const firstName = 'Anil';
