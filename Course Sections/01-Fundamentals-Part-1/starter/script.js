@@ -36,7 +36,7 @@ console.log(typeof anilJob);
 anilJob = 'Programmer!';
 console.log(anilJob);
 console.log(typeof anilJob);
-*/
+
 let age = 23;
 age = 26;
 // this is totally legal! I can change let variable (reassing)
@@ -46,3 +46,34 @@ myJob = 'Software Engineer';
 //but there is a variable called conts. You cant reassing const variables!
 const birthYear = 1999;
 const firstName = 'Anil';
+*/
+
+// Math operators
+const now = 2029;
+const ageAnil = now - 2000;
+const ageEva = now - 1997;
+console.log(ageAnil, ageEva);
+// 29 32
+
+console.log(ageAnil * 2, ageAnil / 10, 2 ** 3);
+// 2 ** 3 means 2 to the power of 3 = 2 * 2 * 2
+
+const firstName = 'Anil';
+const lastName = 'Beter';
+console.log(firstName + ' ' + lastName);
+
+// Assignment operators
+let x = 10 + 5; // 15
+x += 10; // 25
+x -= 3; // 22
+x++; // 23
+x *= 2; // 46
+x--; // 45
+console.log(x);
+
+// Comparison operators
+console.log(ageAnil > ageEva); // false
+console.log(ageEva >= 18); // true
+
+const isFullAge = ageAnil >= 18;
+console.log(typeof isFullAge); // boolean
