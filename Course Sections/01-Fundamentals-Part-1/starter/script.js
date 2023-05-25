@@ -111,7 +111,7 @@ const markBMI = markWeight / (markHeight * markHeight);
 const markHigherBMI = markBMI > johnBMI;
 console.log(markBMI, johnBMI);
 console.log(markHigherBMI);
-*/
+
 
 const firstName = "Anil";
 const job = "student";
@@ -128,3 +128,21 @@ console.log(anilNew);
 console.log(`Kızgın duruyordun,
 Yüzünü dönüyordun,
 Dalgın  yürüyüşlerinin bir anlamı olmalı belki de?`);
+*/
+
+const age = 15;
+
+if (age >= 18) {
+    console.log("Evila can start driving license!")
+} else {
+    console.log(`Evila can't take drivers license! He should wait ${18 - age} years more.`)
+}
+
+const birthYear = 1999;
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century); // 20
