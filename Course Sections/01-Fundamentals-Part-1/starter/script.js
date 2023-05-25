@@ -155,7 +155,7 @@ Your tasks:
 is either "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!"
 2. Use a template literal to include the BMI values in the outputs. Example: "Mark's
 BMI (28.3) is higher than John's (23.9)!"
-*/
+
 const johnHeight = 1.95;
 const johnWeight = 92;
 const markHeight = 1.69;
@@ -169,3 +169,14 @@ if (markBMI > johnBMI) {
 } else {
     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`)
 }
+*/
+// TYPE CONVERSION
+const inputYear = "1999";
+console.log(Number(inputYear));
+console.log(inputYear + 8); // 19998
+console.log(Number(inputYear) + 10); // 2009
+
+console.log(Number("Anil")); // NaN (not a number)
+
+const stringNum = String(23);
+console.log(typeof stringNum); // string
