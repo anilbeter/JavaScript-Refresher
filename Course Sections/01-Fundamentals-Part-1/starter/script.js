@@ -100,7 +100,7 @@ m tall.
 § Data 2: Marks weights 95 kg and is 1.88 m tall. John weights 85 kg and is 1.76
 m tall.
 GOOD LUCK
-*/
+
 const johnHeight = 1.95;
 const johnWeight = 92;
 const markHeight = 1.69;
@@ -111,3 +111,20 @@ const markBMI = markWeight / (markHeight * markHeight);
 const markHigherBMI = markBMI > johnBMI;
 console.log(markBMI, johnBMI);
 console.log(markHigherBMI);
+*/
+
+const firstName = "Anil";
+const job = "student";
+const birthYear = 2000;
+
+const anil = "I'm " + firstName + ", a " + job + " and " + (2023 - 2000) + " years old.";
+console.log(anil); // amele versiyonu
+// I'm Anil, a student and 23 years old.
+
+const anilNew = `Hello! I'm ${firstName} and I'm currently ${job} and ${2023 - birthYear} years old.`;
+console.log(anilNew);
+
+// Also we can use situationts that multiple lines!
+console.log(`Kızgın duruyordun,
+Yüzünü dönüyordun,
+Dalgın  yürüyüşlerinin bir anlamı olmalı belki de?`);
