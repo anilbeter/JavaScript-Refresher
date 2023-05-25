@@ -180,3 +180,14 @@ console.log(Number("Anil")); // NaN (not a number)
 
 const stringNum = String(23);
 console.log(typeof stringNum); // string
+
+// TYPE COERCION
+console.log("I am " + 23 + " years old.");
+console.log("23" - "10" - 3); // 10 -> js automatically converts string to num
+console.log("23" + "10" + 3); // 23103 -> this time js automatically converts num to string
+console.log("23" * "2"); // 46
+console.log("10" / "2"); // 5
+
+let n = "1" + 1; // 11
+n--;
+console.log(n); // 10
