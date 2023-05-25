@@ -191,7 +191,7 @@ console.log("10" / "2"); // 5
 let n = "1" + 1; // 11
 n--;
 console.log(n); // 10
-*/
+
 
 // 5 falsy values: 0, "", undefined, null, NaN
 // everything else truthy values!
@@ -217,3 +217,44 @@ if (height) {
     console.log("Height is UNDEFINED")
 }
 // Height is UNDEFINED
+*/
+
+const age = 18;
+// short note: whenever if block only has one line, we don't need to curly braces
+if (age === 18) console.log("You just became an adult :D");
+
+console.log(18 === 18); // true
+console.log("18" === 18); // false
+console.log("18" == age); // true -> JS coercion type for us in BTS
+console.log("23" == 23); // true -> S coercion type for us in BTS
+
+const favNum = prompt("What's your favorite number?");
+// enter 23
+if (favNum === 23) {
+    console.log("I love 23!")
+    // enter 7
+} else if (favNum == 7) {
+    console.log("I also like 7!")
+} else {
+    console.log("Why dont'u like 23?")
+}
+// output --> I also like 7!
+// Because the value came from prompt is STRING. (favNum === 23) --> false! its like (string === number)
+
+const favNumConverted = Number(prompt("What's your fav num?"));
+// enter 23
+if (favNumConverted === 23) {
+    console.log("I love 23!")
+} else {
+    console.log("Hmmm, I understand.")
+}
+// output --> I love 23!
+
+const inputAge = prompt("How old are you?");
+// enter 23
+if (inputAge == 23) {
+    console.log("Wow, you are 23!!!")
+} else {
+    console.log("You should've wait for take driver's license!")
+}
+// output --> Wow, you are 23!!!
