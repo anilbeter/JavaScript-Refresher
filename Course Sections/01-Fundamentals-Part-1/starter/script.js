@@ -46,7 +46,7 @@ myJob = 'Software Engineer';
 //but there is a variable called conts. You cant reassing const variables!
 const birthYear = 1999;
 const firstName = 'Anil';
-*/
+
 
 // Math operators
 const now = 2029;
@@ -77,3 +77,8 @@ console.log(ageEva >= 18); // true
 
 const isFullAge = ageAnil >= 18;
 console.log(typeof isFullAge); // boolean
+*/
+let x, y;
+x = y = 25 - 10 - 5;
+console.log(x, y);
+// 10 10
