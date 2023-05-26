@@ -312,7 +312,7 @@ Test data:
  Data Bonus 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
  Data Bonus 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
 GOOD LUCK 😀
-*/
+
 const avDolphins = (97 + 112 + 101) / 3;
 const avKoalas = (109 + 95 + 106) / 3;
 if (avDolphins > avKoalas) {
@@ -332,3 +332,47 @@ if (avDolphins > avKoalas) {
 } else {
     console.log(`There's no winner, both team got same score! (Dolphins: ${avDolphins}, Koalas: ${avKoalas})`)
 }
+*/
+
+const day = "friday";
+
+switch (day) {
+    case "monday": // day === "monday"
+        console.log("Study for Linear Algebra");
+        console.log("Exercise for your health!");
+        break;
+    case "tuesday":
+        console.log("Study for Calculus II");
+        break;
+    case "wednesday":
+        console.log("Do some exercise");
+        console.log("Maybe short tarot session?");
+        break;
+    case "thursday":
+        console.log("YAY! it's me time!");
+        break;
+    case "friday":
+        console.log("There's almost weekend, wow!");
+        break;
+    case "saturday":
+    case "sunday":
+        console.log("Enjoy your weekend, you deserve it!");
+        break;
+    default: // its like "else" block
+        console.log("Not a valid day!");
+}
+// output --> There's almost weekend, wow!
+
+// it'll looks like if we write with IF/ELSE
+const newDay = "monday";
+if (newDay === "monday") {
+    console.log("Study for Linear Algebra");
+    console.log("Exercise for your health!");
+} else if (newDay === "tuesday") {
+    console.log("Study for Calculus II");
+} else if (newDay === "wednesday") {
+    console.log("Do some exercise");
+    console.log("Maybe short tarot session?");
+}
+// So on...
+// as you see, there's some circumstances switch statements better than if/else (more efficent)
