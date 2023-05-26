@@ -376,7 +376,7 @@ if (newDay === "monday") {
 }
 // So on...
 // as you see, there's some circumstances switch statements better than if/else (more efficent)
-*/
+
 
 // Statemens and Expressions
 
@@ -393,3 +393,12 @@ if (23 > 10) {
 // mesela templeta literal ın içine sadece expression koyabilirim, if else gibi statement koyamam
 console.log(`I'm ${2037 - 2000} years old.`) // valid sentence
 console.log(`${if (2 < 5)}`); // this gonna give error!!!
+*/
+
+const age = 23;
+age >= 18 ? console.log("I like to drink wine!") : console.log("You shouldn't drink alcohol!");
+
+const drink = age >= 18 ? "Wine" : "Water"; // ternary operator is an expression. It's give a value (in this example wine or water, then we could storage that value.)
+console.log(drink);
+
+console.log(`I like to drink ${age >= 18 ? "Wine" : "Water"}`);
