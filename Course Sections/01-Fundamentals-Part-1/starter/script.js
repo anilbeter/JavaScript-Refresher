@@ -332,7 +332,7 @@ if (avDolphins > avKoalas) {
 } else {
     console.log(`There's no winner, both team got same score! (Dolphins: ${avDolphins}, Koalas: ${avKoalas})`)
 }
-*/
+
 
 const day = "friday";
 
@@ -376,3 +376,20 @@ if (newDay === "monday") {
 }
 // So on...
 // as you see, there's some circumstances switch statements better than if/else (more efficent)
+*/
+
+// Statemens and Expressions
+
+// Expression (expressions produces a value) expressions like a words that make up the sentence
+3 + 4
+1991
+true && false && !false
+
+// Statements (does not produce a value on itself) statements like a sentence that made up with expressions
+if (23 > 10) {
+    const str = "23 is bigger";
+}
+
+// mesela templeta literal ın içine sadece expression koyabilirim, if else gibi statement koyamam
+console.log(`I'm ${2037 - 2000} years old.`) // valid sentence
+console.log(`${if (2 < 5)}`); // this gonna give error!!!
