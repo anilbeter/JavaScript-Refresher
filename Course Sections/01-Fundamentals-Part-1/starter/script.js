@@ -217,7 +217,7 @@ if (height) {
     console.log("Height is UNDEFINED")
 }
 // Height is UNDEFINED
-*/
+
 
 const age = 18;
 // short note: whenever if block only has one line, we don't need to curly braces
@@ -258,3 +258,34 @@ if (inputAge == 23) {
     console.log("You should've wait for take driver's license!")
 }
 // output --> Wow, you are 23!!!
+*/
+
+// LOGICAL OPERATORS
+
+const hasDriversLicense = true;
+const hasGoodVision = false;
+
+// and operation
+console.log(hasDriversLicense && hasGoodVision); // false
+
+// or operation
+console.log(hasDriversLicense || hasGoodVision); // true
+
+// not operation
+console.log(!(hasDriversLicense)); // false
+
+// const shouldDrive = hasDriversLicense && hasGoodVision;
+// if (shouldDrive) {
+//     console.log("Sarah is able to drive!")
+// } else {
+//     console.log("Someone else should drive...")
+// }
+// Someone else should drive...
+
+const isTired = true;
+if (hasDriversLicense && hasGoodVision && !isTired) {
+    console.log("Sarah is able to drive!")
+} else {
+    console.log("Someone else should drive...")
+}
+// Someone else should drive...
