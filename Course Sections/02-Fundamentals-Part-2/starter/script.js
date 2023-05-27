@@ -184,7 +184,7 @@ console.log(calcAge(years[years.length - 1])); // 11
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3])];
 console.log(ages);
 // (4) [27, 42, 23, 11]
-*/
+
 
 // Basic Array Operations
 
@@ -237,3 +237,21 @@ if (friends.includes("Anil")) {
     console.log("You have a friend called Anil!");
 }
 // You have a friend called Anil!
+*/
+
+// Challenge #2
+
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * (15 / 100);
+    } else {
+        return bill * (20 / 100);
+    }
+}
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(bills[0], bills[1], bills[2]);
+console.log(tips[0], tips[1], tips[2]);
+console.log(total[0], total[1], total[2]);
