@@ -117,7 +117,7 @@ console.log(yearsUntilRetirement("Anil", 2000));
 // Anil, You will be retire in 39 years later!
 console.log(yearsUntilRetirement("Mike", 1950));
 // Mike, You already should've retired (Your age is 76)
-*/
+
 
 // Coding Challenge #1
 
@@ -139,3 +139,48 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 checkWinner(avgDolphins, avgKoalas);
 // Dolphins win! (60 vs 28)
+*/
+
+// Arrays
+
+const friends = ["Anil", "Billie", "Cody", "Evan"];
+console.log(friends);
+// (4) ['Anil', 'Billie', 'Cody', 'Evan']
+const y = new Array(1999, 2003, 1984, 2023);
+
+console.log(friends[0]);
+// Anil
+console.log(friends[4]);
+// undefined
+console.log(friends[2]);
+// Cody
+
+console.log(friends.length);
+// 4
+console.log(friends[friends.length - 1]);
+// Evan
+
+friends[0] = "Micheal";
+console.log(friends);
+// (4) ['Micheal', 'Billie', 'Cody', 'Evan']
+
+const firstName = "Anil"
+const anil = [firstName, "Beter", 2023 - 2000, "student", friends];
+console.log(anil);
+// (5) ['Anil', 'Beter', 23, 'student', Array(4)]
+console.log(anil.length);
+// 5
+
+// Exercise
+const calcAge = function (birthYear) {
+    return 2026 - birthYear;
+}
+const years = [1999, 1984, 2003, 2015];
+console.log(calcAge(years[0])); // 27
+console.log(calcAge(years[1])); // 42
+console.log(calcAge(years[2])); // 23
+console.log(calcAge(years[years.length - 1])); // 11
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3])];
+console.log(ages);
+// (4) [27, 42, 23, 11]
