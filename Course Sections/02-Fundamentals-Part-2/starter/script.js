@@ -237,7 +237,7 @@ if (friends.includes("Anil")) {
     console.log("You have a friend called Anil!");
 }
 // You have a friend called Anil!
-*/
+
 
 // Challenge #2
 
@@ -255,3 +255,23 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills[0], bills[1], bills[2]);
 console.log(tips[0], tips[1], tips[2]);
 console.log(total[0], total[1], total[2]);
+*/
+
+// Objects
+
+const anilArray = [
+    "Anil",
+    "Beter",
+    2026 - 2000,
+    "student",
+    ["Eylül", "Cem", "Rachael"]
+];
+
+// let rewrite but this time object! 
+const anilObject = {
+    firstName: "Anil",
+    lastName: "Beter",
+    age: 2026 - 2000,
+    job: "student",
+    friends: ["Eylül", "Cem", "Rachael"]
+};
