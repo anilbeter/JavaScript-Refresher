@@ -255,7 +255,7 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 console.log(bills[0], bills[1], bills[2]);
 console.log(tips[0], tips[1], tips[2]);
 console.log(total[0], total[1], total[2]);
-*/
+
 
 // Objects
 
@@ -267,7 +267,7 @@ const anilArray = [
     ["Eylül", "Cem", "Rachael"]
 ];
 
-// let rewrite but this time object! 
+// let rewrite but this time object!
 const anilObject = {
     firstName: "Anil",
     lastName: "Beter",
@@ -275,3 +275,42 @@ const anilObject = {
     job: "student",
     friends: ["Eylül", "Cem", "Rachael"]
 };
+*/
+
+// How to retrieve data from objects / change data in the object with using both the dot and bracket notation
+
+const anilObject = {
+    firstName: "Anil",
+    lastName: "Beter",
+    age: 2026 - 2000,
+    job: "student",
+    friends: ["Eylül", "Cem", "Rachael"]
+}
+
+console.log(anilObject.lastName); // Beter
+console.log(anilObject["lastName"]); // Beter
+
+const nameKey = "Name";
+console.log(anilObject["first" + nameKey]); // Anil
+console.log(anilObject["last" + nameKey]); // Beter
+// Görüldüğü gibi bracket notation kullandığımda içeriye herhangi bir expression koyabiliyorum (template literal dahil!)
+
+// console.log(anilObject."anil" + nameKey); --> ERROR
+const interestedIn = prompt("What do you want to know about Anil? Chose between firstName, lastName, age, job and friends")
+
+
+if (anilObject[interestedIn]) {
+    console.log(anilObject[interestedIn]);
+    // Bracket notation kullanmak zorundayım, dot notation hataya sebep olur. Bracket interestedIn'i yazdığım şey olarak dönüştürüp veri sağlayabiliyor
+} else {
+    console.log("I dont have that info...");
+}
+
+anilObject.location = "United States";
+anilObject["twitter"] = "@anilfeelsalive";
+console.log(anilObject);
+
+// Challenge
+// Anil has 3 friends, and his best friend is called Eylül
+console.log(`${anilObject["firstName"]} has ${anilObject.friends.length} friends, and his best friend is called ${anilObject.friends[0]}`);
+// Anil has 3 friends, and his best friend is called Eylül
