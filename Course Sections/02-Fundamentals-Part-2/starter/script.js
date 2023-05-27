@@ -275,7 +275,7 @@ const anilObject = {
     job: "student",
     friends: ["Eylül", "Cem", "Rachael"]
 };
-*/
+
 
 // How to retrieve data from objects / change data in the object with using both the dot and bracket notation
 
@@ -314,3 +314,20 @@ console.log(anilObject);
 // Anil has 3 friends, and his best friend is called Eylül
 console.log(`${anilObject["firstName"]} has ${anilObject.friends.length} friends, and his best friend is called ${anilObject.friends[0]}`);
 // Anil has 3 friends, and his best friend is called Eylül
+*/
+
+const anil = {
+    firstName: "Anil",
+    lastName: "Beter",
+    birthYear: 2000,
+    job: "student",
+    friends: ["Eylül", "Dream"],
+    hasDriverLicense: true,
+
+    calcAge: function (birthYear) {
+        return 2026 - birthYear;
+    }
+};
+
+console.log(anil.calcAge(2000)); // 26
+console.log(anil["calcAge"](2000)); // 26
