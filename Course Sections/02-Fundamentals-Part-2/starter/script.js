@@ -84,7 +84,7 @@ const yearsUntilRetirementV2 = (birthYear, firstName) => {
 }
 console.log(yearsUntilRetirementV2(2000, "Anil"));
 // Anil, you will be retire 28 years later!
-*/
+
 
 function cutFruitPieces(fruit) {
     return fruit * 4;
@@ -101,3 +101,19 @@ function fruitProcessor(apples, oranges) {
 const juiceFruitPieces = fruitProcessor(2, 3);
 console.log(juiceFruitPieces);
 // Juice with 8 pieces of apple and 12 pieces of orange.
+*/
+
+// Functions review
+const calcAge = function (birthYear) {
+    return 2026 - birthYear;
+}
+
+const yearsUntilRetirement = function (firstName, birthYear) {
+    const age = calcAge(birthYear);
+    const retirement = 65 - age;
+    return `${firstName}, ${retirement > 0 ? `You will be retire in ${retirement} years later!` : `You already should've retired (Your age is ${age})`}`;
+}
+console.log(yearsUntilRetirement("Anil", 2000));
+// Anil, You will be retire in 39 years later!
+console.log(yearsUntilRetirement("Mike", 1950));
+// Mike, You already should've retired (Your age is 76)
