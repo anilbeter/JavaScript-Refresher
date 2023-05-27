@@ -328,11 +328,31 @@ const anil = {
     //     return 2026 - birthYear;
     // }
 
+    // calcAge: function () {
+    // console.log(this)
+    // this --> {firstName: 'Anil', lastName: 'Beter', birthYear: 2000, job: 'student', friends: Array(2), …}
+    // return 2026 - this.birthYear;
+    // }
+
     calcAge: function () {
-        console.log(this)
-        // this --> {firstName: 'Anil', lastName: 'Beter', birthYear: 2000, job: 'student', friends: Array(2), …}
-        return 2026 - this.birthYear;
+        // creating new data called age
+        this.age = 2026 - this.birthYear;
+        return this.age;
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-years old ${this.job}, and he has ${this.hasDriverLicense ? "a" : "not"} driver's license.`;
     }
 };
 
 console.log(anil.calcAge()); // 26
+
+console.log(anil.age); // 26
+console.log(anil.age);
+console.log(anil.age);
+
+//Challenge
+// Anil is a 26-years old student, and he has a driver's license.
+// write a function called getSummary() that gives sentence upper
+console.log(anil.getSummary());
+// Anil is a 26-years old student, and he has a driver's license.
