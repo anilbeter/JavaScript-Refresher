@@ -27,7 +27,7 @@ console.log(fruitProcessor(2, 0));
 const appleOrangeJuices = fruitProcessor(2, 4);
 console.log(appleOrangeJuices);
 // Juice with 2 apples and 4 oranges.
-*/
+
 
 // Function Declaration vs. Expressions
 
@@ -59,3 +59,28 @@ function calcAge3(birthYear) {
 
 console.log(calcAge3(2000));
 //37
+*/
+
+// Arrow Function
+const calcAgeArrow = birthYear => 2037 - birthYear;
+const ageArrow = calcAgeArrow(2000);
+console.log(ageArrow);
+// 37
+
+const yearsUntilRetirement = birthYear => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return retirement;
+}
+
+console.log(yearsUntilRetirement(2000));
+// 28
+
+// Arrow Functions with multiple parameters:
+const yearsUntilRetirementV2 = (birthYear, firstName) => {
+    const age = 2037 - birthYear;
+    const retirement = 65 - age;
+    return `${firstName}, you will be retire ${retirement} years later!`;
+}
+console.log(yearsUntilRetirementV2(2000, "Anil"));
+// Anil, you will be retire 28 years later!
