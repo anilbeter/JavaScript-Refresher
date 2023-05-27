@@ -324,10 +324,15 @@ const anil = {
     friends: ["Eylül", "Dream"],
     hasDriverLicense: true,
 
-    calcAge: function (birthYear) {
-        return 2026 - birthYear;
+    // calcAge: function (birthYear) {
+    //     return 2026 - birthYear;
+    // }
+
+    calcAge: function () {
+        console.log(this)
+        // this --> {firstName: 'Anil', lastName: 'Beter', birthYear: 2000, job: 'student', friends: Array(2), …}
+        return 2026 - this.birthYear;
     }
 };
 
-console.log(anil.calcAge(2000)); // 26
-console.log(anil["calcAge"](2000)); // 26
+console.log(anil.calcAge()); // 26
