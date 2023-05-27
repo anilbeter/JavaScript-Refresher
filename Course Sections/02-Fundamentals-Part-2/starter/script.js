@@ -139,7 +139,7 @@ const checkWinner = function (avgDolphins, avgKoalas) {
 }
 checkWinner(avgDolphins, avgKoalas);
 // Dolphins win! (60 vs 28)
-*/
+
 
 // Arrays
 
@@ -184,3 +184,56 @@ console.log(calcAge(years[years.length - 1])); // 11
 const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2]), calcAge(years[3])];
 console.log(ages);
 // (4) [27, 42, 23, 11]
+*/
+
+// Basic Array Operations
+
+// Add elements
+const friends = ["Anil", "Ocean", "Deniz", "Eylül"];
+friends.push("Emre");
+console.log(friends);
+// (5) ['Anil', 'Ocean', 'Deniz', 'Eylül', 'Emre']
+const newLength = friends.push("Jim");
+console.log(newLength);
+// 6
+
+// current friends array --> (6) ['Anil', 'Ocean', 'Deniz', 'Eylül', 'Emre', 'Jim']
+
+
+friends.unshift("John");
+console.log(friends);
+// (7) ['John', 'Anil', 'Ocean', 'Deniz', 'Eylül', 'Emre', 'Jim']
+
+
+// Remove elements
+friends.pop(); // removes last element
+console.log(friends);
+// (6) ['John', 'Anil', 'Ocean', 'Deniz', 'Eylül', 'Emre']
+friends.pop();
+console.log(friends);
+// (5) ['John', 'Anil', 'Ocean', 'Deniz', 'Eylül']
+const popped = friends.pop();
+console.log(popped);
+// Eylül
+
+// current friends array --> (4) ['John', 'Anil', 'Ocean', 'Deniz']
+
+friends.shift() // removes first element
+console.log(friends);
+// (3) ['Anil', 'Ocean', 'Deniz']
+
+
+console.log(friends.indexOf("Ocean"));
+// 1
+console.log(friends.indexOf("Eylül"));
+// -1 (there's no Eylül!)
+
+console.log(friends.includes("Eylül"));
+// false
+console.log(friends.includes("Anil"));
+// true
+
+if (friends.includes("Anil")) {
+    console.log("You have a friend called Anil!");
+}
+// You have a friend called Anil!
