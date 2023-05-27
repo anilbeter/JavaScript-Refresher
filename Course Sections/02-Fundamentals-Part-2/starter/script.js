@@ -314,7 +314,7 @@ console.log(anilObject);
 // Anil has 3 friends, and his best friend is called Eylül
 console.log(`${anilObject["firstName"]} has ${anilObject.friends.length} friends, and his best friend is called ${anilObject.friends[0]}`);
 // Anil has 3 friends, and his best friend is called Eylül
-*/
+
 
 const anil = {
     firstName: "Anil",
@@ -356,3 +356,40 @@ console.log(anil.age);
 // write a function called getSummary() that gives sentence upper
 console.log(anil.getSummary());
 // Anil is a 26-years old student, and he has a driver's license.
+*/
+
+// Challenge #3
+
+const mark = {
+    firstName: "Mark",
+    lastName: "Miller",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI;
+    }
+};
+
+const john = {
+    firstName: "John",
+    lastName: "Smith",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height ** 2);
+        return this.BMI;
+    }
+}
+
+mark.calcBMI();
+john.calcBMI();
+// bu 2 fonksiyonu yazdım çünkü oluşturduğum this.bmi verisini oluşturmam için fonksiyonları en az bir kere çalıştırmam gerekeli yoksa bu object ler kendi kendilerine bmi verisini oluşturmayacaktı.
+
+if (john.BMI > mark.BMI) {
+    console.log(`John's BMI (${john.BMI}) higher than Mark's BMI (${mark.BMI})`);
+} else {
+    console.log(`Mark's BMI (${mark.BMI}) higher than John's BMI (${john.BMI})`);
+}
+
+// Mark's BMI (27.309968138370508) higher than John's BMI (24.194608809993426)
