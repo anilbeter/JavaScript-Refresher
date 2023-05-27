@@ -1,5 +1,5 @@
 "use strict";
-
+/*
 function logger() {
     console.log("My name is Anil");
 }
@@ -27,3 +27,35 @@ console.log(fruitProcessor(2, 0));
 const appleOrangeJuices = fruitProcessor(2, 4);
 console.log(appleOrangeJuices);
 // Juice with 2 apples and 4 oranges.
+*/
+
+// Function Declaration vs. Expressions
+
+// Function Declaration
+function calcAge1(birthYear) {
+    return 2037 - birthYear;
+}
+
+const age1 = calcAge1(2000);
+console.log(age1);
+// 37
+
+// Function Expression
+const calcAge2 = function (birthYear) {
+    return 2037 - birthYear;
+}
+
+const age2 = calcAge2(2000);
+console.log(age2);
+// 37
+
+// So, what's the big deal about these two different type function?
+// --> We can call function declarations before they are defined in the code
+const age3 = calcAge3(2000);
+
+function calcAge3(birthYear) {
+    return 2037 - birthYear;
+}
+
+console.log(calcAge3(2000));
+//37
