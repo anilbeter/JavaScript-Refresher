@@ -393,7 +393,7 @@ if (john.BMI > mark.BMI) {
 }
 
 // Mark's BMI (27.309968138370508) higher than John's BMI (24.194608809993426)
-*/
+
 
 // The For Loop
 
@@ -407,3 +407,67 @@ if (john.BMI > mark.BMI) {
 for (let i = 1; i <= 10; i++) {
     console.log(`Lifting weight repetition ${i}`);
 }
+*/
+
+const anilArray = [
+    "Anil",
+    "Beter",
+    2026 - 2000,
+    "student",
+    ["Eylül", "Cem", "Rachael"]
+];
+
+const typeArray = [];
+for (let i = 0; i < anilArray.length; i++) {
+    console.log(anilArray[i], typeof anilArray[i]);
+    // let's create new array which contains type each value of array:
+    typeArray.push(typeof (anilArray[i]));
+}
+console.log(typeArray);
+// (5) ['string', 'string', 'number', 'string', 'object']
+
+// one more example
+const years = [1991, 2007, 1969, 2020];
+const currentYear = 2026;
+const ageArray = [];
+for (let i = 0; i < years.length; i++) {
+    ageArray.push(currentYear - years[i]);
+}
+console.log(ageArray);
+// (4) [35, 19, 57, 6]
+
+// continue
+const dreamArray = [
+    "Love you",
+    "So much",
+    2020,
+    true,
+    "But why did you that?!"
+];
+console.log("----ONLY STRING----")
+for (let i = 0; i < dreamArray.length; i++) {
+    // eğer string olmayan bi elemente denk gelirsen skiple geç (continue bu işe yarıyor), bu sayede sadece string olanları yazdırıyorum bu kodla
+    if (typeof dreamArray[i] !== "string") continue
+    console.log(dreamArray[i], typeof dreamArray[i]);
+}
+
+
+// break
+const may = [
+    2020,
+    5,
+    "May",
+    true,
+    "I loved you so much",
+    3,
+    "September"
+];
+
+for (let i = 0; i < may.length; i++) {
+    // boolean a denk gelirsen break yap, loopu komple bitir!
+    if (typeof may[i] === "boolean") break;
+    console.log(may[i]);
+}
+// 2020
+// 5
+// May
