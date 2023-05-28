@@ -471,7 +471,7 @@ for (let i = 0; i < may.length; i++) {
 // 2020
 // 5
 // May
-*/
+
 
 const anil = [
     "Anil",
@@ -517,3 +517,20 @@ for (let exercise = 1; exercise <= 3; exercise++) {
 // 3. kol tekrarı
 // 4. kol tekrarı
 // 5. kol tekrarı
+*/
+
+let rep = 1;
+while (rep <= 10) {
+    console.log(`Liftin weights repetition ${rep}`);
+    rep++;
+}
+
+
+
+console.log("Generate random num 'til find 6!");
+let randomNum = Math.floor(Math.random() * 7);
+while (randomNum !== 6) {
+    console.log(`I still trying to find 6... Current num that I find: ${randomNum}`);
+    randomNum = Math.floor(Math.random() * 7);
+}
+console.log("YAY!! I FOUND 6!");
