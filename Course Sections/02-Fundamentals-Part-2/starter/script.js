@@ -407,7 +407,7 @@ if (john.BMI > mark.BMI) {
 for (let i = 1; i <= 10; i++) {
     console.log(`Lifting weight repetition ${i}`);
 }
-*/
+
 
 const anilArray = [
     "Anil",
@@ -471,3 +471,49 @@ for (let i = 0; i < may.length; i++) {
 // 2020
 // 5
 // May
+*/
+
+const anil = [
+    "Anil",
+    "Beter",
+    2026 - 2000,
+    "programmer",
+    ["Eylül", "Ocean", "Dennis"]
+];
+
+// let's loop it backwards
+for (let i = anil.length - 1; i >= 0; i--) {
+    console.log(anil[i]);
+}
+// (3) ['Eylül', 'Ocean', 'Dennis']
+// programmer
+// 26
+// Beter
+// Anil
+
+
+// nested loops
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`Dumble egzerisi set ${exercise}`);
+    for (let repetition = 1; repetition <= 5; repetition++) {
+        console.log(`${repetition}. kol tekrarı`);
+    }
+}
+// Dumble egzerisi set 1
+// 1. kol tekrarı
+// 2. kol tekrarı
+// 3. kol tekrarı
+// 4. kol tekrarı
+// 5. kol tekrarı
+// Dumble egzerisi set 2
+// 1. kol tekrarı
+// 2. kol tekrarı
+// 3. kol tekrarı
+// 4. kol tekrarı
+// 5. kol tekrarı
+// Dumble egzerisi set 3
+// 1. kol tekrarı
+// 2. kol tekrarı
+// 3. kol tekrarı
+// 4. kol tekrarı
+// 5. kol tekrarı
