@@ -356,7 +356,7 @@ console.log(anil.age);
 // write a function called getSummary() that gives sentence upper
 console.log(anil.getSummary());
 // Anil is a 26-years old student, and he has a driver's license.
-*/
+
 
 // Challenge #3
 
@@ -393,3 +393,17 @@ if (john.BMI > mark.BMI) {
 }
 
 // Mark's BMI (27.309968138370508) higher than John's BMI (24.194608809993426)
+*/
+
+// The For Loop
+
+// console.log("Lifting weight repetition 1");
+// console.log("Lifting weight repetition 2");
+// console.log("Lifting weight repetition 3");
+// console.log("Lifting weight repetition 4");
+// console.log("Lifting weight repetition 5");
+// tek tek yazmak tam bir amele işi
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`Lifting weight repetition ${i}`);
+}
