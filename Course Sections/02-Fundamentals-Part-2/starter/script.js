@@ -517,7 +517,7 @@ for (let exercise = 1; exercise <= 3; exercise++) {
 // 3. kol tekrarı
 // 4. kol tekrarı
 // 5. kol tekrarı
-*/
+
 
 let rep = 1;
 while (rep <= 10) {
@@ -534,3 +534,40 @@ while (randomNum !== 6) {
     randomNum = Math.floor(Math.random() * 7);
 }
 console.log("YAY!! I FOUND 6!");
+*/
+
+// Challenge #4
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+const calcTip = function (bill) {
+    if (bill >= 50 && bill <= 300) {
+        return bill * (15 / 100);
+    } else {
+        return bill * (20 / 100);
+    }
+}
+for (let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+}
+for (let n = 0; n < bills.length; n++) {
+    totals.push(bills[n] + tips[n]);
+}
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+// another challenge
+// --let's calculate avarage any array--
+
+function calcAverage(numArray) {
+    let sum = 0;
+    for (let x = 0; x < numArray.length; x++) {
+        sum += numArray[x];
+    }
+    const avgValue = sum / numArray.length;
+    return avgValue;
+}
+
+console.log(calcAverage(bills));
