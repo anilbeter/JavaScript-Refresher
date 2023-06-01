@@ -26,6 +26,10 @@ document.querySelector(".check").addEventListener("click", function () {
         document.querySelector(".message").textContent = "Please enter valid number!⛔";
     } else if (guess === secretNum) {
         document.querySelector(".message").textContent = "Congrats, you won!🎊";
+        // Important note about manipulating CSS: Whenever we are manipulating a style, we always need to specify as a string.
+        document.querySelector("body").style.backgroundColor = "#60b347";
+
+        document.querySelector(".number").style.width = "30rem";
     } else if (guess > secretNum) {
         if (score > 1) {
             document.querySelector(".message").textContent = "Too high.";
