@@ -38,7 +38,7 @@ calcAge(1999);
 // console.log(age); // ReferenceError
 // printAge(); // ReferenceError
 
-*/
+
 
 // Variables
 console.log(me);
@@ -83,3 +83,48 @@ const z = 3;
 console.log(x === window.x); // true
 console.log(y === window.y); // false
 console.log(z === window.z); // false
+*/
+
+console.log(this);
+// output --> Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+const calcAge = function (birthYear) {
+  console.log(2023 - birthYear);
+  // 24
+  console.log(this);
+  // undefined
+};
+calcAge(1999);
+
+const calcAgeArrow = birthYear => {
+  console.log(2023 - birthYear);
+  // 24
+  console.log(this);
+  // Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+};
+calcAgeArrow(1999);
+
+const anil = {
+  year: 1999,
+  calcAge: function () {
+    console.log(this);
+    console.log(2023 - this.year);
+  },
+};
+
+anil.calcAge(1999);
+// {year: 1999, calcAge: ƒ}
+// 24
+
+const matilda = {
+  year: 2017,
+};
+
+matilda.calcAge = anil.calcAge;
+// method borrowing yaptim, anil'daki methodu matildaya kopyaladim
+matilda.calcAge();
+// {year: 2017, calcAge: ƒ}
+//  6
+
+const f = anil.calcAge;
+f();
