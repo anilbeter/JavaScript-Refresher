@@ -128,7 +128,6 @@ matilda.calcAge();
 
 const f = anil.calcAge;
 f();
-*/
 
 const anil = {
   firstName: 'Anil',
@@ -188,3 +187,22 @@ addArrow(2, 5, 11);
 // script.js:184 Uncaught ReferenceError: arguments is not defined
 
 // Summary: arguments keyword only exist in regular functions, NOT arrow functions.
+*/
+
+let age = 23;
+let oldAge = age;
+age = 24;
+console.log(age); // 24
+console.log(oldAge); // 23
+
+const me = {
+  name: 'Anil',
+  age: 23,
+};
+
+const friend = me;
+friend.age = 20;
+console.log('Friend:', friend);
+// Friend: {name: 'Anil', age: 20}
+console.log('Me: ', me);
+// Me:  {name: 'Anil', age: 20}
