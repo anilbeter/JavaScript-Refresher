@@ -83,7 +83,7 @@ const z = 3;
 console.log(x === window.x); // true
 console.log(y === window.y); // false
 console.log(z === window.z); // false
-*/
+
 
 console.log(this);
 // output --> Window {window: Window, self: Window, document: document, name: '', location: Location, …}
@@ -128,3 +128,63 @@ matilda.calcAge();
 
 const f = anil.calcAge;
 f();
+*/
+
+const anil = {
+  firstName: 'Anil',
+  year: 1999,
+  calcAge: function () {
+    // console.log(this);
+    console.log(2023 - this.year);
+
+    // Solution 1
+    // const self = this; // self or that
+    // const isMillenial = function () {
+    //   console.log(this); // undefined
+    //   // console.log(this.year >= 1981 && this.year <= 1996);
+    //   console.log(self.year >= 1981 && self.year <= 1996);
+    // };
+
+    // Solution 2
+
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    // Arrow function yaptım ve çalıştı çünkü hatırla, arrow function this keyword'ü parent scope'dan alıp kullanıyor
+
+    isMillenial();
+    // false
+  },
+
+  greet: () => console.log(`Hey ${this.firstName}`),
+  greetNew: function () {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+anil.greet(); // Hey undefined
+// But why? Cause, arrow function does not get its own this keyword. It looks for parent scope and the parent scope is global scope
+
+// So, never ever use arrow function as a method!
+
+anil.greetNew(); // Hey Anil
+anil.calcAge();
+
+// Arguments keyword
+const addExpr = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr(2, 5);
+// Arguments(2) [2, 5, callee: (...), Symbol(Symbol.iterator): ƒ]
+addExpr(2, 5, 8, 12);
+// Arguments(4) [2, 5, 8, 12, callee: (...), Symbol(Symbol.iterator): ƒ]
+
+var addArrow = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow(2, 5, 11);
+// script.js:184 Uncaught ReferenceError: arguments is not defined
+
+// Summary: arguments keyword only exist in regular functions, NOT arrow functions.
