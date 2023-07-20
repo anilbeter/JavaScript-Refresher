@@ -187,7 +187,7 @@ addArrow(2, 5, 11);
 // script.js:184 Uncaught ReferenceError: arguments is not defined
 
 // Summary: arguments keyword only exist in regular functions, NOT arrow functions.
-*/
+
 
 let age = 23;
 let oldAge = age;
@@ -206,3 +206,46 @@ console.log('Friend:', friend);
 // Friend: {name: 'Anil', age: 20}
 console.log('Me: ', me);
 // Me:  {name: 'Anil', age: 20}
+*/
+
+// Primitive Types
+let lastName = 'Williams';
+let oldLastName = lastName;
+lastName = 'Davis';
+console.log(lastName, oldLastName);
+
+// Reference types
+const jessica = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+};
+
+const marriedJessica = jessica;
+marriedJessica.lastName = 'Davis';
+console.log('Before marriage: ', jessica);
+// Before marriage:  {firstName: 'Jessica', lastName: 'Davis', age: 27}
+console.log('After marriage: ', marriedJessica);
+// After marriage:  {firstName: 'Jessica', lastName: 'Davis', age: 27}
+
+// Copying objects
+const jessicaNew = {
+  firstName: 'Jessica',
+  lastName: 'Williams',
+  age: 27,
+  family: ['Alice', 'Jim'],
+};
+
+const jessicaCopy = Object.assign({}, jessicaNew);
+jessicaCopy.lastName = 'Davis';
+console.log('Before marriage: ', jessicaNew);
+// Before marriage:  {firstName: 'Jessica', lastName: 'Williams', age: 27}
+console.log('After marriage: ', jessicaCopy);
+// script.js:241 After marriage:  {firstName: 'Jessica', lastName: 'Davis', age: 27}
+
+jessicaCopy.family.push('Mary');
+jessicaCopy.family.push('John');
+console.log('Before marriage: ', jessicaNew);
+// Before marriage:  {firstName: 'Jessica', lastName: 'Williams', age: 27, family: Array(4)}
+console.log('After marriage: ', jessicaCopy);
+// After marriage:  {firstName: 'Jessica', lastName: 'Davis', age: 27, family: Array(4)}
