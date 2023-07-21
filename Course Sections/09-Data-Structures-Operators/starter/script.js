@@ -34,6 +34,12 @@ const restaurant = {
     );
   },
 
+  // ...otherIngredients = optinal, not neccessary
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -50,6 +56,55 @@ const restaurant = {
   },
 };
 
+// 1)Destructring
+
+// SPREAD, because on RIGHT side of =
+// Spread: unpack an array
+const arr = [1, 2, ...[3, 4]];
+
+// REST, because on LEFT side of =
+// Rest: pack elements into an array
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others); // 1 2 (3) [3, 4, 5]
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
+// Pizza Risotto (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// Objects
+const { sat, ...weekDays } = restaurant.openingHours;
+console.log(weekDays);
+// {thu: {…}, fri: {…}}
+
+// 2) Functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+add(2, 3); // 5
+add(5, 3, 7, 2); // 17
+add(8, 2, 5, 4, 3, 5, 6); // 33
+
+const x = [23, 5, 7];
+add(...x); // 35
+
+restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
+// mushrooms ---> main ingredient
+// (3) ['onion', 'olives', 'spinach'] ---> optioanl stuff
+
+restaurant.orderPizza('mushrooms');
+// mushrooms
+// []
+
+/*
+///////////////////////////////////////
+The Spread Operator(...)
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr); // (5) [1, 2, 7, 8, 9]
@@ -100,7 +155,7 @@ restaurantCopy.name = 'Restorante Roma';
 console.log(restaurantCopy.name); // Restorante Roma
 console.log(restaurant.name); // Classico Italiano
 
-/*
+
 /////////////////////////////////
 Destructring Objects
 restaurant.orderDelivery({
