@@ -16,6 +16,18 @@ const restaurant = {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    address,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+      // Order received! Garlic Bread and Risotto will be delivered to Ice St. at 23.23
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -31,7 +43,61 @@ const restaurant = {
     },
   },
 };
+restaurant.orderDelivery({
+  time: '23:23',
+  address: 'Ice St.',
+  mainIndex: 2,
+  starterIndex: 2,
+});
+// Order received! Garlic Bread and Risotto will be delivered to Ice St. at 23:23
 
+restaurant.orderDelivery({
+  address: 'Ice St.',
+  starterIndex: 1,
+});
+// Order received! Bruschetta and Pizza will be delivered to Ice St. at 20:00
+// Fonksiyondaki atadığım default değerleri kullandı
+
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+// Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+
+// Eğer orijinal objecttekinden farklı isimler kullanmak istiyorsam böyle yapabilirim
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
+// Classico Italiano {thu: {…}, fri: {…}, sat: {…}} (4) ['Italian', 'Pizzeria', 'Vegetarian', 'Organic']
+
+// Set default values
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+// [] (4) ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// Mutating variables (switching)
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+
+// {a,b} = obj; --> Uncaught SyntaxError: Unexpected token '='
+// Bu hatayı çözmek için bütün syntaxi parantez içine almalıyım:
+({ a, b } = obj);
+console.log(a, b); // 23 7
+
+// Nested objects
+const { fri } = openingHours;
+console.log(fri); // {open: 11, close: 23}
+
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c); // 11 23
+
+/*
+///////////////////////////////////
+Destructring Arrays
 const arr = [2, 3, 4];
 const a = [0];
 const b = [1];
@@ -76,3 +142,4 @@ console.log(i, j, k); // 2 5 6
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r); // 8 9 1
 // hepsini default olarak 1 yaptım, eğer kendim değer vermezsem 1 olarak gözükecek, undefined değil
+*/
