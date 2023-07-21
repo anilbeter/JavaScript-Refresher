@@ -28,6 +28,12 @@ const restaurant = {
     );
   },
 
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -43,6 +49,60 @@ const restaurant = {
     },
   },
 };
+
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr); // (5) [1, 2, 7, 8, 9]
+
+// Good way with spread operator(...)
+const newArr = [1, 2, ...arr];
+console.log(newArr); // (5) [1, 2, 7, 8, 9]
+
+console.log(...newArr); // 1 2 7 8 9
+
+const newMenu = [...restaurant.mainMenu, 'Doner'];
+console.log(newMenu); // (4) ['Pizza', 'Pasta', 'Risotto', 'Doner']
+
+// Copy array
+const mainMenuCopy = [...restaurant.mainMenu];
+// (4) ['Pizza', 'Pasta', 'Risotto', 'Doner']
+
+// Join 2 arrays
+const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menu);
+// (7) ['Pizza', 'Pasta', 'Risotto', 'Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad']
+
+// Iterables: arrays, strings, maps, sets, NOT objects!
+const str = 'Anil';
+const letters = [...str, ' ', 'S.'];
+console.log(letters); // (6) ['A', 'n', 'i', 'l', ' ', 'S.']
+console.log(...str); // A n i l
+
+// Real word example
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1?"),
+//   prompt("Let's make pasta! Ingredient 2?"),
+//   prompt("Let's make pasta! Ingredient 3?"),
+// ];
+// console.log(ingredients);
+
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// much better way:
+// restaurant.orderPasta(...ingredients);
+
+// Objects
+const newRestaurant = { foundedIn: 1999, ...restaurant, founder: 'Anil Beter' };
+console.log(newRestaurant);
+// {foundedIn: 1999, name: 'Classico Italiano', location: 'Via Angelo Tavanti 23, Firenze, Italy', categories: Array(4), starterMenu: Array(4), …}
+
+const restaurantCopy = { ...restaurant };
+restaurantCopy.name = 'Restorante Roma';
+console.log(restaurantCopy.name); // Restorante Roma
+console.log(restaurant.name); // Classico Italiano
+
+/*
+/////////////////////////////////
+Destructring Objects
 restaurant.orderDelivery({
   time: '23:23',
   address: 'Ice St.',
@@ -95,7 +155,7 @@ const {
 } = openingHours;
 console.log(o, c); // 11 23
 
-/*
+
 ///////////////////////////////////
 Destructring Arrays
 const arr = [2, 3, 4];
