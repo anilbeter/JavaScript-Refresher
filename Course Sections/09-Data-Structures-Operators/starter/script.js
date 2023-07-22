@@ -58,7 +58,8 @@ const restaurant = {
 
 const rest1 = {
   name: 'Capri',
-  numGuests: 20,
+  // numGuests: 20,
+  numGuests: 0,
 };
 
 const rest2 = {
@@ -71,12 +72,16 @@ const rest2 = {
 
 // OR assignment operator
 // Basically this operator assigns a variable to a variable if that variable is currently FALSY
-rest1.numGuests ||= 10;
+// rest1.numGuests ||= 10;
 // Exactly same with rest1.numGuests = rest1.numGuests || 10; but in a more concise way
-rest2.numGuests ||= 10;
+// rest2.numGuests ||= 10;
+
+// nullish assignment operator (null or undefined)
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
 
 console.log(rest1);
-//output--> {name: 'Capri', numGuests: 20}
+//output--> {name: 'Capri', numGuests: 0}
 console.log(rest2);
 //output--> {name: 'La Piazza', owner: 'Giavonni Rossi', numGuests: 10}
 
