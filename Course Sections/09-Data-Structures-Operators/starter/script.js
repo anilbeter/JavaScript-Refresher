@@ -55,6 +55,20 @@ const restaurant = {
     },
   },
 };
+///////////////////////////////
+// Nullish Coalescing Operator (??)
+restaurant.numGuests = 0;
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2); // 10, but I have 0 guest, how could I solve it?
+
+//Nullish: null and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log(guestCorrect); // 0
+
+/*
+/////////////////////////////////////////
+Short Circuiting (||) and (&&)
+
 
 console.log('----- OR ------');
 // Use ANY data type, return ANY data type, short-circuiting
@@ -90,7 +104,7 @@ if (restaurant.orderPizza) {
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 // NOTE: That not means you should always short circuit instead if-else!
 
-/*
+
 /////////////////////////////////
 Rest Pattern and Parameters
 // 1)Destructring
