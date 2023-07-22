@@ -80,6 +80,16 @@ const rest2 = {
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
+// AND assignment operator
+// rest1.owner = rest1.owner && '<ANONYMOUS>';
+// output --> {name: 'Capri', numGuests: 0, owner: undefined}
+// rest2.owner = rest2.owner && '<ANONYMOUS>';
+// output --> {name: 'La Piazza', owner: '<ANONYMOUS>', numGuests: 10}
+rest1.owner &&= '<ANONYMOUS>';
+// {name: 'Capri', numGuests: 0}
+rest2.owner &&= '<ANONYMOUS>';
+// {name: 'La Piazza', owner: '<ANONYMOUS>', numGuests: 10}
+
 console.log(rest1);
 //output--> {name: 'Capri', numGuests: 0}
 console.log(rest2);
