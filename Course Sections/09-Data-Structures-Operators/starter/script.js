@@ -56,6 +56,43 @@ const restaurant = {
   },
 };
 
+console.log('----- OR ------');
+// Use ANY data type, return ANY data type, short-circuiting
+// (OR) Short circuiting means that if the first value is a truthy value, it will immediately return that first value
+console.log(3 || 'Anil'); // 3
+console.log('' || 'Anil'); //Anil
+console.log(true || 0); // true
+console.log(undefined || null); // null
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+// Hello
+
+restaurant.numGuests = 23;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1); // 23
+
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2); // 23
+
+console.log('----- AND ------');
+console.log(0 && 'Anil'); // 0
+// (AND) Short circuiting means that if the first value is a falsy value, it will immediately return that first value
+console.log(23 && 'Anil'); // Anil (both value is truthy and returns that last value)
+
+console.log('Hello' && 23 && null && 'Anil'); // null
+
+// Practical example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('muhsrooms', 'spinach');
+}
+
+// Simple way
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+// NOTE: That not means you should always short circuit instead if-else!
+
+/*
+/////////////////////////////////
+Rest Pattern and Parameters
 // 1)Destructring
 
 // SPREAD, because on RIGHT side of =
@@ -102,7 +139,7 @@ restaurant.orderPizza('mushrooms');
 // mushrooms
 // []
 
-/*
+
 ///////////////////////////////////////
 The Spread Operator(...)
 const arr = [7, 8, 9];
