@@ -55,6 +55,57 @@ const restaurant = {
   },
 };
 
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// console.log(restaurant.openingHours.mon.open);
+// script.js:61 Uncaught TypeError: Cannot read properties of undefined (reading 'open')
+
+// WITH optional chaining
+
+// only if monday(optional) exist, then open property will be read from there
+console.log(restaurant.openingHours.mon?.open);
+// undefined
+
+//now if restaurant.openingHours does not even exist, then the Monday property will not even be read
+console.log(restaurant.openingHours?.mon?.open);
+// undefined
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  // console.log(day);
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  // restaurant.openingHourd[day] = openingHours.mon, etc.
+  console.log(`On ${day}, we open at ${open}`);
+  //  On mon, we open at closed
+  //  On tue, we open at closed
+  //  On wed, we open at closed
+  //  On thu, we open at 12
+  //  On fri, we open at 11
+  //  On sat, we open at 0
+  //  On sun, we open at closed
+}
+
+// Methods
+
+// I check if order method exist or not with optional chaining (?.)
+console.log(restaurant.order?.(0, 1) ?? 'Method does not exits'); // (2) ['Focaccia', 'Pasta']
+
+console.log(restaurant.orderRisetto?.(0, 1) ?? 'Method does not exits'); // Method does not exits
+
+// Arrays
+const users = [{ name: 'Jonas', email: 'hello@jonas.io' }];
+
+console.log(users[0]?.name ?? 'User array is empty');
+// Jonas
+console.log(users[1]?.name ?? 'User array is empty');
+// User array is empty
+
+// if (users.length > 0) console.log(users[0].name);
+// else console.log('User array empty');
+// ---> Jonas
+
 /*
 ////////////////////////////////
 For-of loop
