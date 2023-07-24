@@ -55,6 +55,52 @@ const restaurant = {
   },
 };
 
+// Property NAMES
+const properties = Object.keys(openingHours);
+console.log(properties);
+// (3) ['thu', 'fri', 'sat']
+
+let openStr = `We are open on ${properties.length} days: `;
+// We are open on 3 days
+
+for (const day of properties) {
+  // console.log(day);
+  //  thu
+  //  fri
+  //  sat
+  openStr += `${day}, `;
+}
+console.log(openStr);
+// We are open on 3 days: thu, fri, sat,
+
+// Property VALUES
+const values = Object.values(openingHours);
+console.log(values);
+// (3) [{…}, {…}, {…}]
+// 0: {open: 12, close: 22}
+// 1: {open: 11, close: 23}
+// 2: {open: 0, close: 24}
+// length: 3
+// [[Prototype]]: Array(0)
+
+// Entire object
+const entries = Object.entries(openingHours);
+console.log(entries);
+// (3) [Array(2), Array(2), Array(2)]
+// 0: (2) ['thu', {…}]
+// 1: (2) ['fri', {…}]
+// 2: (2) ['sat', {…}]
+
+for (const [key, { open, close }] of entries) {
+  console.log(`On ${key} we open at ${open} and close at ${close}`);
+  //  On thu we open at 12 and close at 22
+  //  On fri we open at 11 and close at 23
+  //  On sat we open at 0 and close at 24
+}
+
+/*
+/////////////////////////////////////////////
+Optional Chaining
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
 
@@ -106,7 +152,7 @@ console.log(users[1]?.name ?? 'User array is empty');
 // else console.log('User array empty');
 // ---> Jonas
 
-/*
+
 ////////////////////////////////
 For-of loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
