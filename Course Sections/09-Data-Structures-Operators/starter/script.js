@@ -95,7 +95,66 @@ const game = {
     team2: 6.5,
   },
 };
+//////////////////////////////////////////
+// Sets
+const ordersSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(ordersSet);
+// Set(3) {'Pasta', 'Pizza', 'Risotto'}
 
+console.log(new Set('Anil'));
+// Set(4) {'A', 'n', 'i', 'l'}
+
+console.log(ordersSet.size);
+// 3
+console.log(ordersSet.has('Pizza'));
+// true
+console.log(ordersSet.has('Bread'));
+// false
+ordersSet.add('Garlic Bread');
+ordersSet.add('Garlic Bread');
+console.log(ordersSet);
+// Set(4) {'Pasta', 'Pizza', 'Risotto', 'Garlic Bread'}
+ordersSet.delete('Risotto');
+console.log(ordersSet);
+// Set(3) {'Pasta', 'Pizza', 'Garlic Bread'}
+// ordersSet.clear();
+// console.log(ordersSet);
+//Set(0) {size: 0}
+console.log(ordersSet[1]);
+// undefined
+// we got undefined cause' in SETS there are actually no indexes!!!
+// so, there is no way of getting values out of a set
+// Because there is no need for getting values out of a set. If you neet it, then just use an array
+
+// Sets are also iterable
+for (const order of ordersSet) console.log(order);
+// Pasta
+// Pizza
+// Garlic Bread
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)];
+console.log(staffUnique);
+// (3) ['Waiter', 'Chef', 'Manager']
+console.log(
+  new Set(['Waiter', 'Chef', 'Waiter', 'Manager', 'Chef', 'Waiter']).size
+);
+// 3
+
+console.log(new Set('anilbeter').size);
+// 8 (anilbeter --> 8 harf)
+
+/*
+/////////////////////////////////////////
+// CHALLENGE 2
 // 1)
 // Array'lerde entries() methodu kullanımı
 for (const [i, goal] of game.scored.entries()) {
@@ -122,7 +181,7 @@ for (const [team, odd] of Object.entries(game.odds)) {
   console.log(`Odd of ${teamStr} ${odd}`);
 }
 
-/*
+
 Coding Challenge #2
 Let's continue with our football betting app! Keep using the 'game' variable from before.
 Your tasks:
