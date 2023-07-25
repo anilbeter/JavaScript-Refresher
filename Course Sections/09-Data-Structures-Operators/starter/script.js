@@ -95,6 +95,52 @@ const game = {
     team2: 6.5,
   },
 };
+//////////////////////////////////////////
+// Maps: Iteration
+const question = new Map([
+  ['question', 'What is the best programming language in the world?'],
+  [1, 'C'],
+  [2, 'Java'],
+  [3, 'JavaScript'],
+  ['correct', 3],
+  [true, 'Correct'],
+  [false, 'Try again!'],
+]);
+console.log(question);
+
+// Convert object to map
+console.log(Object.entries(openingHours));
+//(3) [Array(2), Array(2), Array(2)]
+const hoursMap = new Map(Object.entries(openingHours));
+console.log(hoursMap);
+// Map(3) {'thu' => {…}, 'fri' => {…}, 'sat' => {…}}
+
+// Quiz app
+console.log(question.get('question'));
+// What is the best programming language in the world?
+for (const [key, value] of question) {
+  if (typeof key === 'number') console.log(`Answer ${key}: ${value}`);
+}
+// Answer 1: C
+// Answer 2: Java
+// Answer 3: JavaScript
+// const answer = Number(prompt('Your answer'));
+const answer = 3;
+console.log(question.get(question.get('correct') === answer));
+// 3 yazarsam console da True çıkıyor, 3 dışında herhangi bir şey yazarsam Try again! çıkıyor. Çünkü maps de true yu correct, false u try again! diye ayarladık (key, value)
+
+// Convert map to array
+console.log([...question]);
+// (7) [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+
+console.log([...question.entries()]);
+// [Array(2), Array(2), Array(2), Array(2), Array(2), Array(2), Array(2)]
+console.log([...question.keys()]);
+// ['question', 1, 2, 3, 'correct', true, false]
+console.log([...question.values()]);
+// ['What is the best programming language in the world?', 'C', 'Java', 'JavaScript', 3, 'Correct', 'Try again!']
+
+/*
 ///////////////////////////////////////////
 // Maps: Fundamentals
 const rest = new Map();
@@ -152,7 +198,7 @@ console.log(rest);
 console.log(rest.size);
 // 8
 
-/*
+
 //////////////////////////////////////////
 // Sets
 const ordersSet = new Set([
