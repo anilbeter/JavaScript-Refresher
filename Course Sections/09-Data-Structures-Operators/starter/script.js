@@ -95,6 +95,25 @@ const game = {
     team2: 6.5,
   },
 };
+// Challenge 3
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+document.querySelector('button').addEventListener('click', function () {
+  const text = document.querySelector('textarea').value;
+  const rows = text.split('\n');
+  console.log(rows);
+
+  for (const [i, row] of rows.entries()) {
+    // rows.entries() yazdım cünkü index lazım, index kadar tik emojisi koymam gerektigi icin
+    const [first, second] = row.toLowerCase().trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+  }
+});
+/*
 //////////////////////////////////////////////////
 // Working with String - Part 3
 
@@ -161,7 +180,7 @@ planesInLine(3);
 planesInLine(2);
 // There are 5 planes in line 🌃🌃
 
-/*
+
 //////////////////////////
 // Working with String - Part 2
 const airline = 'TAP Air Portugal';
