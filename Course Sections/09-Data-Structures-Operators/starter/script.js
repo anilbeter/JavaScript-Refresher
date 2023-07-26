@@ -95,6 +95,73 @@ const game = {
     team2: 6.5,
   },
 };
+//////////////////////////////////////////////////
+// Working with String - Part 3
+
+// Split and Join
+console.log('a+very+nice+string'.split('+'));
+// (4) ['a', 'very', 'nice', 'string']
+console.log('Anil Beter'.split(' '));
+// (2) ['Anil', 'Beter']
+
+const [firstName, lastName] = 'Anil Beter'.split(' ');
+
+const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+console.log(newName);
+// Mr. Anil BETER
+
+const capitalizeName = function (name) {
+  const names = name.split(' ');
+  const namesUpper = [];
+
+  for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+    namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+  }
+  console.log(namesUpper.join(' '));
+};
+
+capitalizeName('jessica ann smith davis');
+// Jessica Ann Smith Davis
+capitalizeName('anil beter');
+// Anil Beter
+
+// Padding
+const message = 'Go to gate 23!';
+console.log(message.padStart(25, '+'));
+// +++++++++++Go to gate 23!
+console.log('Anil'.padStart(25, '+'));
+// +++++++++++++++++++++Anil (21 tane + ekledi 25e tamamlamak için)
+console.log(message.padStart(25, '+').padEnd(30, '+'));
+// +++++++++++Go to gate 23!+++++
+
+const maskCreditCard = function (number) {
+  // const str = String(number)
+  const str = number + ''; // number a boş string ekleyerek stringe dönüştürdüm
+  const last = str.slice(-4);
+  return last.padStart(str.length, '*');
+};
+
+console.log(maskCreditCard(2342852409235092));
+// ************5092
+console.log(maskCreditCard('424829549538342852409235092420554'));
+// *****************************0554
+
+// Repeat
+const message2 = 'Bad weather... All Departues Delayed... ';
+console.log(message2.repeat(5));
+
+const planesInLine = function (n) {
+  console.log(`There are ${n} planes in line ${'🌃'.repeat(n)}`);
+};
+planesInLine(5);
+// There are 5 planes in line 🌃🌃🌃🌃🌃
+planesInLine(3);
+// There are 5 planes in line 🌃🌃🌃
+planesInLine(2);
+// There are 5 planes in line 🌃🌃
+
+/*
 //////////////////////////
 // Working with String - Part 2
 const airline = 'TAP Air Portugal';
@@ -162,7 +229,7 @@ checkBaggage('Socks and camera');
 // Welcome aboard
 checkBaggage('Got some snacks and gun for a protection');
 // You are NOT allowed on board
-/*
+
 //////////////////////////////////
 // Working with String
 const airline = 'TAP Air Portugal';
