@@ -95,6 +95,49 @@ const game = {
     team2: 6.5,
   },
 };
+//////////////////////////////////
+// Working with String
+const airline = 'TAP Air Portugal';
+const plane = 'A320';
+
+console.log(plane[0]); // A
+console.log(plane[1]); // 3
+console.log(plane[2]); // 2
+console.log('B737'[0]); // 0
+
+console.log(airline.length); // 16
+
+// String methods
+console.log(airline.indexOf('r')); // 6
+console.log(airline.lastIndexOf('r')); // 10
+console.log(airline.indexOf('Portugal')); // 8
+console.log(airline.indexOf('portugal')); // -1 (not found)
+
+console.log(airline.slice(4)); // Air Portugal
+// 4. index dahil 4'ten sonrasını alıyor
+console.log(airline.slice(4, 7)); // Air
+// 4 dahil, 7 dahil değil, length ---> 7-4 = 3
+
+// Extract first word without knowing any indexes
+console.log(airline.slice(0, airline.indexOf(' '))); // TAP
+console.log(airline.slice(airline.lastIndexOf(' ') + 1)); // Portugal
+
+console.log(airline.slice(-2)); // al
+console.log(airline.slice(1, -1)); // AP Air Portuga
+
+const checkMiddleSeat = function (seat) {
+  // B and E are middle seats
+  const s = seat.slice(-1);
+  if (s === 'B' || s === 'E') console.log('You got the middle seat');
+  else console.log('You got lucky😎');
+};
+checkMiddleSeat('11B'); // You got the middle seat
+checkMiddleSeat('23C'); // You got lucky😎
+checkMiddleSeat('3E'); // You got the middle seat
+// BTS: Stringler primitive oldukları için normal şartlarda method uygulayamamam gerekli, ama javascript benim için arka planda stringi Object'e dönüştürüyor, işlem bittikten sonra tekrardan orijinal hali olan primitive e dönüştürüyor.return as primitive
+
+/*
+////////////////////////////////////////////////
 // Challenge #3
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
@@ -135,7 +178,7 @@ for (const [min, event] of gameEvents) {
   );
 }
 
-/*
+
 /////////////////////////////////
 Coding Challenge #3
 Let's continue with our football betting app! This time, we have a map called 'gameEvents' (see below) with a log of the events that happened during the game. The values are the events themselves, and the keys are the minutes in which each event happened (a football game has 90 minutes plus some extra time). Your tasks: 
