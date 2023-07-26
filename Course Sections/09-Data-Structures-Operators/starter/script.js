@@ -95,6 +95,74 @@ const game = {
     team2: 6.5,
   },
 };
+//////////////////////////
+// Working with String - Part 2
+const airline = 'TAP Air Portugal';
+console.log(airline.toLowerCase()); // tap air portugal
+console.log(airline.toUpperCase()); // TAP AIR PORTUGAL
+
+// Fix capitalization in name
+const passenger = 'aNiL';
+const passengerLower = passenger.toLowerCase(); // anil
+const passengerCorrect =
+  passengerLower[0].toUpperCase() + passengerLower.slice(1);
+console.log(passengerCorrect); // Anil
+
+// Comparing emails
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@Jonas.Io \n';
+
+const lowerEmail = loginEmail.toLowerCase();
+// trim() --> Removes the leading and trailing white space and line terminator characters from a string.
+const trimmedEmail = lowerEmail.trim();
+console.log(trimmedEmail); // hello@jonas.io
+
+// All in one
+const normalizedEmail = loginEmail.toLowerCase().trim();
+console.log(normalizedEmail); // hello@jonas.io
+console.log(email === normalizedEmail); // true
+
+// Replacing
+const priceGB = '£288,97';
+const priceUS = priceGB.replace('£', '$').replace(',', '.');
+console.log(priceUS); // $288.97
+
+const annoucement =
+  'All passengers come to boarding door 23. Boarding door 23!';
+console.log(annoucement.replaceAll('door', 'gate'));
+// All passengers come to boarding gate 23. Boarding gate 23!
+
+// Same solution with regular expression (Older way, just use replaceAll() method)
+// console.log(annoucement.replace(/door/g, 'gate'));
+
+// Booleans
+const plane = 'Airbus A320neo';
+console.log(plane.includes('A320')); // true
+console.log(plane.startsWith('Air')); // true
+console.log(plane.startsWith('Airb')); // true
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbus family');
+}
+// output ---> Part of the NEW Airbus family
+
+// Practice exercise
+const checkBaggage = function (items) {
+  // this is too important! when we receive input from a user, always start putting everything into lower case
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  } else {
+    console.log('Welcome aboard');
+  }
+};
+checkBaggage('I have a laptop, some Food and a pocket Knife');
+// You are NOT allowed on board
+checkBaggage('Socks and camera');
+// Welcome aboard
+checkBaggage('Got some snacks and gun for a protection');
+// You are NOT allowed on board
+/*
 //////////////////////////////////
 // Working with String
 const airline = 'TAP Air Portugal';
@@ -136,7 +204,7 @@ checkMiddleSeat('23C'); // You got lucky😎
 checkMiddleSeat('3E'); // You got the middle seat
 // BTS: Stringler primitive oldukları için normal şartlarda method uygulayamamam gerekli, ama javascript benim için arka planda stringi Object'e dönüştürüyor, işlem bittikten sonra tekrardan orijinal hali olan primitive e dönüştürüyor.return as primitive
 
-/*
+
 ////////////////////////////////////////////////
 // Challenge #3
 const gameEvents = new Map([
