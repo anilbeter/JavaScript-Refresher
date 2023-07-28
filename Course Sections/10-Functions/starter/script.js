@@ -29,7 +29,7 @@ createBooking('KEK', 5);
 // {flightNum: 'KEK', numPassenger: 5, price: 995}
 createBooking('ADR23', undefined, 1000);
 // {flightNum: 'ADR23', numPassenger: 1, price: 1000}
-*/
+
 
 const flight = 'LH234';
 const anil = {
@@ -61,3 +61,44 @@ const newPassport = function (person) {
 newPassport(anil);
 checkIn(flight, anil);
 // Wrong passport!
+*/
+
+// Create higher-order function: part1
+//// Functions Accepting Callback Functions
+const oneWord = function (str) {
+  return str.replaceAll(' ', '').toLowerCase();
+};
+
+const upperFirstWord = function (str) {
+  const [first, ...others] = str.split(' ');
+  return [first.toUpperCase(), ...others].join(' ');
+};
+
+// Higher-order function
+const transformer = function (str, fn) {
+  console.log(`Original string: ${str}`);
+  console.log(`Transformed string: ${fn(str)}`);
+
+  console.log(`Transformed by: ${fn.name}`);
+};
+
+transformer('JavaScript is the best!', upperFirstWord);
+// Original string: JavaScript is the best!
+// Transformed string: JAVASCRIPT is the best!
+// Transformed by: upperFirstWord
+
+transformer('JavaScript is the best!', oneWord);
+// Original string: JavaScript is the best!
+// Transformed string: javascriptisthebest!
+// Transformed by: oneWord
+
+// JS uses callback all the time
+const writeToConsole = function () {
+  console.log('🌃');
+};
+document.body.addEventListener('click', writeToConsole);
+// sayfada herhangi bir yere her tıkladığımda console da 🌃 bu gözükücek
+
+//We'll learn forEach() function later!
+['Anil', 'Billie', 'Martha'].forEach(writeToConsole);
+// 3🌃
