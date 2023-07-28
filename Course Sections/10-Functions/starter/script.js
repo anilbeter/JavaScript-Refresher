@@ -61,7 +61,7 @@ const newPassport = function (person) {
 newPassport(anil);
 checkIn(flight, anil);
 // Wrong passport!
-*/
+
 
 // Create higher-order function: part1
 //// Functions Accepting Callback Functions
@@ -102,3 +102,27 @@ document.body.addEventListener('click', writeToConsole);
 //We'll learn forEach() function later!
 ['Anil', 'Billie', 'Martha'].forEach(writeToConsole);
 // 3🌃
+*/
+
+// Higher-Order Function: Part2
+//// Functions Returning Functions
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+
+const greeterHey = greet('Hey');
+greeterHey('Anil');
+// Hey Anil
+greeterHey('Martha');
+// Hey Martha
+
+greet('Hello')('Anil');
+// Hello Anil
+
+// Rewrite above function with arrow
+const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
+
+greetArrow('Heyoo')('Anil!');
+// Heyoo Anil!
