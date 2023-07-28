@@ -102,7 +102,7 @@ document.body.addEventListener('click', writeToConsole);
 //We'll learn forEach() function later!
 ['Anil', 'Billie', 'Martha'].forEach(writeToConsole);
 // 3🌃
-*/
+
 
 // Higher-Order Function: Part2
 //// Functions Returning Functions
@@ -126,3 +126,66 @@ const greetArrow = greeting => name => console.log(`${greeting} ${name}`);
 
 greetArrow('Heyoo')('Anil!');
 // Heyoo Anil!
+*/
+
+const lufthansa = {
+  airline: 'Lufthansa',
+  iataCode: 'LH',
+  bookings: [],
+  // book: function() {},
+  book(flightNum, name) {
+    console.log(
+      `${name} booked a seat on ${this.airline} flight ${this.iataCode}${flightNum}`
+    );
+    this.bookings.push({ flight: `${this.iataCode}${flightNum}`, name });
+  },
+};
+
+lufthansa.book(239, 'Anil Beter');
+// Anil Beter booked a seat on Lufthansa flight LH239
+lufthansa.book(567, 'John Smith');
+// John Smith booked a seat on Lufthansa flight LH567
+
+const eurowings = {
+  airline: 'Eurowings',
+  iataCode: 'EW',
+  bookings: [],
+};
+
+const book = lufthansa.book;
+
+// DOES NOT work
+// book(23, 'Sarah');
+
+// Call method
+// call(eurowings, ...)  eurowing yazdığım için this keywordu şu an eurowings i işaret ediyor
+book.call(eurowings, 23, 'Sarah Williams');
+console.log(eurowings);
+// bookings: Array(1)
+// 0: {flight: 'EW23', name: 'Sarah Williams'}
+
+book.call(lufthansa, 239, 'Billie Sky');
+console.log(lufthansa);
+// bookings: Array(3)
+// 0: {flight: 'LH239', name: 'Anil Beter'}
+// 1: {flight: 'LH567', name: 'John Smith'}
+// 2: {flight: 'LH239', name: 'Billie Sky'}
+
+const swiss = {
+  airline: 'Swiss Air Lines',
+  iataCode: 'SAL',
+  bookings: [],
+};
+
+book.call(swiss, 580, 'Mary Cooper');
+console.log(swiss);
+// bookings: Array(1)
+// 0: {flight: 'SAL580', name: 'Mary Cooper'}
+
+// Apply method [array]
+const flightData = [589, 'George Cooper'];
+book.apply(swiss, flightData);
+console.log(swiss);
+
+// Exactly same thing with apply method, and you should pref use only call method and spread operator for spread out arguments an array
+book.call(swiss, ...flightData);
