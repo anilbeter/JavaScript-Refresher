@@ -189,3 +189,49 @@ console.log(swiss);
 
 // Exactly same thing with apply method, and you should pref use only call method and spread operator for spread out arguments an array
 book.call(swiss, ...flightData);
+
+// Bind Method
+// book.call(eurowings, 23, "Sarah Williams");
+
+const bookEW = book.bind(eurowings);
+const bookLH = book.bind(lufthansa);
+const bookLX = book.bind(swiss);
+
+bookEW(246, 'Steven Williams');
+
+const bookEW23 = book.bind(eurowings, 23);
+// Now bookEW23() only needs name, i already predefined flightNum which is 23
+bookEW23('Anil LA');
+// Anil LA booked a seat on Eurowings flight EW23
+
+// With Event Listeners
+lufthansa.planes = 300;
+lufthansa.buyPlane = function () {
+  console.log(this);
+  // {airline: 'Lufthansa', iataCode: 'LH', bookings: Array(3), planes: 300, book: ƒ, …}
+
+  this.planes++;
+  console.log(this.planes);
+};
+
+document
+  .querySelector('.buy')
+  .addEventListener('click', lufthansa.buyPlane.bind(lufthansa));
+
+// Partial application
+const addTax = (rate, value) => value + value * rate;
+console.log(addTax(0.1, 200)); // 220
+
+const addVAT = addTax.bind(null, 0.23);
+// rate i default olarak 23 yaptım. addVAT fonksiyonunda ne yazarsam tax yüzdesi her zaman %23
+console.log(addVAT(100)); // 123
+
+// CHALLENGE, write whole function with technique that function returning another function
+const addTaxRate = function (rate) {
+  return function (value) {
+    return value + value * rate;
+  };
+};
+const addVAT2 = addTaxRate(0.23);
+console.log(addVAT2(100)); // 123
+console.log(addVAT2(200)); // 246
