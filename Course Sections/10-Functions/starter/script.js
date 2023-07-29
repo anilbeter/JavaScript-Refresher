@@ -257,6 +257,11 @@ Your tasks:
 4. Run the 'displayResults' method at the end of each
 'registerNewAnswer' method call.
 5. Bonus: Use the 'displayResults' method to display the 2 arrays in the test data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll object! So what should the this keyword look like in this situation?
+Bonus: Use the 'displayResults' method to display the 2 arrays in the test data. Use both the 'array' and the 'string' option. Do not put the arrays in the poll
+object! So what should the this keyword look like in this situation?
+Test data for bonus:
+ Data 1: [5, 2, 3]
+ Data 2: [1, 5, 3, 9, 6, 1]
 */
 const poll = {
   question: 'What is your favourite programming language?',
@@ -264,30 +269,30 @@ const poll = {
   // This generates [0, 0, 0, 0]. More in the next section!
   answers: new Array(4).fill(0),
   registerNewAnswer() {
-    let answerFromUser = Number(
-      prompt(`What is your favourite programming language?
-    0: JavaScript
-    1: Python
-    2: Rust
-    3: C++
-    (Write option number)`)
+    const answer = Number(
+      prompt(
+        `${this.question}\n${this.options.join('\n')}\n(Write option number)`
+      )
     );
-    if (
-      !(answerFromUser ??= 0) ||
-      answerFromUser === 1 ||
-      answerFromUser === 2 ||
-      answerFromUser === 3
-    ) {
-      this.answers[answerFromUser] = 1 + this.answers[answerFromUser];
+    console.log(answer);
+    typeof answer === 'number' &&
+      answer < this.answers.length &&
+      this.answers[answer]++;
+    this.displayResult();
+    this.displayResult('string');
+  },
+  displayResult(type = 'array') {
+    if (type === 'array') {
       console.log(this.answers);
-    } else {
-      console.log('Invalid Answer! Try Again!');
+    } else if (type === 'string') {
+      console.log(`Poll results are ${this.answers.join(', ')}`);
     }
-    // this.answers[answerFromUser] = 1 + this.answers[answerFromUser];
-    // console.log(this.answers);
   },
 };
 
 document
   .querySelector('.poll')
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
+
+poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
+poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
