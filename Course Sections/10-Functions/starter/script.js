@@ -332,7 +332,7 @@ console.log(notPrivate);
 // 24
 console.log(isPrivate);
 // Uncaught ReferenceError: isPrivate is not defined
-*/
+
 
 // CLOSURES
 const secureBooking = function () {
@@ -352,3 +352,45 @@ booker();
 // 2 passengers
 booker();
 // 3 passengers
+*/
+
+// Example 1
+let f;
+
+const g = function () {
+  const a = 23;
+  f = function () {
+    console.log(a * 2);
+  };
+};
+
+const h = function () {
+  const b = 777;
+  f = function () {
+    console.log(b * 2);
+  };
+};
+
+g();
+f(); // 46
+
+h();
+f(); // 1554
+
+// Example 2
+const boardPassengers = function (n, wait) {
+  const perGroup = n / 3;
+
+  // after 1000 millisecond, the function will executed
+  setTimeout(function () {
+    console.log(`We are now boarding all ${n} passengers`);
+    console.log(`There are 3 groups, each with ${perGroup} passengers`);
+  }, wait * 1000);
+
+  console.log(`Will start boarding in ${wait} seconds`);
+  // this console.log will not wait these (wait * 1000) seconds
+};
+
+// const perGroup = 1000;
+// eğer fonksiyon içinde bir perGroup variable'ı tanımlamasaydım otomatik olarak 1000 alacaktı, global scope'tan.
+boardPassengers(180, 3);
