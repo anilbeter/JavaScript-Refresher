@@ -304,7 +304,7 @@ poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 // Poll results are 1, 5, 3, 9, 6, 1
 poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
 // (6) [1, 5, 3, 9, 6, 1]
-*/
+
 
 const runOnce = function () {
   console.log('This will neven run again');
@@ -332,3 +332,23 @@ console.log(notPrivate);
 // 24
 console.log(isPrivate);
 // Uncaught ReferenceError: isPrivate is not defined
+*/
+
+// CLOSURES
+const secureBooking = function () {
+  let passengerCount = 0;
+
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker();
+// 1 passengers
+booker();
+// 2 passengers
+booker();
+// 3 passengers
