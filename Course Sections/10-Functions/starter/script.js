@@ -275,11 +275,15 @@ const poll = {
       )
     );
     console.log(answer);
+    // [START] short-circuiting: && kullanıyorum ve && kullandığım için bulduğu ilk falsy value'yu dönüş yapıcak, doğru olanları ignorelayacak. Eğer hepsi doğruysa en sonuncu value'yu çalıştırıcak. burada 3 value de doğru olduğu için this.answers[]++, kodunu dönüş yapıcak en sonda olduğu için.
     typeof answer === 'number' &&
       answer < this.answers.length &&
       this.answers[answer]++;
+    // [END] short-circuiting
     this.displayResult();
+    // (4) [0, 1, 1, 0]
     this.displayResult('string');
+    // Poll results are 0, 1, 1, 0
   },
   displayResult(type = 'array') {
     if (type === 'array') {
@@ -295,4 +299,8 @@ document
   .addEventListener('click', poll.registerNewAnswer.bind(poll));
 
 poll.displayResult.call({ answers: [5, 2, 3] }, 'string');
+// Poll results are 5, 2, 3
 poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
+// Poll results are 1, 5, 3, 9, 6, 1
+poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
+// (6) [1, 5, 3, 9, 6, 1]
