@@ -262,7 +262,7 @@ object! So what should the this keyword look like in this situation?
 Test data for bonus:
  Data 1: [5, 2, 3]
  Data 2: [1, 5, 3, 9, 6, 1]
-*/
+
 const poll = {
   question: 'What is your favourite programming language?',
   options: ['0: JavaScript', '1: Python', '2: Rust', '3: C++'],
@@ -304,3 +304,31 @@ poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] }, 'string');
 // Poll results are 1, 5, 3, 9, 6, 1
 poll.displayResult.call({ answers: [1, 5, 3, 9, 6, 1] });
 // (6) [1, 5, 3, 9, 6, 1]
+*/
+
+const runOnce = function () {
+  console.log('This will neven run again');
+};
+runOnce();
+
+// Immediately Invoked Function Expressions (IIFE)
+(function () {
+  console.log('This will never run again');
+  const isPrivate = 23;
+})();
+// This will never run again
+
+// console.log(isPrivate);
+// script.js:321 Uncaught ReferenceError: isPrivate is not defined
+
+(() => console.log('This will ALSO never run again'))();
+// This will ALSO never run again
+
+{
+  const isPrivate = 23;
+  var notPrivate = 24;
+}
+console.log(notPrivate);
+// 24
+console.log(isPrivate);
+// Uncaught ReferenceError: isPrivate is not defined
