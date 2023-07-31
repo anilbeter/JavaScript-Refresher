@@ -65,12 +65,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 /////////////////////////////////////////////////
 // LECTURES
 
-const currencies = new Map([
-  ['USD', 'United States dollar'],
-  ['EUR', 'Euro'],
-  ['GBP', 'Pound sterling'],
-]);
-
 // const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
@@ -130,7 +124,7 @@ console.log(arr.at(-2)); // 11
 
 console.log('Anil'.at(0)); // A
 console.log('Anil'.at(-1)); // l
-*/
+
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
@@ -161,3 +155,29 @@ movements.forEach(function (mov, i, arr) {
 // Movement 1: You deposited 200
 // Movement 2: You deposited 450
 // ...
+*/
+
+// Map
+const currencies = new Map([
+  ['USD', 'United States dollar'],
+  ['EUR', 'Euro'],
+  ['GBP', 'Pound sterling'],
+]);
+
+currencies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value}`);
+});
+// USD: United States dollar
+// EUR: Euro
+// GBP: Pound sterling
+
+// Set
+const currenciesUnique = new Set(['USD', 'GBP', 'USD', 'EUR', 'EUR']);
+console.log(currenciesUnique);
+// Set(3) {'USD', 'GBP', 'EUR'}
+currenciesUnique.forEach(function (value, _value, map) {
+  console.log(`${value}: ${_value}`);
+});
+// USD: USD
+// GBP: GBP
+// EUR: EUR
