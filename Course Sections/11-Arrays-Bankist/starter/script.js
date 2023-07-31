@@ -155,7 +155,7 @@ movements.forEach(function (mov, i, arr) {
 // Movement 1: You deposited 200
 // Movement 2: You deposited 450
 // ...
-*/
+
 
 // Map
 const currencies = new Map([
@@ -181,3 +181,4 @@ currenciesUnique.forEach(function (value, _value, map) {
 // USD: USD
 // GBP: GBP
 // EUR: EUR
+*/
