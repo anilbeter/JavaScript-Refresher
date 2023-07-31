@@ -74,3 +74,43 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+
+let arr = ['a', 'b', 'c', 'd', 'e'];
+
+// SLICE (orijinal arrayi değiştirmiyor)
+console.log(arr.slice(0, 3)); // [(3) ['a', 'b', 'c']
+console.log(arr.slice(1)); // (4) ['b', 'c', 'd', 'e']
+console.log(arr.slice(-1)); // ['e']
+console.log(arr.slice()); // (5) ['a', 'b', 'c', 'd', 'e']
+console.log([...arr]); // (5) ['a', 'b', 'c', 'd', 'e']
+
+// SPLICE (orijinal arrayi değiştiriyor)
+// console.log(arr.splice(2));
+// (3) ['c', 'd', 'e']
+console.log(arr);
+// (2) ['a', 'b']
+arr.splice(-1); // son elementi siliyorum
+console.log(arr);
+// [(4) ['a', 'b', 'c', 'd']
+arr.splice(1, 2, 'x');
+console.log(arr);
+// (3) ['a', 'x', 'd']
+
+// REVERSE (orijinal arrayi değiştiriyor)
+arr = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['j', 'i', 'h', 'f'];
+console.log(arr2.reverse());
+// (4) ['f', 'h', 'i', 'j']
+console.log(arr2);
+// (4) ['f', 'h', 'i', 'j']
+
+// CONCAT
+const letters = arr.concat(arr2);
+console.log(letters);
+// (9) ['a', 'b', 'c', 'd', 'e', 'f', 'h', 'i', 'j']
+console.log([...arr, ...arr2]);
+// (9) ['a', 'b', 'c', 'd', 'e', 'f', 'h', 'i', 'j']
+
+// JOIN
+console.log(letters.join('-'));
+// a-b-c-d-e-f-h-i-j
