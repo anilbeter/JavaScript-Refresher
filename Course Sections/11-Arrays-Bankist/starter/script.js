@@ -74,7 +74,7 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
-
+/*
 let arr = ['a', 'b', 'c', 'd', 'e'];
 
 // SLICE (orijinal arrayi değiştirmiyor)
@@ -114,3 +114,19 @@ console.log([...arr, ...arr2]);
 // JOIN
 console.log(letters.join('-'));
 // a-b-c-d-e-f-h-i-j
+*/
+
+const arr = [23, 11, 64];
+// console.log(arr[0]); // 23
+console.log(arr.at(0)); // 23
+
+// solving the problem of getting last element TRADITONAL WAYS
+console.log(arr[arr.length - 1]); // 64
+console.log(arr.slice(-1)[0]); // 64
+
+// with at method
+console.log(arr.at(-1)); // 64
+console.log(arr.at(-2)); // 11
+
+console.log('Anil'.at(0)); // A
+console.log('Anil'.at(-1)); // l
