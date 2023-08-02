@@ -460,7 +460,7 @@ Test data:
  Data 1: [5, 2, 4, 1, 15, 8, 3]
  Data 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
-*/
+
 const calcAverageHumanAge = function (ages) {
   const humanAges = ages.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
   const adults = humanAges.filter(age => age >= 18);
@@ -481,3 +481,22 @@ console.log(avg1);
 console.log(avg2);
 
 // NOTE FOR MYSELF: The "reduce" method shouldn't be so hard. repeat!!!!!!!!
+*/
+
+// The find method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// find method not return a new array
+const firstWithdrawal = movements.find(mov => mov < 0);
+console.log(firstWithdrawal);
+// -400
+
+// differetens between filter and find method:
+// filter returns all the elements, find method only returns first one
+// filter method returns new array, find only returns element itself (not an array)
+
+console.log(accounts);
+
+const account = accounts.find(acc => acc.owner === 'Jessica Davis');
+console.log(account);
+// {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222, username: 'jd'}
