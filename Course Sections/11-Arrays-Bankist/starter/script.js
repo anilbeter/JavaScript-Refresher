@@ -98,6 +98,28 @@ const calcDisplayBalance = function (movement) {
   labelBalance.textContent = `${balance} EUR`;
 };
 
+const calcDisplaySummary = function (movement) {
+  const incomes = movement
+    .filter(mov => mov > 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumIn.textContent = `${incomes}€`;
+  const outcomes = movement
+    .filter(mov => mov < 0)
+    .reduce((acc, mov) => acc + mov, 0);
+  labelSumOut.textContent = `${Math.abs(outcomes)}€`;
+
+  const interest = movement
+    .filter(mov => mov > 0)
+    .map(deposit => (deposit * 1.2) / 100)
+    .filter((int, i, arr) => {
+      console.log(arr);
+      return int >= 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = interest;
+};
+calcDisplaySummary(account1.movements);
+
 // let's put this code into a function
 const createUsernames = accs => {
   //forEach kullanıyorum çünkü yeni bir array yaratmak istemiyorum, sadece var olan arrayi modife etmek istiyorum. Yeni bir array oluşturmak isteseydim map methodunu kullanacaktım.
