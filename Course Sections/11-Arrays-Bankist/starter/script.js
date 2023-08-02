@@ -112,7 +112,7 @@ const calcDisplaySummary = function (movement) {
     .filter(mov => mov > 0)
     .map(deposit => (deposit * 1.2) / 100)
     .filter((int, i, arr) => {
-      console.log(arr);
+      // console.log(arr);
       return int >= 1;
     })
     .reduce((acc, int) => acc + int, 0);
@@ -434,7 +434,7 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 console.log(avg1);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg2);
-*/
+
 
 // The Magic of Chaining Methods
 const eurToUSD = 1.1;
@@ -453,3 +453,31 @@ const totalDepositsUSD = movements
 
 console.log(totalDepositsUSD);
 // 5522.000000000001
+/////////////////////////////////////////////////
+Coding Challenge #3
+Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time as an arrow function, and using chaining!
+Test data:
+ Data 1: [5, 2, 4, 1, 15, 8, 3]
+ Data 2: [16, 6, 10, 5, 6, 1, 4]
+GOOD LUCK 😀
+*/
+const calcAverageHumanAge = function (ages) {
+  const humanAges = ages.map(age => (age <= 2 ? age * 2 : 16 + age * 4));
+  const adults = humanAges.filter(age => age >= 18);
+  const average = adults.reduce((acc, age) => acc + age, 0) / adults.length;
+  return average;
+};
+const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+
+// Challenged function (rewrite with arrow and use chaining methods)
+const calcAverageHumanAgeArrow = ages =>
+  ages
+    .map(age => (age <= 2 ? 2 * age : 16 + age * 4))
+    .filter(age => age >= 18)
+    .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+
+const avg2 = calcAverageHumanAgeArrow([5, 2, 4, 1, 15, 8, 3]);
+console.log(avg1);
+console.log(avg2);
+
+// NOTE FOR MYSELF: The "reduce" method shouldn't be so hard. repeat!!!!!!!!
