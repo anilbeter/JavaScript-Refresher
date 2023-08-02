@@ -398,7 +398,7 @@ Test data:
  Data 1: [5, 2, 4, 1, 15, 8, 3]
  Data 2: [16, 6, 10, 5, 6, 1, 4]
 GOOD LUCK 😀
-*/
+
 
 const calcAverageHumanAge = function (ages) {
   // map'teki array fonksiyonu doğru yazmadığım için bugı bulmakla uğraştım, next time daha dikkatli ol!!!
@@ -412,3 +412,22 @@ const avg1 = calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
 console.log(avg1);
 const avg2 = calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
 console.log(avg2);
+*/
+
+// The Magic of Chaining Methods
+const eurToUSD = 1.1;
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const totalDepositsUSD = movements
+  .filter(mov => mov > 0)
+  .map(mov => mov * eurToUSD)
+  // FOR DEBUG (use arr and console it to see whats going on previous operation)
+  // =====================================
+  // .map((mov, i, arr) => {
+  //   console.log(arr);
+  //   return mov * eurToUSD;
+  // })
+  .reduce((acc, mov) => acc + mov, 0);
+
+console.log(totalDepositsUSD);
+// 5522.000000000001
