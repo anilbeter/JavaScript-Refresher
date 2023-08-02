@@ -92,6 +92,12 @@ const user = 'Anil Badly Beter'; // abb'yi elde etmek istiyorum
 // console.log(username);
 // abb
 
+const calcDisplayBalance = function (movement) {
+  // acc stands for accumulator
+  const balance = movement.reduce((acc, mov) => acc + mov, 0);
+  labelBalance.textContent = `${balance} EUR`;
+};
+
 // let's put this code into a function
 const createUsernames = accs => {
   //forEach kullanıyorum çünkü yeni bir array yaratmak istemiyorum, sadece var olan arrayi modife etmek istiyorum. Yeni bir array oluşturmak isteseydim map methodunu kullanacaktım.
@@ -295,7 +301,7 @@ const movementsDescriptions = movements.map(
 );
 console.log(movementsDescriptions);
 // (8) ['Movement 1: You deposited 200', 'Movement 2: You deposited 450', 'Movement 3: You withdrew 400', 'Movement 4: You deposited 3000', 'Movement 5: You withdrew 650', 'Movement 6: You withdrew 130', 'Movement 7: You deposited 70', 'Movement 8: You deposited 1300']
-*/
+
 
 // Filter method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -320,3 +326,60 @@ console.log(onlyDepositsFor);
 const onlyWithdrawals = movements.filter(mov => mov < 0);
 console.log(onlyWithdrawals);
 // (3) [-400, -650, -130]
+*/
+
+// Reduce method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+// accumulator-- > SNOWBALL;
+const balance1 = movements.reduce(function (
+  accumulator,
+  current,
+  index,
+  array
+) {
+  console.log(
+    `Iteration ${index} Accumulator: ${accumulator} and current: ${current}`
+  );
+  return accumulator + current;
+},
+0);
+console.log(balance1);
+// Iteration 0 Accumulator: 0 and current: 200
+// Iteration 1 Accumulator: 200 and current: 450
+// Iteration 2 Accumulator: 650 and current: -400
+
+// lets write reduce method with arrow function (much simpler way!)
+const balance = movements.reduce((acc, cur) => acc + cur);
+console.log(balance);
+// 3840
+
+// same code with for loop
+let sum = 0;
+for (const mov of movements) {
+  sum += mov;
+}
+console.log(sum);
+// 3840
+
+// Get maximum value
+// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const max = movements.reduce((acc, mov) => {
+  console.log(`accumulator: ${acc} and current movement: ${mov}`);
+  if (acc > mov) {
+    return acc;
+  } else {
+    return mov;
+  }
+}, movements[0]);
+
+console.log(max);
+// accumulator: 200 and current movement: 200
+// accumulator: 200 and current movement: 450
+// accumulator: 450 and current movement: -400
+// accumulator: 450 and current movement: 3000
+// accumulator: 3000 and current movement: -650
+// accumulator: 3000 and current movement: -130
+// accumulator: 3000 and current movement: 70
+// accumulator: 3000 and current movement: 1300
+// 3000
