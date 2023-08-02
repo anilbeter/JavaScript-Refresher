@@ -296,3 +296,27 @@ const movementsDescriptions = movements.map(
 console.log(movementsDescriptions);
 // (8) ['Movement 1: You deposited 200', 'Movement 2: You deposited 450', 'Movement 3: You withdrew 400', 'Movement 4: You deposited 3000', 'Movement 5: You withdrew 650', 'Movement 6: You withdrew 130', 'Movement 7: You deposited 70', 'Movement 8: You deposited 1300']
 */
+
+// Filter method
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+
+const deposits = movements.filter(function (mov) {
+  return mov > 0;
+});
+console.log(deposits);
+// (5) [200, 450, 3000, 70, 1300]
+
+//same code with for of loop
+const onlyDepositsFor = [];
+for (const mov of movements) {
+  if (mov > 0) {
+    onlyDepositsFor.push(mov);
+  }
+}
+console.log(onlyDepositsFor);
+// (5) [200, 450, 3000, 70, 1300]
+
+// pop challenge - create an array of the withdrawals
+const onlyWithdrawals = movements.filter(mov => mov < 0);
+console.log(onlyWithdrawals);
+// (3) [-400, -650, -130]
