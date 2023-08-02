@@ -81,36 +81,25 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
-
-const user = 'Anil Badly Beter'; // abb'yi elde etmek istiyorum
-// const username = user
-//   .toLowerCase()
-//   .split(' ')
-//   .map(name => name[0])
-//   .join('');
-// console.log(username);
-// abb
-
 const calcDisplayBalance = function (movement) {
   // acc stands for accumulator
   const balance = movement.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} EUR`;
 };
 
-const calcDisplaySummary = function (movement) {
-  const incomes = movement
+const calcDisplaySummary = function (acc) {
+  const incomes = acc.movements
     .filter(mov => mov > 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumIn.textContent = `${incomes}€`;
-  const outcomes = movement
+  const outcomes = acc.movements
     .filter(mov => mov < 0)
     .reduce((acc, mov) => acc + mov, 0);
   labelSumOut.textContent = `${Math.abs(outcomes)}€`;
 
-  const interest = movement
+  const interest = acc.movements
     .filter(mov => mov > 0)
-    .map(deposit => (deposit * 1.2) / 100)
+    .map(deposit => (deposit * acc.interestRate) / 100)
     .filter((int, i, arr) => {
       // console.log(arr);
       return int >= 1;
@@ -118,7 +107,6 @@ const calcDisplaySummary = function (movement) {
     .reduce((acc, int) => acc + int, 0);
   labelSumInterest.textContent = interest;
 };
-calcDisplaySummary(account1.movements);
 
 // let's put this code into a function
 const createUsernames = accs => {
@@ -133,6 +121,37 @@ const createUsernames = accs => {
 };
 // bu fonksiyonla beraber her account objectine (account1, account2 etc.) yeni bir property/key ekliyorum(username). ve bu username keyini isim ve soyismin baş harflerine eşitliyorum. örnek olarak: account1 {owner: "Anil Beter"} ---> {username: "ab"}
 createUsernames(accounts);
+
+// Event Handlers
+let currentAccount;
+btnLogin.addEventListener('click', function (event) {
+  //prevent form from submitting
+  event.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    // Display UI and message (show only the first name of owner)
+    labelWelcome.textContent = `Welcome back, ${
+      currentAccount.owner.split(' ')[0]
+    }`;
+    containerApp.style.opacity = 100;
+    // Clear input fields
+    inputLoginUsername.value = inputLoginPin.value = '';
+    inputLoginPin;
+    //inputLoginPin.blur() kodu ile pin de yanıp sönen mouse cursorunu ortadan kaldırıyorum
+    inputLoginPin.blur();
+    // Display movements
+    displayMovements(currentAccount.movements);
+    // Display balance
+    calcDisplayBalance(currentAccount.movements);
+    // Display summary
+    calcDisplaySummary(currentAccount);
+  }
+});
 
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
@@ -481,7 +500,7 @@ console.log(avg1);
 console.log(avg2);
 
 // NOTE FOR MYSELF: The "reduce" method shouldn't be so hard. repeat!!!!!!!!
-*/
+
 
 // The find method
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -500,3 +519,4 @@ console.log(accounts);
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222, username: 'jd'}
+*/
