@@ -83,6 +83,29 @@ const displayMovements = function (movements) {
 
 displayMovements(account1.movements);
 
+const user = 'Anil Badly Beter'; // abb'yi elde etmek istiyorum
+// const username = user
+//   .toLowerCase()
+//   .split(' ')
+//   .map(name => name[0])
+//   .join('');
+// console.log(username);
+// abb
+
+// let's put this code into a function
+const createUsernames = accs => {
+  //forEach kullanıyorum çünkü yeni bir array yaratmak istemiyorum, sadece var olan arrayi modife etmek istiyorum. Yeni bir array oluşturmak isteseydim map methodunu kullanacaktım.
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(' ')
+      .map(name => name[0])
+      .join('');
+  });
+};
+// bu fonksiyonla beraber her account objectine (account1, account2 etc.) yeni bir property/key ekliyorum(username). ve bu username keyini isim ve soyismin baş harflerine eşitliyorum. örnek olarak: account1 {owner: "Anil Beter"} ---> {username: "ab"}
+createUsernames(accounts);
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // LECTURES
@@ -239,7 +262,7 @@ const checkDogs = function (dogsJulia, dogsKate) {
 };
 
 checkDogs(dogsJulia, dogsKate);
-*/
+
 
 // map method
 
@@ -272,3 +295,4 @@ const movementsDescriptions = movements.map(
 );
 console.log(movementsDescriptions);
 // (8) ['Movement 1: You deposited 200', 'Movement 2: You deposited 450', 'Movement 3: You withdrew 400', 'Movement 4: You deposited 3000', 'Movement 5: You withdrew 650', 'Movement 6: You withdrew 130', 'Movement 7: You deposited 70', 'Movement 8: You deposited 1300']
+*/
