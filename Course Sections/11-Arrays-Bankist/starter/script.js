@@ -573,3 +573,11 @@ const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222, username: 'jd'}
 */
+
+// EQUALITY
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+console.log(movements.includes(-130)); // true
+
+// some method (CONDITION)
+const anyDeposits = movements.some(mov => mov > 5000);
+console.log(anyDeposits); // false;
