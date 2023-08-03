@@ -607,7 +607,7 @@ const deposit = mov => mov > 0;
 console.log(movements.some(deposit)); // true
 console.log(movements.every(deposit)); // false
 console.log(movements.filter(deposit)); // (5) [200, 450, 3000, 70, 1300]
-*/
+
 
 // flat
 const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
@@ -647,3 +647,39 @@ const overalBalanceFlatMap = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalanceChain);
 // 17840
+*/
+
+// Sorting Arrays
+
+// Strings
+const owners = ['Anil', 'Chris', 'Billie', 'Martha'];
+console.log(owners.sort());
+// (4) ['Anil', 'Billie', 'Chris', 'Martha']
+console.log(owners);
+// (4) ['Anil', 'Billie', 'Chris', 'Martha']
+
+// Numbers
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+// console.log(movements.sort());
+// (8) [-130, -400, -650, 1300, 200, 3000, 450, 70]
+// this is not we expect
+
+// return < 0, A, B (keep order)
+// return > 0  B, A (switch order)
+// Ascending
+// movements.sort((a, b) => {
+//   if (a > b) return 1;
+//   if (a < b) return -1;
+// });
+movements.sort((a, b) => a - b);
+console.log(movements);
+// (8) [-650, -400, -130, 70, 200, 450, 1300, 3000]
+
+// Descending
+// movements.sort((a, b) => {
+//   if (a > b) return -1;
+//   if (a < b) return 1;
+// });
+movements.sort((a, b) => b - a);
+console.log(movements);
+// (8) [3000, 1300, 450, 200, 70, -130, -400, -650]
