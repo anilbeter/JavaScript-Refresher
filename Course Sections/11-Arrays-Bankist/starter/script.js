@@ -656,7 +656,7 @@ const overalBalanceFlatMap = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalanceChain);
 // 17840
-*/
+
 
 // Sorting Arrays
 
@@ -692,3 +692,61 @@ console.log(movements);
 movements.sort((a, b) => b - a);
 console.log(movements);
 // (8) [3000, 1300, 450, 200, 70, -130, -400, -650]
+*/
+
+// More ways of creating and filling arrays
+
+console.log([1, 2, 3, 4, 5, 6, 7]);
+console.log(new Array([1, 2, 3, 4, 5, 6, 7]));
+
+// Empty arrays + fill method
+const x = new Array(7);
+console.log(x); // (7) [empty × 7]
+console.log(x.map(() => 5)); // (7) [empty × 7]
+
+// x.fill(1);
+console.log(x); // (7) [1, 1, 1, 1, 1, 1, 1]
+
+// x.fill(1, 3); --> (3. indexten doldurmaya başla)
+console.log(x); // (7) [empty × 3, 1, 1, 1, 1]
+
+// x.fill(1, 3, 5); --> (3. indexten doldurmaya başla 5'e kadar doldur, 5 dahil değil)
+console.log(x); // (7) [empty × 3, 1, 1, empty × 2]
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+arr.fill(23, 4, 6);
+console.log(arr); // (7) [1, 2, 3, 4, 23, 23, 7]
+
+// Array.from
+const y = Array.from({ length: 7 }, () => 1);
+console.log(y);
+// (7) [1, 1, 1, 1, 1, 1, 1]
+
+// callback içine tanımladığım _(current) parametresini kullanmıyorum ama yazmak zorundayım, çünkü index (i) 2. parametrede olmak zorunda. sıra önemli!
+const z = Array.from({ length: 7 }, (_, i) => i + 1);
+console.log(z);
+// (7) [1, 2, 3, 4, 5, 6, 7]
+
+// pop-challenge. create an array from stratch which contains 100 element and all the elements are selected by randomize (random dice)
+
+const arrayRandom = Array.from(
+  { length: 100 },
+  () => Math.trunc(Math.random() * 10) + 1
+);
+// console.log(arrayRandom);
+// (100) [7, 3, 1, 8, 7, 3, 4, 7, 4, 8, 7, 10, 9, 6, 6, 2, 10, 3, 2, 7, 9, 4, 4, 4, 8, 9, 5, 3, 4, 4, 3, 1, 1, 6, 4, 2, 10, 8, 3, 10, 6, 4, 5, 5, 4, 8, 4, 4, 9, 5, 10, 5, 4, 9, 10, 9, 2, 5, 1, 7, 3, 5, 3, 2, 2, 6, 10, 6, 10, 3, 8, 7, 5, 8, 9, 6, 5, 10, 6, 8, 6, 5, 8, 9, 6, 10, 1, 1, 10, 3, 8, 7, 5, 1, 1, 1, 3, 6, 5, 9]
+
+// real world example
+// web sitesinde bulunan movementslardan değer almak istiyorum, user interface den değer alıp hepsini toplucam
+
+labelBalance.addEventListener('click', function () {
+  const movementsUI = Array.from(
+    document.querySelectorAll('.movements__value'),
+    el => Number(el.textContent.replace('€', ''))
+  );
+  console.log(movementsUI);
+  // (8) ['1300 ', '70 ', '-130 ', '-650 ', '3000 ', '-400 ', '450 ', '200 ']
+
+  // another way to convert querySelectorAll to an array:
+  // const movementsUI2 = [...document.querySelectorAll('.movements__value')];
+});
