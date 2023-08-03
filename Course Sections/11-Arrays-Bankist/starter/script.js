@@ -73,7 +73,7 @@ const displayMovements = function (movements) {
         <div class="movements__type movements__type--${type}">${
       i + 1
     } ${type}</div>
-        <div class="movements__value">${mov}</div>
+        <div class="movements__value">${mov} €</div>
       </div>
     `;
 
@@ -587,7 +587,7 @@ console.log(accounts);
 const account = accounts.find(acc => acc.owner === 'Jessica Davis');
 console.log(account);
 // {owner: 'Jessica Davis', movements: Array(8), interestRate: 1.5, pin: 2222, username: 'jd'}
-*/
+
 
 // EQUALITY
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
@@ -607,3 +607,43 @@ const deposit = mov => mov > 0;
 console.log(movements.some(deposit)); // true
 console.log(movements.every(deposit)); // false
 console.log(movements.filter(deposit)); // (5) [200, 450, 3000, 70, 1300]
+*/
+
+// flat
+const arr = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arr.flat());
+// (8) [1, 2, 3, 4, 5, 6, 7, 8]
+
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat());
+// (6) [Array(2), 3, 4, Array(2), 7, 8]
+
+console.log(arrDeep.flat(2));
+// (8) [1, 2, 3, 4, 5, 6, 7, 8]
+
+const accountMovements = accounts.map(acc => acc.movements);
+console.log(accountMovements);
+// (4) [Array(8), Array(8), Array(8), Array(5)]
+
+const allMovements = accountMovements.flat();
+console.log(allMovements);
+// (29) [200, 450, -400, 3000, -650, -130, 70, 1300, 5000, 3400, -150, -790, -3210, -1000, 8500, -30, 200, -200, 340, -300, -20, 50, 400, -460, 430, 1000, 700, 50, 90]
+
+const overalBalance = allMovements.reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalance);
+// 17840
+
+// Shorter way with chaining
+const overalBalanceChain = accounts
+  .map(acc => acc.movements)
+  .flat()
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalanceChain);
+// 17840
+
+// flatMap
+const overalBalanceFlatMap = accounts
+  .flatMap(acc => acc.movements)
+  .reduce((acc, mov) => acc + mov, 0);
+console.log(overalBalanceChain);
+// 17840
