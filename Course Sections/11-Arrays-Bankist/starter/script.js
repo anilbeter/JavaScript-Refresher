@@ -593,6 +593,17 @@ console.log(account);
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 console.log(movements.includes(-130)); // true
 
-// some method (CONDITION)
+// SOME (CONDITION)
 const anyDeposits = movements.some(mov => mov > 5000);
 console.log(anyDeposits); // false;
+
+// EVERY
+console.log(movements.every(mov => mov > 200));
+// false
+// false çünkü her bir array elementinin yazdığım koşulu sağlaması lazım, onu kontrol ediyorum every methodu ile. 700 ve 200 bu koşulu sağlamadığı için false.
+
+// Separate callback
+const deposit = mov => mov > 0;
+console.log(movements.some(deposit)); // true
+console.log(movements.every(deposit)); // false
+console.log(movements.filter(deposit)); // (5) [200, 450, 3000, 70, 1300]
