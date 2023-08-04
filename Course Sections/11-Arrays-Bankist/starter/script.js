@@ -778,7 +778,7 @@ Hints:
 lecture to choose between them 😉
  Being within a range 10% above and below the recommended portion means:
 current > (recommended * 0.90) && current < (recommended * 1.10). Basically, the current portion should be between 90% and 110% of the recommended portion.
-*/
+
 
 const dogs = [
   { weight: 22, curFood: 250, owners: ['Alice', 'Bob'] },
@@ -830,3 +830,28 @@ console.log(dogs.filter(checkEatingOkay));
 // 8.
 const dogsSorted = dogs.slice().sort((a, b) => a.recFood - b.recFood);
 console.log(dogsSorted);
+*/
+
+// Array Methods Practice
+
+// 1. Exercise
+const bankDepositSum = accounts
+  .flatMap(mov => mov.movements)
+  .filter(mov => mov > 0)
+  .reduce((acc, cur) => acc + cur, 0);
+console.log(bankDepositSum);
+// 25180
+
+// 2. Exercise
+// const numDeposits1000 = accounts
+//   .flatMap(mov => mov.movements)
+//   .filter(mov => mov > 1000).length;
+
+// console.log(numDeposits1000);
+// 6 --> sadece 6'sı 1000 den büyük
+// How we could do the same thing using reduce?
+
+const numDeposits1000 = accounts
+  .flatMap(mov => mov.movements)
+  .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
+console.log(numDeposits1000);
