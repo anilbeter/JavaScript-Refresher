@@ -845,13 +845,52 @@ console.log(bankDepositSum);
 // 2. Exercise
 // const numDeposits1000 = accounts
 //   .flatMap(mov => mov.movements)
-//   .filter(mov => mov > 1000).length;
+//   .filter(mov => mov >= 1000).length;
 
 // console.log(numDeposits1000);
-// 6 --> sadece 6'sı 1000 den büyük
+// 6 --> sadece 6'sı 1000 den büyük veya eşit
+// ===============================================
 // How we could do the same thing using reduce?
 
 const numDeposits1000 = accounts
   .flatMap(mov => mov.movements)
   .reduce((count, cur) => (cur >= 1000 ? ++count : count), 0);
 console.log(numDeposits1000);
+// 6
+
+// 3. exercise
+const { deposits, withdrawals } = accounts
+  .flatMap(mov => mov.movements)
+  .reduce(
+    (sums, cur) => {
+      // ===== FIRST WAY ====
+      // cur > 0 ? (sums.deposits += cur) : (sums.withdrawals += cur);
+
+      // -------------------------
+      // ==== SECOND WAY ====
+      sums[cur > 0 ? 'deposits' : 'withdrawals'] += cur;
+      return sums;
+    },
+    { deposits: 0, withdrawals: 0 }
+  );
+
+console.log(deposits, withdrawals);
+// 25180 -7340
+
+// 4. Exercise
+// this is a nice title -> This Is a Nice Title
+const convertTitleCase = function (title) {
+  const expections = ['a', 'am', 'the', 'but', 'or', 'on', 'in', 'with'];
+
+  const titleCase = title
+    .toLowerCase()
+    .split(' ')
+    .map(word =>
+      expections.includes(word) ? word : word[0].toUpperCase() + word.slice(1)
+    );
+  return titleCase;
+};
+console.log(convertTitleCase('this is a nice title'));
+// (5) ['This', 'Is', 'a', 'Nice', 'Title']
+console.log(convertTitleCase('this is a LONG title but not too long'));
+// (9) ['This', 'Is', 'a', 'Long', 'Title', 'but', 'Not', 'Too', 'Long']
