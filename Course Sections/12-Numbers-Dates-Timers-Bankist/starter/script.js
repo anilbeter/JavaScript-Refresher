@@ -155,6 +155,21 @@ const updateUI = function (acc) {
 // Event handlers
 let currentAccount;
 
+// FAKE ALWAYS LOGGED IN
+currentAccount = account1;
+updateUI(currentAccount);
+containerApp.style.opacity = 100;
+
+const now = new Date();
+const day = `${now.getDate()}`.padStart(2, '0');
+const month = `${now.getMonth() + 1}`.padStart(2, 0);
+const year = now.getFullYear();
+const hour = now.getHours();
+const min = now.getMinutes();
+labelDate.textContent = `${day}/${month}/${year}, ${hour}:${min}`;
+
+// day/month/year
+
 btnLogin.addEventListener('click', function (e) {
   // Prevent form from submitting
   e.preventDefault();
@@ -398,7 +413,7 @@ console.log(813194982342342343244239n + ' is REALLY big!!!');
 // Divisions
 console.log(10n / 3n); // 3n
 console.log(11n / 3n); // 3n
-*/
+
 
 // Create a date
 const now = new Date();
@@ -408,18 +423,6 @@ console.log(now);
 console.log(new Date('December 24, 2015'));
 // Thu Dec 24 2015 00:00:00 GMT+0200 (GMT+03:00)
 
-/*
- movementsDates: [
-   '2019-11-18T21:31:17.178Z',
-   '2019-12-23T07:42:02.383Z',
-   '2020-01-28T09:15:04.904Z',
-   '2020-04-01T10:17:24.185Z',
-   '2020-05-08T14:11:59.604Z',
-   '2020-05-27T17:01:17.194Z',
-   '2020-07-11T23:36:17.929Z',
-   '2020-07-12T10:51:36.790Z',
- ],
- */
 console.log(new Date(account1.movementsDates[0]));
 // Tue Nov 19 2019 00:31:17 GMT+0300 (GMT+03:00)
 
@@ -467,3 +470,4 @@ console.log(Date.now());
 future.setFullYear(2040);
 console.log(future);
 // Mon Nov 19 2040 15:23:00 GMT+0300 (GMT+03:00)
+*/
