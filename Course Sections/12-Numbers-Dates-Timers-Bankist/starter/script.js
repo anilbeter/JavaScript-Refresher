@@ -329,7 +329,7 @@ console.log((2.7).toFixed(0)); // "3"
 // toFixed always returns a string
 console.log((2.7).toFixed(3)); // "2.700"
 console.log(+(2.345).toFixed(2)); // 2.35
-*/
+
 
 // Remainder Operator
 console.log(5 % 2); // 1
@@ -347,3 +347,21 @@ labelBalance.addEventListener('click', function () {
   });
 });
 // Nth
+
+*/
+
+// 287,460,000,000
+const diameter = 284_460_000_000;
+console.log(diameter); // 284460000000
+
+const priceCents = 345_99;
+console.log(priceCents); // 34599
+
+const transferFee = 15_00; // $15.00
+
+const PI = 3.141_5;
+console.log(PI); // 3.1415
+
+// BE AWARE
+console.log(Number('230_000')); // NaN
+console.log(parseInt('230_000')); // 230
