@@ -348,7 +348,7 @@ labelBalance.addEventListener('click', function () {
 });
 // Nth
 
-*/
+
 
 // 287,460,000,000
 const diameter = 284_460_000_000;
@@ -365,3 +365,36 @@ console.log(PI); // 3.1415
 // BE AWARE
 console.log(Number('230_000')); // NaN
 console.log(parseInt('230_000')); // 230
+*/
+
+console.log(2 ** 53 - 1); // 9007199254740991 (this is the biggest number that javascript can safely represent)
+console.log(Number.MAX_SAFE_INTEGER); // 9007199254740991
+
+console.log(488234829423942394234923842392349);
+// 4.882348294239424e+32
+
+// BigInt yapmak için sonuna n koymam yeterli:
+console.log(488234829423942394234923842392349n);
+// 488234829423942394234923842392349n
+
+console.log(BigInt(48823482942394239));
+// 48823482942394240n
+
+// Operations
+console.log(10000n + 10000n); // 20000n
+console.log(4823842394234232348n * 174218423849234n); // 840402218820603224109261277821432n
+// console.log(Math.sqrt(16n));
+// ERROR!
+
+// Exceptions
+console.log(20n > 15); // true
+console.log(20n === 20); // false
+console.log(typeof 20n); // bigint
+console.log(20n == 20); // true
+
+console.log(813194982342342343244239n + ' is REALLY big!!!');
+// 813194982342342343244239 is REALLY big!!!
+
+// Divisions
+console.log(10n / 3n); // 3n
+console.log(11n / 3n); // 3n
