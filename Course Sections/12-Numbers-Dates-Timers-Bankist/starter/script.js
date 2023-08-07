@@ -530,3 +530,24 @@ const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 4));
 console.log(days1);
 // 10
 */
+
+const num = 3832434.23;
+
+const options = {
+  style: 'unit',
+  unit: 'mile-per-hour',
+  // useGrouping: false,
+};
+
+console.log('US        ', new Intl.NumberFormat('en-US', options).format(num));
+// US         3,832,434.23 mph
+console.log(
+  'Germany          ',
+  new Intl.NumberFormat('de-DE', options).format(num)
+);
+// Germany           3.832.434,23 mi/h
+console.log(
+  'Turkey          ',
+  new Intl.NumberFormat('tr-TR', options).format(num)
+);
+// Turkey           3.832.434,23 mil/sa
