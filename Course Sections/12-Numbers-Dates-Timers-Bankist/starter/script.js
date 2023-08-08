@@ -564,6 +564,7 @@ console.log(
 // Turkey           3.832.434,23 mil/sa
 */
 
+// setTimeout
 const ingredients = ['olives', 'spinach'];
 const pizzaTimer = setTimeout(
   (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
@@ -575,3 +576,14 @@ console.log('Waiting...');
 
 if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
 // eğer spinach varsa timeout u durduruyor (geri sayım iptal)
+
+// setInterval
+setInterval(function () {
+  const now = new Date();
+  const hour = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+
+  console.log(`${hour}:${minutes}:${seconds}`);
+}, 1000);
+// her 1 sn bir console a güncel saat:dk:saniyeyi yazıyor
