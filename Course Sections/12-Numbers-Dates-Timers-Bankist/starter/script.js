@@ -561,3 +561,15 @@ console.log(
 );
 // Turkey           3.832.434,23 mil/sa
 */
+
+const ingredients = ['olives', 'spinach'];
+const pizzaTimer = setTimeout(
+  (ing1, ing2) => console.log(`Here is your pizza with ${ing1} and ${ing2}`),
+  3000,
+  ...ingredients
+);
+// Here is your pizza with olives and spinach
+console.log('Waiting...');
+
+if (ingredients.includes('spinach')) clearTimeout(pizzaTimer);
+// eğer spinach varsa timeout u durduruyor (geri sayım iptal)
