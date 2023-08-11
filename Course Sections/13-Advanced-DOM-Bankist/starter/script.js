@@ -31,6 +31,7 @@ document.addEventListener('keydown', function (e) {
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/*
 // Selecting elements
 console.log(document.documentElement);
 console.log(document.head);
@@ -121,3 +122,37 @@ logo.classList.contains('c'); // not include
 
 // Don't use
 logo.className = 'anil';
+*/
+
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const section1Coordinates = section1.getBoundingClientRect();
+  console.log(section1Coordinates);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll X/Y', window.scrollX, window.scrollY);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   section1Coordinates.left + window.scrollX,
+  //   section1Coordinates.top + window.scrollY
+  // );
+
+  // window.scrollTo({
+  //   left: section1Coordinates.left + window.scrollX,
+  //   top: section1Coordinates.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  // Modern way (only works modern browsers)
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
