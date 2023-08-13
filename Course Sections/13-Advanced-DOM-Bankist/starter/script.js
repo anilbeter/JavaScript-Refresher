@@ -29,6 +29,64 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+////////////////////////////////////
+
+// Button scrolling
+const btnScrollTo = document.querySelector('.btn--scroll-to');
+const section1 = document.querySelector('#section--1');
+
+btnScrollTo.addEventListener('click', function (e) {
+  const section1Coordinates = section1.getBoundingClientRect();
+  console.log(section1Coordinates);
+
+  console.log(e.target.getBoundingClientRect());
+
+  console.log('Current scroll X/Y', window.scrollX, window.scrollY);
+
+  console.log(
+    'height/width viewport',
+    document.documentElement.clientHeight,
+    document.documentElement.clientWidth
+  );
+
+  // Scrolling
+  // window.scrollTo(
+  //   section1Coordinates.left + window.scrollX,
+  //   section1Coordinates.top + window.scrollY
+  // );
+
+  // window.scrollTo({
+  //   left: section1Coordinates.left + window.scrollX,
+  //   top: section1Coordinates.top + window.scrollY,
+  //   behavior: 'smooth',
+  // });
+
+  // Modern way (only works modern browsers)
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Page navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+  // Matching strategy
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /*
@@ -124,39 +182,6 @@ logo.classList.contains('c'); // not include
 logo.className = 'anil';
 */
 
-const btnScrollTo = document.querySelector('.btn--scroll-to');
-const section1 = document.querySelector('#section--1');
-
-btnScrollTo.addEventListener('click', function (e) {
-  const section1Coordinates = section1.getBoundingClientRect();
-  console.log(section1Coordinates);
-
-  console.log(e.target.getBoundingClientRect());
-
-  console.log('Current scroll X/Y', window.scrollX, window.scrollY);
-
-  console.log(
-    'height/width viewport',
-    document.documentElement.clientHeight,
-    document.documentElement.clientWidth
-  );
-
-  // Scrolling
-  // window.scrollTo(
-  //   section1Coordinates.left + window.scrollX,
-  //   section1Coordinates.top + window.scrollY
-  // );
-
-  // window.scrollTo({
-  //   left: section1Coordinates.left + window.scrollX,
-  //   top: section1Coordinates.top + window.scrollY,
-  //   behavior: 'smooth',
-  // });
-
-  // Modern way (only works modern browsers)
-  section1.scrollIntoView({ behavior: 'smooth' });
-});
-
 /*
 const h1 = document.querySelector('h1');
 
@@ -172,7 +197,7 @@ setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000);
 // h1.onmouseenter = function (e) {
 //   alert('addEventListener: Great! You are reading the heading :D');
 // };
-*/
+
 
 // rgb(255, 255, 255)
 const randomInt = (min, max) =>
@@ -198,3 +223,4 @@ document.querySelector('.nav').addEventListener('click', function (e) {
   this.style.backgroundColor = randomColor();
   console.log('NAV', e.target, e.currentTarget);
 });
+*/
