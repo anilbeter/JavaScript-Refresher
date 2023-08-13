@@ -224,3 +224,39 @@ document.querySelector('.nav').addEventListener('click', function (e) {
   console.log('NAV', e.target, e.currentTarget);
 });
 */
+
+const h1 = document.querySelector('h1');
+
+// Going downwards: child
+console.log(h1.querySelectorAll('.highlight'));
+// NodeList(2) [span.highlight, span.highlight]
+console.log(h1.childNodes);
+// NodeList(9) [text, comment, text, span.highlight, text, br, text, span.highlight, text]
+
+console.log(h1.children);
+// HTMLCollection(3) [span.highlight, br, span.highlight]
+
+h1.firstElementChild.style.color = 'white';
+h1.lastElementChild.style.color = 'orangered';
+
+// Going upwards: parents
+console.log(h1.parentNode);
+console.log(h1.parentElement);
+
+h1.closest('.header').style.background = 'var(--gradient-secondary)';
+
+// h1 in kendisini yazdım bu kez en yakını bulmak yerine direkt kendine uyguladı background gradient primary yi
+h1.closest('h1').style.background = 'var(--gradient-primary)';
+
+// Going sideways: siblings
+console.log(h1.previousElementSibling);
+// null
+console.log(h1.nextElementSibling);
+// <h4></h4>
+
+// previous veya next değil de bütün siblingleri görmek istiyorsam uygulayabileceğim teknik: h1 in önce parent elemanını buluyorum ondan da bütün child elementleri listeliyorum, bütün siblingler gözükmüş oluyor
+console.log(h1.parentElement.children);
+
+[...h1.parentElement.children].forEach(function (el) {
+  if (el !== h1) el.style.transform = 'scale(0.5)';
+});
