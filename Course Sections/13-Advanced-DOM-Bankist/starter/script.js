@@ -145,22 +145,41 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 // Sticky navigation: Intersection Observer API
 
-const observerCallback = function (entries, observer) {
-  // this callback function get called each time that the observed element (our target element ,section1,) is intersecting the root element at the threshold that we defined
+// const observerCallback = function (entries, observer) {
+//   // this callback function get called each time that the observed element (our target element ,section1,) is intersecting the root element at the threshold that we defined
 
-  entries.forEach(entry => {
-    console.log(entry);
-  });
+//   entries.forEach(entry => {
+//     console.log(entry);
+//   });
+// };
+
+// const observerOptions = {
+//   root: null,
+//   // null --> viewport
+//   threshold: [0, 0.2],
+// };
+
+// const observer = new IntersectionObserver(observerCallback, observerOptions);
+// observer.observe(section1);
+
+const header = document.querySelector('.header');
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
 };
 
-const observerOptions = {
+const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  // null --> viewport
-  threshold: [0, 0.2],
-};
-
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-observer.observe(section1);
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+headerObserver.observe(header);
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
