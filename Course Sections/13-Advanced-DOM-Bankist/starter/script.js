@@ -290,6 +290,7 @@ const slider = function () {
     createDots();
     activateDot(0);
   };
+  init();
 
   // Event handlers
   btnRight.addEventListener('click', nextSlide);
