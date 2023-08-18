@@ -269,8 +269,13 @@ const prevSlide = function () {
 
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
-// curSlide -> 1
-// -100%, 0%, 100%, 200%
+
+// Keyboard event
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowLeft') prevSlide();
+  // Short circuiting
+  e.key === 'ArrowRight' && nextSlide();
+});
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
