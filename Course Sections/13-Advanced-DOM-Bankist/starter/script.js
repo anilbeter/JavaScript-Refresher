@@ -236,11 +236,7 @@ const dotContainer = document.querySelector('.dots');
 let curSlide = 0;
 const maxSlide = slides.length;
 
-// Temp scale down for ease
-// const slider = document.querySelector('.slider');
-// slider.style.transform = 'scale(0.4) translateX(-800px)';
-// slider.style.overflow = 'visible';
-
+// Functions
 const createDots = function () {
   slides.forEach(function (_, i) {
     dotContainer.insertAdjacentHTML(
@@ -249,7 +245,6 @@ const createDots = function () {
     );
   });
 };
-createDots();
 
 const activateDot = function (slide) {
   document
@@ -260,14 +255,12 @@ const activateDot = function (slide) {
     .querySelector(`.dots__dot[data-slide="${slide}"]`)
     .classList.add('dots__dot--active');
 };
-activateDot(0);
 
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 };
-goToSlide(0);
 
 // Next slide
 const nextSlide = function () {
@@ -291,6 +284,13 @@ const prevSlide = function () {
   activateDot(curSlide);
 };
 
+const init = function () {
+  goToSlide(0);
+  createDots();
+  activateDot(0);
+};
+
+// Event handlers
 btnRight.addEventListener('click', nextSlide);
 btnLeft.addEventListener('click', prevSlide);
 
