@@ -233,6 +233,7 @@ const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
 
 let curSlide = 0;
+const maxSlide = slides.length;
 
 // Temp scale down for ease
 const slider = document.querySelector('.slider');
@@ -244,7 +245,11 @@ slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
 
 // Next slide
 btnRight.addEventListener('click', function () {
-  curSlide++;
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  }
 
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
