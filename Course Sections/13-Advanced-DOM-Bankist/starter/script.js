@@ -240,13 +240,12 @@ const slider = document.querySelector('.slider');
 slider.style.transform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
-slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
-
 const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 };
+goToSlide(0);
 
 // Next slide
 btnRight.addEventListener('click', function () {
