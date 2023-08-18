@@ -232,7 +232,7 @@ const slides = document.querySelectorAll('.slide');
 
 // Temp scale down for ease
 const slider = document.querySelector('.slider');
-slider.style.transform = 'scale(0.5)';
+slider.style.transform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
