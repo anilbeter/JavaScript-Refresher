@@ -242,8 +242,14 @@ const maxSlide = slides.length;
 // slider.style.overflow = 'visible';
 
 const createDots = function () {
-  slides.forEach(function (_, i) {});
+  slides.forEach(function (_, i) {
+    dotContainer.insertAdjacentHTML(
+      'beforeend',
+      `<button class="dots__dot" data-slide="${i}"></button>`
+    );
+  });
 };
+createDots();
 
 const goToSlide = function (slide) {
   slides.forEach(
