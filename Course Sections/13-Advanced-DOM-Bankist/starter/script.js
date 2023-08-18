@@ -229,6 +229,8 @@ imgTargets.forEach(img => imgObserver.observe(img));
 
 // Slider
 const slides = document.querySelectorAll('.slide');
+const btnLeft = document.querySelector('.slider__btn--left');
+const btnRight = document.querySelector('.slider__btn--right');
 
 // Temp scale down for ease
 const slider = document.querySelector('.slider');
