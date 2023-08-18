@@ -241,7 +241,12 @@ slider.style.transform = 'scale(0.4) translateX(-800px)';
 slider.style.overflow = 'visible';
 
 slides.forEach((s, i) => (s.style.transform = `translateX(${100 * i}%)`));
-// 0%, 100%, 200%, %300
+
+const goToSlide = function (slide) {
+  slides.forEach(
+    (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  );
+};
 
 // Next slide
 btnRight.addEventListener('click', function () {
@@ -251,9 +256,7 @@ btnRight.addEventListener('click', function () {
     curSlide++;
   }
 
-  slides.forEach(
-    (s, i) => (s.style.transform = `translateX(${100 * (i - curSlide)}%)`)
-  );
+  goToSlide(curSlide);
 });
 // curSlide -> 1
 // -100%, 0%, 100%, 200%
