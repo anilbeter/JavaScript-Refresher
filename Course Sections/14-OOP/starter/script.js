@@ -6,10 +6,10 @@ const Person = function (firstName, birthYear) {
   this.firstName = firstName;
   this.birthYear = birthYear;
 
-  // Bad practice! never create a function inside of constructor function
-  this.calcAge = function () {
-    console.log(2023 - this.birthYear);
-  };
+  // // Bad practice! never create a function inside of constructor function
+  // this.calcAge = function () {
+  //   console.log(2023 - this.birthYear);
+  // };
 };
 
 const anil = new Person('Anil', 1999);
@@ -36,3 +36,13 @@ console.log(anil instanceof Person);
 // true
 console.log(jay instanceof Person);
 // false
+
+// Prototypes
+Person.prototype.calcAge = function () {
+  console.log(2023 - this.birthYear);
+};
+
+anil.calcAge();
+// 24
+matilda.calcAge();
+// 6
