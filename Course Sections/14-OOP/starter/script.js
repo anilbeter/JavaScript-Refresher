@@ -46,3 +46,16 @@ anil.calcAge();
 // 24
 matilda.calcAge();
 // 6
+
+console.log(anil.__proto__);
+// {calcAge: ƒ, constructor: ƒ}
+console.log(anil.__proto__ === Person.prototype);
+// true
+console.log(Person.prototype.isPrototypeOf(anil));
+// true
+console.log(Person.prototype.isPrototypeOf(matilda));
+// true
+console.log(Person.prototype.isPrototypeOf(Person));
+// false
+
+// anil.__proto__ === Person.prototype ---> Person.prototype, Person'ın prototype'ı değil, anil'in prototype'ı. Bu yüzden true. line 58 bunu doğruluyor
