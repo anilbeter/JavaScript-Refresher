@@ -59,3 +59,19 @@ console.log(Person.prototype.isPrototypeOf(Person));
 // false
 
 // anil.__proto__ === Person.prototype ---> Person.prototype, Person'ın prototype'ı değil, anil'in prototype'ı. Bu yüzden true. line 58 bunu doğruluyor
+
+// Set property from the prototype
+Person.prototype.species = 'Homo Sapines';
+console.log(anil.species);
+// Homo Sapines
+console.log(matilda.species);
+// Homo Sapines
+console.log(anil);
+// birthYear: 1999
+// firstName: "Anil"
+// [[Prototype]]: Object
+// species property direkt olarak anil'in içinde değil, child gibi. [Prototype]'ın içinde.
+console.log(anil.hasOwnProperty('firstName'));
+// true
+console.log(anil.hasOwnProperty('species'));
+// false
