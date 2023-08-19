@@ -5,6 +5,11 @@ const Person = function (firstName, birthYear) {
   // Instance properties
   this.firstName = firstName;
   this.birthYear = birthYear;
+
+  // Bad practice! never create a function inside of constructor function
+  this.calcAge = function () {
+    console.log(2023 - this.birthYear);
+  };
 };
 
 const anil = new Person('Anil', 1999);
