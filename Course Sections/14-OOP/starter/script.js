@@ -2,7 +2,7 @@
 
 // Constructor function (our blueprint)
 const Person = function (firstName, birthYear) {
-  console.log(this); // Person {}
+  // Instance properties
   this.firstName = firstName;
   this.birthYear = birthYear;
 };
@@ -24,3 +24,10 @@ console.log(matilda);
 // Person {firstName: 'Matilda', birthYear: 2017}
 console.log(chris);
 // Person {firstName: 'Chris', birthYear: 1984}
+
+const jay = 'Jay';
+
+console.log(anil instanceof Person);
+// true
+console.log(jay instanceof Person);
+// false
