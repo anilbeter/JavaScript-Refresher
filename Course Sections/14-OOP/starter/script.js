@@ -75,3 +75,25 @@ console.log(anil.hasOwnProperty('firstName'));
 // true
 console.log(anil.hasOwnProperty('species'));
 // false
+
+console.log(anil.__proto__);
+// {species: 'Homo Sapines', calcAge: ƒ, constructor: ƒ}
+
+// Object.prototype (top of prototype chain)
+console.log(anil.__proto__.__proto__);
+// {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+console.log(anil.__proto__.__proto__.__proto__);
+// null
+
+const arr = [3, 3, 3, 6, 4, 4, 6, 2, 5, 1]; // new Array === []
+console.log(arr.__proto__);
+// [constructor: ƒ, at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, …] it gives all array methods
+console.log(arr.__proto__ === Array.prototype);
+// true
+
+Array.prototype.unique = function () {
+  return [...new Set(this)];
+};
+console.log(arr.unique());
+// (6) [3, 6, 4, 2, 5, 1]
+// Görüldüğü gibi unique() diye bir array method oluşturdum tıpkı map gibi filter gibi.
