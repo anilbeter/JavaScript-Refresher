@@ -1,5 +1,6 @@
 'use strict';
 
+/*
 // Constructor function (our blueprint)
 const Person = function (firstName, birthYear) {
   // Instance properties
@@ -133,3 +134,41 @@ bmw.accelerate();
 bmw.break();
 mercedes.accelerate();
 mercedes.break();
+*/
+
+// class expression
+// const PersonCl = class {}
+
+// class declaration
+class PersonCl {
+  constructor(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  }
+
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2026 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.firstName}, how you doing?`);
+  }
+}
+
+const anil = new PersonCl('Anil', 1999);
+console.log(anil);
+// PersonCl {firstName: 'Anil', birthYear: 1999}
+
+anil.calcAge();
+// 27
+
+// PersonCl.prototype.greet = function () {
+//   console.log(`Hey ${this.firstName}, how you doing?`);
+// };
+anil.greet();
+// Hey Anil, how you doing?
+
+// 1. Classes are NOT hoisted (means we can't use them before they are declared)
+// 2. Classes are first-class citizens
+// 3. Classes are executed in strict mode
