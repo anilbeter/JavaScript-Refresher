@@ -172,3 +172,23 @@ anil.greet();
 // 1. Classes are NOT hoisted (means we can't use them before they are declared)
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode
+
+const account = {
+  owner: 'Anil',
+  movements: [200, 300, 550, 120],
+
+  get latest() {
+    return this.movements.slice(-1).pop();
+  },
+
+  set latest(mov) {
+    this.movements.push(mov);
+  },
+};
+
+console.log(account.latest);
+// 120
+
+account.latest = 50;
+console.log(account.movements);
+// (5) [200, 300, 550, 120, 50]
