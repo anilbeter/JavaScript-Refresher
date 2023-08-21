@@ -141,8 +141,8 @@ mercedes.break();
 
 // class declaration
 class PersonCl {
-  constructor(firstName, birthYear) {
-    this.firstName = firstName;
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
     this.birthYear = birthYear;
   }
 
@@ -158,11 +158,21 @@ class PersonCl {
   get age() {
     return 2026 - this.birthYear;
   }
+
+  // Set a property that already exists
+  set fullName(name) {
+    console.log(name);
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
 }
 
-const anil = new PersonCl('Anil', 1999);
+const anil = new PersonCl('Anil Beter', 1999);
 console.log(anil);
-// PersonCl {firstName: 'Anil', birthYear: 1999}
 
 anil.calcAge();
 // 27
@@ -179,6 +189,9 @@ anil.greet();
 // 1. Classes are NOT hoisted (means we can't use them before they are declared)
 // 2. Classes are first-class citizens
 // 3. Classes are executed in strict mode
+
+const chris = new PersonCl('Chris', 1984);
+// Alert -> Chris is not a full name!
 
 const account = {
   owner: 'Anil',
