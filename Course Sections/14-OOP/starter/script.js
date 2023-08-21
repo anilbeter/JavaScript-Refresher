@@ -134,7 +134,7 @@ bmw.accelerate();
 bmw.break();
 mercedes.accelerate();
 mercedes.break();
-*/
+
 
 // class expression
 // const PersonCl = class {}
@@ -212,3 +212,61 @@ console.log(account.latest);
 account.latest = 50;
 console.log(account.movements);
 // (5) [200, 300, 550, 120, 50]
+*/
+
+const Person = function (firstName, birthYear) {
+  this.firstName = firstName;
+  this.birthYear = birthYear;
+};
+
+// static method
+Person.hey = function () {
+  console.log('Hey there 👋🏻');
+};
+Person.hey();
+// Hey there 👋🏻
+
+// Static methods are not inherited
+const anil = new Person('Anil', 1999);
+// anil.hey();
+// Uncaught TypeError: anil.hey is not a function
+
+class PersonCl {
+  constructor(fullName, birthYear) {
+    this.fullName = fullName;
+    this.birthYear = birthYear;
+  }
+
+  // Instance methods
+  // Methods will be added to .prototype property
+  calcAge() {
+    console.log(2026 - this.birthYear);
+  }
+
+  greet() {
+    console.log(`Hey ${this.firstName}, how you doing?`);
+  }
+
+  get age() {
+    return 2026 - this.birthYear;
+  }
+
+  // Set a property that already exists
+  set fullName(name) {
+    console.log(name);
+    if (name.includes(' ')) this._fullName = name;
+    else alert(`${name} is not a full name!`);
+  }
+
+  get fullName() {
+    return this._fullName;
+  }
+
+  // Static method
+  static hey() {
+    console.log('Hey there :)');
+  }
+}
+
+PersonCl.hey();
+// Hey there :)
