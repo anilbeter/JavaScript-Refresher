@@ -212,7 +212,7 @@ console.log(account.latest);
 account.latest = 50;
 console.log(account.movements);
 // (5) [200, 300, 550, 120, 50]
-*/
+
 
 const Person = function (firstName, birthYear) {
   this.firstName = firstName;
@@ -270,3 +270,26 @@ class PersonCl {
 
 PersonCl.hey();
 // Hey there :)
+*/
+
+const PersonProto = {
+  calcAge() {
+    console.log(2026 - this.birthYear);
+  },
+
+  init(firstName, birthYear) {
+    this.firstName = firstName;
+    this.birthYear = birthYear;
+  },
+};
+
+const steven = Object.create(PersonProto);
+console.log(steven); // {}
+steven.name = 'Steven';
+steven.birthYear = 2002;
+steven.calcAge(); // 24
+
+const sarah = Object.create(PersonProto);
+sarah.init('Sarah', 1994);
+sarah.calcAge();
+// 32
