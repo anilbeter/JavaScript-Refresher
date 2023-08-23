@@ -470,7 +470,7 @@ const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
 martha.introduce(); // My name is Martha Jones and I study Computer Science
 
 martha.calcAge(); // I'm 25 years old. but as a student I feel more like 35
-*/
+
 
 ////////////////////////////////////
 // Inheritance Between "Classes": Object.create
@@ -506,3 +506,57 @@ anil.introduce();
 // My name is Anil and I study Game Development
 anil.calcAge();
 // 27
+*/
+
+class Account {
+  constructor(owner, currency, pin) {
+    this.owner = owner;
+    this.currency = currency;
+    this.pin = pin;
+    this.movements = [];
+    this.locale = navigator.language;
+
+    console.log(`Thanks for opening an account, ${owner}`);
+  }
+
+  // Public interface
+  deposit(val) {
+    this.movements.push(val);
+  }
+
+  withdraw(val) {
+    this.deposit(-val);
+  }
+
+  approveLoan(val) {
+    return true;
+  }
+
+  requestLoan(val) {
+    if (this.approveLoan(val)) {
+      this.deposit(val);
+      console.log('Loan approved');
+    }
+  }
+}
+
+const acc1 = new Account('Anil', 'EUR', 1111);
+console.log(acc1);
+// Account {owner: 'Anil', currency: 'EUR', pin: 1111, movements: Array(0), locale: 'en-US'}
+
+// acc1.movements.push(250);
+// acc1.movements.push(-140);
+// console.log(acc1.movements);
+// (2) [250, -140]
+acc1.deposit(250);
+acc1.withdraw(140);
+console.log(acc1.movements);
+// (2) [250, -140]
+
+console.log(acc1.pin);
+// 1111 --> pin shouldn't be accessable from outside, should accessable only in class. We'll solve this in next topic
+
+acc1.requestLoan(1000);
+console.log(acc1.movements);
+// Loan approved
+// (3) [250, -140, 1000]
