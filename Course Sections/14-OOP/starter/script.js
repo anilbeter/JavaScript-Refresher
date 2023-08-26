@@ -508,14 +508,23 @@ anil.calcAge();
 // 27
 */
 
+// Public fields
+// Private fields
+// Public methods
+// Private methods
+
 class Account {
+  // Public field (instances)
+  locale = navigator.language;
+  _movements = [];
+
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
     // Protected property
     this._pin = pin;
     this._movements = [];
-    this.locale = navigator.language;
+    // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
   }
