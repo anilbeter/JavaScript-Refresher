@@ -532,7 +532,7 @@ class Account {
     console.log(`Thanks for opening an account, ${owner}`);
   }
 
-  // Public interface
+  // 3) Public methods (public interface)
   getMovements() {
     return this.#movements;
   }
