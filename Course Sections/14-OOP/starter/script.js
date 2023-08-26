@@ -553,6 +553,11 @@ class Account {
     }
   }
 
+  // static methods will not be available on all the instances, only on the class itself
+  static helper() {
+    console.log('Helper');
+  }
+
   // 4) Private methods
   #approveLoan(val) {
     return true;
@@ -587,3 +592,5 @@ console.log(acc1);
 
 // console.log(acc1.#movements);
 // Uncaught SyntaxError: Private field '#movements' must be declared in an enclosing class
+
+Account.helper();
