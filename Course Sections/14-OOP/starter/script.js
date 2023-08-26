@@ -512,6 +512,7 @@ anil.calcAge();
 // 2) Private fields
 // 3) Public methods
 // 4) Private methods
+// (there is also the static version)
 
 class Account {
   // 1) Public field (instances)
@@ -545,15 +546,16 @@ class Account {
     this.deposit(-val);
   }
 
-  approveLoan(val) {
-    return true;
-  }
-
   requestLoan(val) {
-    if (this.approveLoan(val)) {
+    if (this.#approveLoan(val)) {
       this.deposit(val);
       console.log('Loan approved');
     }
+  }
+
+  // 4) Private methods
+  #approveLoan(val) {
+    return true;
   }
 }
 
