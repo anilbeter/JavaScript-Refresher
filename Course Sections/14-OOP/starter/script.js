@@ -508,22 +508,25 @@ anil.calcAge();
 // 27
 */
 
-// Public fields
-// Private fields
-// Public methods
-// Private methods
+// 1) Public fields
+// 2) Private fields
+// 3) Public methods
+// 4) Private methods
 
 class Account {
-  // Public field (instances)
+  // 1) Public field (instances)
   locale = navigator.language;
-  _movements = [];
+
+  // 2) Private fields (instances)
+  #movements = [];
+  #pin;
 
   constructor(owner, currency, pin) {
     this.owner = owner;
     this.currency = currency;
     // Protected property
-    this._pin = pin;
-    this._movements = [];
+    this.#pin = pin;
+    // this._movements = [];
     // this.locale = navigator.language;
 
     console.log(`Thanks for opening an account, ${owner}`);
@@ -531,11 +534,11 @@ class Account {
 
   // Public interface
   getMovements() {
-    return this._movements;
+    return this.#movements;
   }
 
   deposit(val) {
-    this._movements.push(val);
+    this.#movements.push(val);
   }
 
   withdraw(val) {
@@ -564,17 +567,21 @@ console.log(acc1);
 // (2) [250, -140]
 acc1.deposit(250);
 acc1.withdraw(140);
-console.log(acc1._movements);
+// console.log(acc1._movements);
 // (2) [250, -140]
 
 console.log(acc1._pin);
 // 1111 --> pin shouldn't be accessable from outside, should accessable only in class. We'll solve this in next topic
 
 acc1.requestLoan(1000);
-console.log(acc1._movements);
+// console.log(acc1._movements);
 // Loan approved
 // (3) [250, -140, 1000]
 
 // movements'ın başına _ koydum ve artık ben dahil diğer developerlar bu propertynin (movements) class'ın dışında kullanılmaması/dokulunmaması gerekiyor. _ koydum çünkü bunun korunduğu belli olsun
 
 console.log(acc1.getMovements());
+console.log(acc1);
+
+// console.log(acc1.#movements);
+// Uncaught SyntaxError: Private field '#movements' must be declared in an enclosing class
