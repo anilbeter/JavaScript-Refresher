@@ -22,18 +22,33 @@ if (navigator.geolocation)
 
       const coords = [latitude, longitude];
 
-      // L.map('map') parantez içindeki mapin anlamı -> id si map olan elementte gözükücek bizim leaftlet mapimiz. Biz zaten html de idsi map olan bir div oluşturduk, o div de gözükecek bu map.
       const map = L.map('map').setView(coords, 13);
+      // console.log(map);
 
       L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
 
-      L.marker(coords)
-        .addTo(map)
-        .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-        .openPopup();
+      // on -> addEventListener gibi ama bunu leaflet libraysinden alıyorum, işlevi aynı.
+      map.on('click', function (mapEvent) {
+        console.log(mapEvent);
+        const { lat, lng } = mapEvent.latlng;
+
+        L.marker([lat, lng])
+          .addTo(map)
+          .bindPopup(
+            L.popup({
+              maxWidth: 250,
+              minWidth: 100,
+              autoClose: false,
+              closeOnClick: false,
+              className: 'running-popup',
+            })
+          )
+          .setPopupContent('Workout')
+          .openPopup();
+      });
     },
     function () {
       alert('Could not get your location');
