@@ -25,7 +25,7 @@ if (navigator.geolocation)
       // L.map('map') parantez içindeki mapin anlamı -> id si map olan elementte gözükücek bizim leaftlet mapimiz. Biz zaten html de idsi map olan bir div oluşturduk, o div de gözükecek bu map.
       const map = L.map('map').setView(coords, 13);
 
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
       }).addTo(map);
