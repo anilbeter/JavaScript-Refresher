@@ -17,17 +17,22 @@ navigator.geolocation.getCurrentPosition(
   function (position) {
     const { latitude } = position.coords;
     const { longitude } = position.coords;
-    console.log(latitude);
-    // 39.9336842
-    console.log(longitude);
-    // 32.7294199
-    console.log(
-      `https://www.google.com/maps/@${latitude},${longitude},14z?entry=ttu`
-      // yaklaşık olarak konumumu gösteren bir link oluşturdum
-    );
+
+    const coords = [latitude, longitude];
+
+    const map = L.map('map').setView(coords, 13);
+
+    L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker(coords)
+      .addTo(map)
+      .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+      .openPopup();
   },
   function () {
     alert('Could not get your position');
   }
 );
-// If I press Allow, output will ->  GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1697266426350}
