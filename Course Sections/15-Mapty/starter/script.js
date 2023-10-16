@@ -63,7 +63,6 @@ class Cycling extends Workout {
 // TESTING
 const run1 = new Running([39, -12], 5.2, 24, 178);
 const cycling1 = new Cycling([39, -12], 27, 95, 523);
-console.log(run1, cycling1);
 
 ///////////////////////////////////////////
 // APPLICATION ARCHITECTURE
@@ -82,14 +81,15 @@ class App {
   #mapZoomLevel = 13;
 
   constructor() {
+    // Get user position
     this._getPosition();
 
-    form.addEventListener('submit', this._newWorkout.bind(this));
-    // this._newWorkout form'u gösteriyor ama bunu istemiyorum, objectin kendisini (classı) göstermesini istiyorum. bunun icin bind methodunu kullandım, this'i manipüle etmek icin
+    // Get data from local storage
+    this._getLocalStorage();
 
-    // Changing input types depending select element
+    // Attach event handlers
+    form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
-    // _toggleElevationField da herhangi bi this keywordu kullanmadım, o yüzden burada bind() kullanarak this'i yönlendirmeme gerek yok
     containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
   }
 
@@ -118,6 +118,10 @@ class App {
 
     // Handling clicks on map
     this.#map.on('click', this._showForm.bind(this));
+
+    this.#workouts.forEach(work => {
+      this._renderWorkoutMarker(work);
+    });
   }
 
   _showForm(mapE) {
@@ -190,7 +194,6 @@ class App {
 
     // Add new object to workout array
     this.#workouts.push(workout);
-    console.log(workout);
 
     // Render workout on map as marker
     this._renderWorkoutMarker(workout);
@@ -200,6 +203,9 @@ class App {
 
     // Hide form + Clear input fields
     this._hideForm();
+
+    // Set local storage to all workouts
+    this._setLocalStorage();
   }
 
   _renderWorkoutMarker(workout) {
@@ -276,14 +282,12 @@ class App {
 
   _moveToPopup(e) {
     const workOutEl = e.target.closest('.workout');
-    console.log(workOutEl);
 
     if (!workOutEl) return;
 
     const workout = this.#workouts.find(
       work => work.id === workOutEl.dataset.id
     );
-    console.log(workout);
 
     // setView() comes from leaflet library
     this.#map.setView(workout.coords, this.#mapZoomLevel, {
@@ -294,7 +298,29 @@ class App {
     });
 
     // using public interface
-    workout.click();
+    // workout.click();
+  }
+
+  _setLocalStorage() {
+    localStorage.setItem('workouts', JSON.stringify(this.#workouts));
+    // converty any object to string via JSON.stringify
+  }
+
+  _getLocalStorage() {
+    const data = JSON.parse(localStorage.getItem('workouts'));
+
+    if (!data) return;
+
+    this.#workouts = data;
+
+    this.#workouts.forEach(work => {
+      this._renderWorkout(work);
+    });
+  }
+
+  reset() {
+    localStorage.removeItem('workouts'); // local datayı sil
+    location.reload(); // f5 the page
   }
 }
 
