@@ -5,6 +5,7 @@ let map, mapEvent;
 class Workout {
   date = new Date();
   id = (Date.now() + '').slice(-10); // şu anki anlık zamanın mili sn cinsinden son 10 rakamını alıyorum id olarak, unique olması icin
+  clicks = 0;
 
   constructor(coords, distance, duration) {
     this.coords = coords; // [lat, lng]
@@ -19,6 +20,10 @@ class Workout {
     this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)} on ${
       months[this.date.getMonth()]
     } ${this.date.getDate()}`;
+  }
+
+  click() {
+    this.clicks++;
   }
 }
 
@@ -74,6 +79,7 @@ class App {
   #map;
   #mapEvent;
   #workouts = [];
+  #mapZoomLevel = 13;
 
   constructor() {
     this._getPosition();
@@ -84,6 +90,7 @@ class App {
     // Changing input types depending select element
     inputType.addEventListener('change', this._toggleElevationField);
     // _toggleElevationField da herhangi bi this keywordu kullanmadım, o yüzden burada bind() kullanarak this'i yönlendirmeme gerek yok
+    containerWorkouts.addEventListener('click', this._moveToPopup.bind(this));
   }
 
   _getPosition() {
@@ -102,7 +109,7 @@ class App {
 
     const coords = [latitude, longitude];
 
-    this.#map = L.map('map').setView(coords, 13);
+    this.#map = L.map('map').setView(coords, this.#mapZoomLevel);
 
     L.tileLayer('https://tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
       attribution:
@@ -265,6 +272,29 @@ class App {
     }
 
     form.insertAdjacentHTML('afterend', html);
+  }
+
+  _moveToPopup(e) {
+    const workOutEl = e.target.closest('.workout');
+    console.log(workOutEl);
+
+    if (!workOutEl) return;
+
+    const workout = this.#workouts.find(
+      work => work.id === workOutEl.dataset.id
+    );
+    console.log(workout);
+
+    // setView() comes from leaflet library
+    this.#map.setView(workout.coords, this.#mapZoomLevel, {
+      animate: true,
+      pan: {
+        duration: 1,
+      },
+    });
+
+    // using public interface
+    workout.click();
   }
 }
 
