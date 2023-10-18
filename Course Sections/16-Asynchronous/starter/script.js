@@ -26,6 +26,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+/*
 const getCountryAndNeighbour = function (country) {
   // AJAX call country 1
   const request = new XMLHttpRequest();
@@ -65,3 +66,18 @@ const getCountryAndNeighbour = function (country) {
 
 // Sample countries whose details we want to display.
 getCountryAndNeighbour('usa');
+*/
+
+// This is how we used to work:
+// -- -- -- -- -- -- -- -- -- --
+// const request = new XMLHttpRequest();
+// request.open("GET", "API LINK");
+// request.send();
+
+const request = fetch('https://restcountries.com/v3.1/name/usa');
+console.log(request); // Promise {<pending>}
+// pending -> before the future value is available
+
+// Avantages of promises & fetch
+// 1. we no longer need to rely on events and callbacks passed into asynchronous to handle asynchronous results;
+// 2. Instead of nesting callbacks, we can *chain promises* for a sequence of asycnhronous operations: escaping callback hell
