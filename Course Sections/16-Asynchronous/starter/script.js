@@ -81,3 +81,22 @@ console.log(request); // Promise {<pending>}
 // Avantages of promises & fetch
 // 1. we no longer need to rely on events and callbacks passed into asynchronous to handle asynchronous results;
 // 2. Instead of nesting callbacks, we can *chain promises* for a sequence of asycnhronous operations: escaping callback hell
+
+// const getCountryData = function (country) {
+//   fetch(`https://restcountries.com/v3.1/name/${country}`)
+//     .then(function (response) {
+//       console.log(response);
+//       return response.json(); // json method available for all the response objects that coming from fetch. response.json() -> new promise
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//       renderCountry(data[0]);
+//     });
+// };
+
+const getCountryData = function (country) {
+  fetch(`https://restcountries.com/v3.1/name/${country}`)
+    .then(response => response.json())
+    .then(data => renderCountry(data[0]));
+};
+getCountryData('usa');
