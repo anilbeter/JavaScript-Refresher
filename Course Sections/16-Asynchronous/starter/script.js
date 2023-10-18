@@ -3,8 +3,6 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
-///////////////////////////////////////
-
 const renderCountry = function (data, className = '') {
   const languages = Object.values(data.languages);
   const currencies = Object.values(data.currencies);
@@ -23,8 +21,15 @@ const renderCountry = function (data, className = '') {
 </article>`;
 
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
+  // countriesContainer.style.opacity = 1;
 };
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  // countriesContainer.style.opacity = 1;
+};
+
+///////////////////////////////////////
 
 /*
 const getCountryAndNeighbour = function (country) {
@@ -99,14 +104,25 @@ const getCountryData = function (country) {
     .then(response => response.json())
     .then(data => {
       renderCountry(data[0]);
-      const neighbour = data[0].borders;
+      const neighbour = data[0].borders[0];
       if (!neighbour) return;
 
-      neighbour.forEach(async n => {
-        await fetch(`https://restcountries.com/v3.1/alpha/${n}`)
-          .then(response => response.json())
-          .then(data => renderCountry(data[0], 'neighbour'));
-      });
+      return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data[0], 'neighbour'))
+    .catch(err => {
+      console.error(`${err}🌠`);
+      renderError(`Something went wrong ${err.message}. Try again!`);
+      // .catch method must be in the end of the chaining! catch will be handle all rejected errors (only called promise is rejected)
+
+      // Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected)
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
     });
 };
-getCountryData('usa');
+
+btn.addEventListener('click', function () {
+  getCountryData('usa');
+});
