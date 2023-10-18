@@ -97,6 +97,16 @@ console.log(request); // Promise {<pending>}
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+      const neighbour = data[0].borders;
+      if (!neighbour) return;
+
+      neighbour.forEach(async n => {
+        await fetch(`https://restcountries.com/v3.1/alpha/${n}`)
+          .then(response => response.json())
+          .then(data => renderCountry(data[0], 'neighbour'));
+      });
+    });
 };
 getCountryData('usa');
