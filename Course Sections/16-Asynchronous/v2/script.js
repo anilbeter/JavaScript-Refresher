@@ -79,14 +79,6 @@ setTimeout(() => {
 }, 1000);
 */
 
-// OLD SCHOOL WAY
-//  const request = new XMLHttpRequest();
-//  request.open(
-//    'GET',
-//    `https://countries-api-836d.onrender.com/countries/name/${country}`
-//  );
-//  request.send();
-
 // Promises and Fetch API
 const request = fetch(
   'https://countries-api-836d.onrender.com/countries/name/usa'
@@ -94,12 +86,15 @@ const request = fetch(
 console.log(request); // Promise {<pending>}
 
 const getCountryData = function (country) {
-  // then -> Attaches callbacks for the resolution and/or rejection of the Promise.
   fetch(
     `https://countries-api-836d.onrender.com/countries/name/${country}`
   ).then(function (response) {
     console.log(response);
+    // response.json() will be new promise, that's why I called another then method on line 94
+    return response.json().then(function (data) {
+      console.log(data);
+      renderCountry(data[0]);
+    });
   });
 };
 getCountryData('usa');
-// Response {type: 'cors', url: 'https://countries-api-836d.onrender.com/countries/name/usa', redirected: false, status: 200, ok: true, …}
