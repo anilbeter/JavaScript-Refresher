@@ -92,4 +92,14 @@ const request = fetch(
   'https://countries-api-836d.onrender.com/countries/name/usa'
 );
 console.log(request); // Promise {<pending>}
-// Promise -> a container for a future value
+
+const getCountryData = function (country) {
+  // then -> Attaches callbacks for the resolution and/or rejection of the Promise.
+  fetch(
+    `https://countries-api-836d.onrender.com/countries/name/${country}`
+  ).then(function (response) {
+    console.log(response);
+  });
+};
+getCountryData('usa');
+// Response {type: 'cors', url: 'https://countries-api-836d.onrender.com/countries/name/usa', redirected: false, status: 200, ok: true, …}
