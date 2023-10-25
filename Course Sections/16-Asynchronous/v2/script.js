@@ -24,6 +24,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+/*
 const getCountryAndNeighbour = function (country) {
   // AJAX call country 1
   const request = new XMLHttpRequest();
@@ -76,3 +77,19 @@ setTimeout(() => {
     }, 1000);
   }, 1000);
 }, 1000);
+*/
+
+// OLD SCHOOL WAY
+//  const request = new XMLHttpRequest();
+//  request.open(
+//    'GET',
+//    `https://countries-api-836d.onrender.com/countries/name/${country}`
+//  );
+//  request.send();
+
+// Promises and Fetch API
+const request = fetch(
+  'https://countries-api-836d.onrender.com/countries/name/usa'
+);
+console.log(request); // Promise {<pending>}
+// Promise -> a container for a future value
