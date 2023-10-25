@@ -86,8 +86,21 @@ const request = fetch(
 console.log(request); // Promise {<pending>}
 
 const getCountryData = function (country) {
+  // Country 1
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+      const neighbour = data[0].borders[0];
+
+      if (!neighbour) return;
+
+      // Country 2
+      return fetch(
+        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
+      );
+    })
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'));
 };
 getCountryData('usa');
