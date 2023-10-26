@@ -80,10 +80,11 @@ setTimeout(() => {
 */
 
 // Promises and Fetch API
-const request = fetch(
-  'https://countries-api-836d.onrender.com/countries/name/usa'
-);
-console.log(request); // Promise {<pending>}
+
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.style.opacity = 1;
+};
 
 const getCountryData = function (country) {
   // Country 1
@@ -102,8 +103,10 @@ const getCountryData = function (country) {
     })
     .then(response => response.json())
     .then(data => renderCountry(data, 'neighbour'))
-    .catch(err => console.error(`${err}💥💥💥`));
-  // to handle all errors no matter where they appear in the chain, add catch() method at end of the chain
+    .catch(err => {
+      console.error(`${err}💥💥💥`);
+      renderError(`Something went wrong 💥 ${err.message}. Try again!`);
+    });
 };
 
 btn.addEventListener('click', function () {
