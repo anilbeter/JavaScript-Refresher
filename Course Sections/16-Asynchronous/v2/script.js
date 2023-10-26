@@ -140,9 +140,8 @@ const getCountryData = function (country) {
   )
     .then(data => {
       renderCountry(data[0]);
-      // const neighbour = data[0].borders[0];
-      const neighbour = 'xklasjkd';
-      if (!neighbour) return;
+      const neighbour = data[0].borders[0];
+      if (!neighbour) throw new Error('No neighbour found!');
 
       // Country 2
       return getJSON(
@@ -165,5 +164,4 @@ btn.addEventListener('click', function () {
   getCountryData('usa');
 });
 
-getCountryData('usa');
-// getCountryData('alkxjaslkfjaxk23');
+getCountryData('australia');
