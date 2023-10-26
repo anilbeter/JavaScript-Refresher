@@ -88,10 +88,7 @@ console.log(request); // Promise {<pending>}
 const getCountryData = function (country) {
   // Country 1
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(
-      response => response.json(),
-      error => alert(error)
-    )
+    .then(response => response.json())
     .then(data => {
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
@@ -103,11 +100,10 @@ const getCountryData = function (country) {
         `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
       );
     })
-    .then(
-      response => response.json(),
-      error => alert(error)
-    )
-    .then(data => renderCountry(data, 'neighbour'));
+    .then(response => response.json())
+    .then(data => renderCountry(data, 'neighbour'))
+    .catch(err => console.error(`${err}💥💥💥`));
+  // to handle all errors no matter where they appear in the chain, add catch() method at end of the chain
 };
 
 btn.addEventListener('click', function () {
