@@ -96,7 +96,10 @@ const getCountryData = function (country) {
     })
     .then(data => {
       renderCountry(data[0]);
-      const neighbour = data[0].borders[0];
+      // const neighbour = data[0].borders[0];
+      const neighbour = 'xklasjkd';
+      // Something went wrong 💥 Cannot read properties of undefined (reading '0'). Try again!
+      // Now I have to rewrite throw New Error... stuff for second fetch. But this is just bad practice
 
       if (!neighbour) return;
 
@@ -121,6 +124,4 @@ btn.addEventListener('click', function () {
   getCountryData('usa');
 });
 
-getCountryData('alkxjaslkfjaxk23');
-// Something went wrong 💥 Cannot read properties of undefined (reading 'flag'). Try again!
-// I need to handle this error manually!
+// getCountryData('alkxjaslkfjaxk23');
