@@ -114,3 +114,7 @@ const getCountryData = function (country) {
 btn.addEventListener('click', function () {
   getCountryData('usa');
 });
+
+getCountryData('alkxjaslkfjaxk23');
+// Something went wrong 💥 Cannot read properties of undefined (reading 'flag'). Try again!
+// I need to handle this error manually!
