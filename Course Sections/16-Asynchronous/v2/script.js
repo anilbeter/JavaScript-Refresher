@@ -87,7 +87,13 @@ const renderError = function (msg) {
 const getCountryData = function (country) {
   // Country 1
   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(response => response.json())
+    .then(response => {
+      // Rejection
+      if (!response.ok) {
+        throw new Error(`Country not found (${response.status})`);
+      }
+      response.json();
+    })
     .then(data => {
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
@@ -101,6 +107,7 @@ const getCountryData = function (country) {
     })
     .then(response => response.json())
     .then(data => renderCountry(data, 'neighbour'))
+    // Attaches a callback for only the rejection of the Promise.
     .catch(err => {
       console.error(`${err}💥💥💥`);
       renderError(`Something went wrong 💥 ${err.message}. Try again!`);
@@ -108,7 +115,6 @@ const getCountryData = function (country) {
     .finally(() => {
       countriesContainer.style.opacity = 1;
     });
-  // no matter promise is fulfilled or rejected, this callback function that we define here (finally), is gonna be called ALWAYS
 };
 
 btn.addEventListener('click', function () {
