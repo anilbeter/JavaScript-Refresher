@@ -21,7 +21,6 @@ const renderCountry = function (data, className = '') {
     </article>
   `;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
 };
 
 /*
@@ -83,7 +82,6 @@ setTimeout(() => {
 
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
-  countriesContainer.style.opacity = 1;
 };
 
 const getCountryData = function (country) {
@@ -106,7 +104,11 @@ const getCountryData = function (country) {
     .catch(err => {
       console.error(`${err}💥💥💥`);
       renderError(`Something went wrong 💥 ${err.message}. Try again!`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
     });
+  // no matter promise is fulfilled or rejected, this callback function that we define here (finally), is gonna be called ALWAYS
 };
 
 btn.addEventListener('click', function () {
