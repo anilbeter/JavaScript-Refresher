@@ -84,31 +84,72 @@ const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
 };
 
+const getJSON = function (url, errorMsg = 'Something went wrong') {
+  // return allows me to chain then() methods on the getJSON()
+  return fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(`${errorMsg} (${response.status})`);
+    }
+    return response.json();
+  });
+};
+
+// const getCountryData = function (country) {
+//   // Country 1
+//   fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+//     .then(response => {
+//       // Rejection
+//       if (!response.ok) {
+//         throw new Error(`Country not found (${response.status})`);
+//       }
+//       return response.json();
+//     })
+//     .then(data => {
+//       renderCountry(data[0]);
+//       // const neighbour = data[0].borders[0];
+//       const neighbour = 'xklasjkd';
+
+//       if (!neighbour) return;
+
+//       // Country 2
+//       return fetch(
+//         `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
+//       );
+//     })
+//     .then(response => response.json())
+//     .then(data => renderCountry(data, 'neighbour'))
+//     // Attaches a callback for only the rejection of the Promise.
+//     .catch(err => {
+//       console.error(`${err}💥💥💥`);
+//       renderError(`Something went wrong 💥 ${err.message}. Try again!`);
+//     })
+//     .finally(() => {
+//       countriesContainer.style.opacity = 1;
+//     });
+// };
+
+// btn.addEventListener('click', function () {
+//   getCountryData('usa');
+// });
+
 const getCountryData = function (country) {
   // Country 1
-  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then(response => {
-      // Rejection
-      if (!response.ok) {
-        throw new Error(`Country not found (${response.status})`);
-      }
-      response.json();
-    })
+  getJSON(
+    `https://countries-api-836d.onrender.com/countries/name/${country}`,
+    `Country not found)`
+  )
     .then(data => {
       renderCountry(data[0]);
       // const neighbour = data[0].borders[0];
       const neighbour = 'xklasjkd';
-      // Something went wrong 💥 Cannot read properties of undefined (reading '0'). Try again!
-      // Now I have to rewrite throw New Error... stuff for second fetch. But this is just bad practice
-
       if (!neighbour) return;
 
       // Country 2
-      return fetch(
-        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
+      return getJSON(
+        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`,
+        `Country not found`
       );
     })
-    .then(response => response.json())
     .then(data => renderCountry(data, 'neighbour'))
     // Attaches a callback for only the rejection of the Promise.
     .catch(err => {
@@ -124,4 +165,5 @@ btn.addEventListener('click', function () {
   getCountryData('usa');
 });
 
+getCountryData('usa');
 // getCountryData('alkxjaslkfjaxk23');
