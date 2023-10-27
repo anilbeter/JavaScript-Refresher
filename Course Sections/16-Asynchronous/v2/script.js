@@ -190,3 +190,23 @@ TEST COORDINATES 2: -33.933, 18.474
 
 GOOD LUCK 😀
 */
+const whereAmI = function (lat, lng) {
+  fetch(
+    `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
+  )
+    .then(response => {
+      return response.json();
+    })
+    .then(data => {
+      const { city } = data;
+      const { countryName } = data;
+      console.log(`You are in ${city}, ${countryName}`);
+      getCountryData(countryName);
+    })
+    .catch(err => {
+      console.log(`Something went wrong! Try again (${err.message})`);
+    });
+};
+whereAmI(19.037, 72.873);
+whereAmI(52.508, 13.381);
+whereAmI(-33.933, 18.474);
