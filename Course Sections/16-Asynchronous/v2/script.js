@@ -189,7 +189,7 @@ TEST COORDINATES 2: 19.037, 72.873
 TEST COORDINATES 2: -33.933, 18.474
 
 GOOD LUCK 😀
-*/
+
 const whereAmI = function (lat, lng) {
   fetch(
     `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}`
@@ -210,3 +210,18 @@ const whereAmI = function (lat, lng) {
 whereAmI(19.037, 72.873);
 whereAmI(52.508, 13.381);
 whereAmI(-33.933, 18.474);
+*/
+
+// Event Loop
+console.log('Test start');
+setTimeout(() => console.log('0 sec timer'), 0);
+Promise.resolve('Resolved promise 1').then(res => console.log(res));
+console.log('Test end');
+
+// Output:
+// Test Start
+// Test end
+// Resolved promise 1
+// 0 sec timer
+
+// Notes: 1) Any code that out of callback run first, so Test start and Test end appears first and second line 2) Promises do have priority than casual callbacks. Promises goes to microtasks que and casual callbacks goes to callback queue. Microtasks queue > callback queue, thats why Resolver promise 1 logged before 0 sec timer
