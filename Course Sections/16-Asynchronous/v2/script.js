@@ -285,7 +285,6 @@ getPosition()
   .catch(err => console.error('IZIN VER KARDESM'));
 // GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1698588000892}...
 
-// Challenge #1
 const whereAmI = function () {
   getPosition()
     .then(pos => {
