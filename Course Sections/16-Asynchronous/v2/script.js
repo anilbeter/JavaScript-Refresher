@@ -226,7 +226,7 @@ console.log('Test end');
 
 // Notes: 1) Any code that out of callback run first, so Test start and Test end appears first and second line 2) Promises do have priority than casual callbacks. Promises goes to microtasks que and casual callbacks goes to callback queue. Microtasks queue > callback queue, thats why Resolver promise 1 logged before 0 sec timer
 
-*/
+
 
 // Building a Simple Promise
 
@@ -266,3 +266,44 @@ wait(1)
 Promise.resolve('ANIL BETER').then(x => console.log(x)); // ANIL BETER
 
 Promise.reject(new Error('PROBLEM, ADR FROM 23')).catch(x => console.error(x)); // script.js:267 Error: PROBLEM, ADR FROM 23 at script.js:267:16
+
+*/
+
+// Promisifying the Geolocation API
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then(pos => console.log(pos));
+// GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1698588000892}...
+
+// Challenge #1
+const whereAmI = function (lat, lng) {
+  fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`)
+    .then(res => {
+      if (!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
+      return res.json();
+    })
+    .then(data => {
+      console.log(data);
+      console.log(`You are in ${data.city}, ${data.country}`);
+
+      return fetch(`https://restcountries.eu/rest/v2/name/${data.country}`);
+    })
+    .then(res => {
+      if (!res.ok) throw new Error(`Country not found (${res.status})`);
+
+      return res.json();
+    })
+    .then(data => renderCountry(data[0]))
+    .catch(err => console.error(`${err.message} 💥`));
+};
+whereAmI(52.508, 13.381);
+whereAmI(19.037, 72.873);
+whereAmI(-33.933, 18.474);
