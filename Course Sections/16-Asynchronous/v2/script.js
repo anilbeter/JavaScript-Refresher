@@ -210,7 +210,7 @@ const whereAmI = function (lat, lng) {
 whereAmI(19.037, 72.873);
 whereAmI(52.508, 13.381);
 whereAmI(-33.933, 18.474);
-*/
+
 
 // Event Loop
 console.log('Test start');
@@ -225,3 +225,44 @@ console.log('Test end');
 // 0 sec timer
 
 // Notes: 1) Any code that out of callback run first, so Test start and Test end appears first and second line 2) Promises do have priority than casual callbacks. Promises goes to microtasks que and casual callbacks goes to callback queue. Microtasks queue > callback queue, thats why Resolver promise 1 logged before 0 sec timer
+
+*/
+
+// Building a Simple Promise
+
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('Lottery draw is happening');
+
+  setTimeout(function () {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN');
+    } else {
+      reject(new Error('You lost your money...'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+wait(1)
+  .then(() => {
+    console.log('1 second passed');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('2 second passed');
+    return wait(1);
+  })
+  .then(() => console.log('3 second passed'));
+
+// Resolve/Reject immediately
+Promise.resolve('ANIL BETER').then(x => console.log(x)); // ANIL BETER
+
+Promise.reject(new Error('PROBLEM, ADR FROM 23')).catch(x => console.error(x)); // script.js:267 Error: PROBLEM, ADR FROM 23 at script.js:267:16
