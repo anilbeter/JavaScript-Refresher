@@ -280,7 +280,9 @@ const getPosition = function () {
   });
 };
 
-getPosition().then(pos => console.log(pos));
+getPosition()
+  .then(pos => console.log(pos))
+  .catch(err => console.error('IZIN VER KARDESM'));
 // GeolocationPosition {coords: GeolocationCoordinates, timestamp: 1698588000892}...
 
 // Challenge #1
