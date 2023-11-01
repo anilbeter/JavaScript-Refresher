@@ -422,3 +422,12 @@ const whereAmI = async function () {
 };
 whereAmI();
 console.log('FIRST ADR'); // FIRST ADR appears first, although the whereAmI function is earlier. Cuz' of async
+
+// try & catch
+try {
+  let y = 1;
+  const x = 2;
+  x = 3;
+} catch (err) {
+  alert(err.message);
+}
