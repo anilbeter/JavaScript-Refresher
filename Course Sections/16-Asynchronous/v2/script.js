@@ -60,6 +60,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 
+/*
 const getCountryAndNeighbour = function (country) {
   // AJAX call for main country
   const request = new XMLHttpRequest();
@@ -89,3 +90,13 @@ const getCountryAndNeighbour = function (country) {
 };
 
 getCountryAndNeighbour('usa');
+*/
+
+// const getCountryData = function (country) {
+//   const request = new XMLHttpRequest();
+//   request.open('GET', `https://restcountries.com/v2/name/${country}`);
+//   request.send();
+
+// Promises and Fetch API
+const request = fetch('https://restcountries.com/v2/name/usa');
+console.log(request); // Promise {<pending>}
