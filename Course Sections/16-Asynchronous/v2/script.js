@@ -103,8 +103,19 @@ getCountryAndNeighbour('usa');
 
 // Consuming Promise
 const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v2/name/${country}`)
+  // Country 1
+  fetch(`https://restcountries.com/v2/alpha/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data);
+      const neighbour = data.borders[0];
+
+      if (!neighbour) return;
+
+      // Country 2
+      return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
+    })
+    .then(res => res.json())
+    .then(data => renderCountry(data, 'neighbour'));
 };
 getCountryData('usa');
