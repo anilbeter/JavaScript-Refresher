@@ -105,10 +105,7 @@ getCountryAndNeighbour('usa');
 const getCountryData = function (country) {
   // Country 1
   fetch(`https://restcountries.com/v2/alpha/${country}`)
-    .then(
-      response => response.json(),
-      err => alert(err)
-    )
+    .then(response => response.json())
     .then(data => {
       renderCountry(data);
       const neighbour = data.borders[0];
@@ -118,11 +115,9 @@ const getCountryData = function (country) {
       // Country 2
       return fetch(`https://restcountries.com/v2/alpha/${neighbour}`);
     })
-    .then(
-      res => res.json(),
-      err => alert(err)
-    )
-    .then(data => renderCountry(data, 'neighbour'));
+    .then(res => res.json())
+    .then(data => renderCountry(data, 'neighbour'))
+    .catch(err => alert(err));
 };
 
 btn.addEventListener('click', function () {
