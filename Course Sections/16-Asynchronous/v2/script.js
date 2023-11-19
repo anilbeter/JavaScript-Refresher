@@ -249,7 +249,7 @@ Print order to the console:
  Test end 
  Resolved promise 1 (Microtasks queue priority)
  0 sec timer
-*/
+
 
 // Building simple promise
 const lotteryPromise = new Promise(function (resolve, reject) {
@@ -293,3 +293,25 @@ wait(1)
 // Another way create fullfilled or rejected promise immediately
 Promise.resolve('Anil feel alive').then(a => console.log(a)); // Anil feel alive
 Promise.reject(new Error('TAKING OVER!')).catch(a => console.error(a)); // Error: TAKING OVER!
+*/
+
+// Promisifying the Geolocation API
+
+// ---- Reminder for Geolocation API ----
+//               ==========
+// navigator.geolocation.getCurrentPosition(
+//   position => console.log(position),
+//   err => console.error(err)
+// );
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   position => resolve(position),
+    //   err => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then(pos => console.log(pos));
