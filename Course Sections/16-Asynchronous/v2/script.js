@@ -235,7 +235,7 @@ const whereAmI = function (lat, lng) {
 
 whereAmI(52.508, 13.381);
 whereAmI(19.037, 72.873);
-*/
+
 
 // The event loop
 console.log('Test start');
@@ -250,3 +250,46 @@ Print order to the console:
  Resolved promise 1 (Microtasks queue priority)
  0 sec timer
 */
+
+// Building simple promise
+const lotteryPromise = new Promise(function (resolve, reject) {
+  console.log('Lottery draw is starting');
+  setTimeout(() => {
+    if (Math.random() >= 0.5) {
+      resolve('You WIN 🍁');
+    } else {
+      reject(new Error('You lost your money...'));
+    }
+  }, 2000);
+});
+
+lotteryPromise.then(res => console.log(res)).catch(err => console.error(err));
+
+// Promisifying setTimeout
+const wait = function (seconds) {
+  return new Promise(function (resolve) {
+    setTimeout(resolve, seconds * 1000);
+  });
+};
+
+// Creating promise, after 1 seconds this promise will be resolved
+wait(1)
+  .then(() => {
+    console.log('I waited for 1 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 2 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 3 seconds');
+    return wait(1);
+  })
+  .then(() => {
+    console.log('I waited for 4 seconds');
+  });
+
+// Another way create fullfilled or rejected promise immediately
+Promise.resolve('Anil feel alive').then(a => console.log(a)); // Anil feel alive
+Promise.reject(new Error('TAKING OVER!')).catch(a => console.error(a)); // Error: TAKING OVER!
