@@ -524,6 +524,7 @@ get3Countries('usa', 'turkey', 'sweden'); // (3) ['Washington, D.C.', 'Ankara', 
   ]);
   console.log(res[0]);
 })();
+// Promise.race -> Yüklenen ilk promise'ı alıyor. Fullfilled ya da rejected olması önemli değil, sadece bi tanesiyle ilgileniyor rejected ya da resolved. Mesela sayfayı her yenilediğimde bu 3 ülkeden birisi console da gözükecek (italya, mısır ya da meksika) o an hangisi daha hızlı yüklenirse.
 
 // Example
 const timeout = function (sec) {
