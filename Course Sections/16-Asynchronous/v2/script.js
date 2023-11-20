@@ -488,7 +488,7 @@ console.log('1: Will get location');
   console.log('3: Finished getting location');
 })();
 
-*/
+
 
 // Running Promises in Parallel
 const get3Countries = async function (c1, c2, c3) {
@@ -510,3 +510,66 @@ const get3Countries = async function (c1, c2, c3) {
 };
 
 get3Countries('usa', 'turkey', 'sweden'); // (3) ['Washington, D.C.', 'Ankara', 'Stockholm']
+
+*/
+
+// Promise.race
+
+// MDN -> Creates a Promise that is resolved or rejected when any of the provided Promises are resolved or rejected.
+(async function () {
+  const res = await Promise.race([
+    getJSON(`https://restcountries.com/v2/name/italy`),
+    getJSON(`https://restcountries.com/v2/name/egypt`),
+    getJSON(`https://restcountries.com/v2/name/mexico`),
+  ]);
+  console.log(res[0]);
+})();
+
+// Example
+const timeout = function (sec) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('Request took too long!'));
+    }, sec * 1000);
+  });
+};
+
+// Request 1sn icinde tamamlanmazsa reject devreye giricek (Request took too long!)
+Promise.race([getJSON(`https://restcountries.com/v2/name/mexico`), timeout(1)])
+  .then(res => console.log(res[0]))
+  .catch(err => console.error(err));
+
+// Promise.allSettled
+
+// MDN -> Creates a Promise that is resolved with an array of results when all of the provided Promises resolve or reject.
+Promise.allSettled([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
+// ----- OUTPUT ------
+// (3) [{…}, {…}, {…}]
+// 0: {status: 'fulfilled', value: 'Success'}
+// 1: {status: 'rejected', reason: 'Error'}
+// 2: {status: 'fulfilled', value: 'Another success'}
+// length: 3
+
+// Compare w/ Promise.All
+Promise.all([
+  Promise.resolve('Success'),
+  Promise.reject('Error'),
+  Promise.resolve('Another success'),
+])
+  .then(res => console.log(res))
+  .catch(err => console.error(err));
+// Promise.all'da herhangi biri reject olduğu an tüm hepsi gidiyor, erişemiyorum (1 tane reject tüm hepsini götürüyor!!!)
+// Output -> Error
+
+// Promise.any (ES2021)
+Promise.any([
+  Promise.reject('Error'),
+  Promise.resolve('Success'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
+// Output -> Success
+// Karşılaştığı ilk fullfilled promise'ı alıyor. (Rejected promiselar ignorelanıyor), race'e benziyor, tek farkı rejected olanlar ignorelanıyor
