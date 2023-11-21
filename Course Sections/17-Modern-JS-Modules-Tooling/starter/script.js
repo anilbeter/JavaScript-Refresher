@@ -18,9 +18,12 @@ console.log('Importing module');
 // 237
 
 // Default export
-import add from './shoppingCart.js';
+import add, { cart } from './shoppingCart.js';
 add('pizza', 2);
-// 2 pizza added to cart
+add('bread', 5);
+add('ocean', 1);
+console.log(cart);
+// (3) [{…}, {…}, {…}]
 
 // TOP-LEVEL await (only available in modules)
 
