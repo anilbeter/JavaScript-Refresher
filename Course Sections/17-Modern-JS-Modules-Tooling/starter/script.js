@@ -96,7 +96,7 @@ console.log(ShoppingCart2);
 
 console.log(ShoppingCart2.shippingCost); // undefined
 
-*/
+
 
 // CommonJS Modules (Node.JS stuff)
 
@@ -108,3 +108,24 @@ export.const addToCart = function (product, quantity) {
 
 // Import
 const { addToCart } = require("./shoppingCart.js")
+
+*/
+
+import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
+
+const stateClone = Object.assign({}, state);
+console.log(stateClone);
+state.user.loggedIn = false;
+console.log(stateClone);
+// stateClone'daki loggedIn'de false oldu, ama bunu istemiyorum. Lodash frameworkündeki cloneDeep'i kullanabilirim
+
+const stateDeepClone = cloneDeep(state);
+console.log(stateDeepClone);
