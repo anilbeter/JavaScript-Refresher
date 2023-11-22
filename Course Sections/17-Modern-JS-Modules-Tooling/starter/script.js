@@ -56,7 +56,7 @@ const lastPost2 = await lastPost;
 console.log(lastPost2);
 // {title: 'at nam consequatur ea labore ea harum', text: 'cupiditate quo est a modi nesciunt soluta\nipsa vol…nam et distinctio eum\naccusamus ratione error aut'}
 
-*/
+
 
 // The Module Pattern
 
@@ -95,3 +95,16 @@ console.log(ShoppingCart2);
 // totalQuantity: 23
 
 console.log(ShoppingCart2.shippingCost); // undefined
+
+*/
+
+// CommonJS Modules (Node.JS stuff)
+
+// Export
+export.const addToCart = function (product, quantity) {
+  cart.push({ product, quantity });
+  console.log(`${quantity} ${product} added to cart`);
+};
+
+// Import
+const { addToCart } = require("./shoppingCart.js")
