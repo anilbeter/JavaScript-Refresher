@@ -1,5 +1,3 @@
-/*
-
 // Importing module
 // import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 
@@ -33,16 +31,16 @@ console.log(cart);
 // const data = await res.json();
 // console.log(data);
 
-const getLastPost = async function () {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
-  const data = await res.json();
-  console.log(data);
+// const getLastPost = async function () {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+//   const data = await res.json();
+//   console.log(data);
 
-  return { title: data.at(-1).title, text: data.at(-1).body };
-};
+//   return { title: data.at(-1).title, text: data.at(-1).body };
+// };
 
-const lastPost = getLastPost();
-console.log(lastPost);
+// const lastPost = getLastPost();
+// console.log(lastPost);
 // Promise {<pending>}
 // ---> Because, async function always return a promise!
 
@@ -52,11 +50,9 @@ console.log(lastPost);
 
 // Instead of using regular resolve stuff (like then, catch) use top-level await
 // More clean solution:
-const lastPost2 = await lastPost;
-console.log(lastPost2);
+// const lastPost2 = await lastPost;
+// console.log(lastPost2);
 // {title: 'at nam consequatur ea labore ea harum', text: 'cupiditate quo est a modi nesciunt soluta\nipsa vol…nam et distinctio eum\naccusamus ratione error aut'}
-
-
 
 // The Module Pattern
 
@@ -96,20 +92,16 @@ console.log(ShoppingCart2);
 
 console.log(ShoppingCart2.shippingCost); // undefined
 
-
-
 // CommonJS Modules (Node.JS stuff)
 
 // Export
-export.const addToCart = function (product, quantity) {
-  cart.push({ product, quantity });
-  console.log(`${quantity} ${product} added to cart`);
-};
+// export.const addToCart = function (product, quantity) {
+//   cart.push({ product, quantity });
+//   console.log(`${quantity} ${product} added to cart`);
+// };
 
 // Import
-const { addToCart } = require("./shoppingCart.js")
-
-*/
+// const { addToCart } = require("./shoppingCart.js")
 
 import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 
