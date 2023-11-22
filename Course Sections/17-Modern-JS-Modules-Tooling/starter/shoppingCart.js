@@ -2,9 +2,9 @@
 console.log('Exporting module');
 
 // Blocking code
-console.log('Start fetching users');
-await fetch('https://jsonplaceholder.typicode.com/users');
-console.log('Finish fetching users');
+// console.log('Start fetching users');
+// await fetch('https://jsonplaceholder.typicode.com/users');
+// console.log('Finish fetching users');
 // script.js, bu fetch'in tamamlanmasını bekliyor kodu execute etmek için (sadece bu module'da değil, import edildiği moduleda da kodu blokluyor)
 
 const shippingCost = 10;
