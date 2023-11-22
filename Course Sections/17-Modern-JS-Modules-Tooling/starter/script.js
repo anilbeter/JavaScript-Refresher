@@ -91,6 +91,8 @@ console.log(ShoppingCart2);
 // totalQuantity: 23
 
 console.log(ShoppingCart2.shippingCost); // undefined
+console.log(cart);
+// cuz of module.hot -> (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
 
 // CommonJS Modules (Node.JS stuff)
 
@@ -103,7 +105,8 @@ console.log(ShoppingCart2.shippingCost); // undefined
 // Import
 // const { addToCart } = require("./shoppingCart.js")
 
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
   cart: [
@@ -121,3 +124,7 @@ console.log(stateClone);
 
 const stateDeepClone = cloneDeep(state);
 console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
