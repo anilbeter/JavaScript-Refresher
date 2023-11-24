@@ -1,4 +1,6 @@
-const budget = [
+'strict mode';
+
+const budget = Object.freeze([
   { value: 250, description: 'Sold old TV 📺', user: 'jonas' },
   { value: -45, description: 'Groceries 🥑', user: 'jonas' },
   { value: 3500, description: 'Monthly salary 👩‍💻', user: 'jonas' },
@@ -7,12 +9,20 @@ const budget = [
   { value: -20, description: 'Candy 🍭', user: 'matilda' },
   { value: -125, description: 'Toys 🚂', user: 'matilda' },
   { value: -1800, description: 'New Laptop 💻', user: 'jonas' },
-];
+]);
 
-const spendingLimits = {
+budget[0].value = 10000;
+// 0: {value: 10000, description: 'Sold old TV 📺', user: 'jonas'}
+// -> Freeze sadece first level etki ediyor, arrayin içindeki değeri değiştirebilirim fakat dışarıdan yeni bir veri ekleyemem
+
+const spendingLimits = Object.freeze({
   jonas: 1500,
   matilda: 100,
-};
+});
+spendingLimits.jay = 200;
+console.log(spendingLimits);
+// {jonas: 1500, matilda: 100}
+// It didn't work cuz' it has been freezed
 
 const getLimit = user => spendingLimits?.[user] ?? 0;
 
@@ -20,22 +30,13 @@ const addExpense = function (value, description, user = 'jonas') {
   // if (!user) user = 'jonas';
   user = user.toLowerCase();
 
-  // let lim;
-  // if (spendingLimits[user]) {
-  //   lim = spendingLimits[user];
-  // } else {
-  //   lim = 0;
-  // }
-
-  // const limit = spendingLimits[user] ? spendingLimits[user] : 0;
-
   if (value <= getLimit(user)) {
     budget.push({ value: -value, description, user });
   }
 };
-addExpense(10, 'Pizza 🍕');
-addExpense(100, 'Going to movies 🍿', 'Matilda');
-addExpense(200, 'Stuff', 'Jay');
+// addExpense(10, 'Pizza 🍕');
+// addExpense(100, 'Going to movies 🍿', 'Matilda');
+// addExpense(200, 'Stuff', 'Jay');
 
 const check = function () {
   for (const entry of budget) {
