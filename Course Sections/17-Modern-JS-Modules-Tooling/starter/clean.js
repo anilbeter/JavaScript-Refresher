@@ -19,24 +19,29 @@ const spendingLimits = Object.freeze({
   jonas: 1500,
   matilda: 100,
 });
-spendingLimits.jay = 200;
-console.log(spendingLimits);
-// {jonas: 1500, matilda: 100}
-// It didn't work cuz' it has been freezed
+// spendingLimits.jay = 200;
 
 const getLimit = user => spendingLimits?.[user] ?? 0;
 
-const addExpense = function (value, description, user = 'jonas') {
+// Pure function
+const addExpense = function (
+  state,
+  limits,
+  value,
+  description,
+  user = 'jonas'
+) {
   // if (!user) user = 'jonas';
-  user = user.toLowerCase();
+  const cleanUser = user.toLowerCase();
 
-  if (value <= getLimit(user)) {
-    budget.push({ value: -value, description, user });
-  }
+  return value <= getLimit(cleanUser)
+    ? [...state, { value: -value, description, user: cleanUser }]
+    : state;
 };
-// addExpense(10, 'Pizza 🍕');
-// addExpense(100, 'Going to movies 🍿', 'Matilda');
-// addExpense(200, 'Stuff', 'Jay');
+addExpense(budget, spendingLimits, 10, 'Pizza 🍕');
+addExpense(budget, spendingLimits, 100, 'Going to movies 🍿', 'Matilda');
+addExpense(budget, spendingLimits, 200, 'Stuff', 'Jay');
+// Uncaught TypeError: Cannot add property 8, object is not extensible
 
 const check = function () {
   for (const entry of budget) {
