@@ -7,5 +7,8 @@
     "build": "parcel build index.html"
   },
   "author": "Anil Beter",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  }
 }
