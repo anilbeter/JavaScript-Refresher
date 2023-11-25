@@ -31,11 +31,19 @@ const renderSpinner = function (parentEl) {
 
 const showRecipe = async function () {
   try {
+    // get hash from url (window.location -> entire url)
+    const id = window.location.hash;
+    console.log(id);
+    // #5ed6604591c37cdc054bc990
+    // but i dont want to hash symbol
+    const slicedID = id.slice(1);
+    console.log(slicedID);
+
     // 1) Loading recipe
     renderSpinner(recipeContainer);
 
     const res = await fetch(
-      'https://forkify-api.herokuapp.com/api/v2/recipes/5ed6604591c37cdc054bc886'
+      `https://forkify-api.herokuapp.com/api/v2/recipes/${slicedID}`
     );
     const data = await res.json();
 
@@ -155,4 +163,7 @@ const showRecipe = async function () {
     alert(err);
   }
 };
-showRecipe();
+
+['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+// window.addEventListener('hashchange', showRecipe);
+// window.addEventListener('load', showRecipe);
