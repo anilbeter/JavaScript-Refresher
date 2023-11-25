@@ -136,6 +136,8 @@ const showRecipe = async function () {
         </a>
       </div>
     `;
+    recipeContainer.innerHTML = '';
+    // To clear recipeContainer before inserting our HTML (because there was a error message like: "No recipe found")
     recipeContainer.insertAdjacentHTML('afterbegin', markup);
   } catch (err) {
     alert(err);
