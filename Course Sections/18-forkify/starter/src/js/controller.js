@@ -19,6 +19,9 @@ const showRecipe = async function () {
     );
     const data = await res.json();
 
+    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+    // If there is a an error, its alerting it now with throw new Error()
+
     console.log(res, data);
   } catch (err) {
     alert(err);
