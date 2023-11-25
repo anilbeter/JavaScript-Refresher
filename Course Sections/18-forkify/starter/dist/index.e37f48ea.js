@@ -673,7 +673,7 @@ const showRecipe = async function() {
               </div>
             </li>
           `;
-        })}
+        }).join("")}
       </div>
 
       <div class="recipe__directions">
