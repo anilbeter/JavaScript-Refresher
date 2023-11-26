@@ -35,10 +35,13 @@ const showRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
 
+    renderSpinner(recipeContainer);
     if (!id) return;
 
     // 1) Loading recipe
-    renderSpinner(recipeContainer);
+    // loadRecipe function does not return anything, since I'm not storing any result so I don't need to store it into any new variable
+    await model.loadRecipe(id);
+    const { recipe } = model.state;
 
     // 2) Rendering recipe
     const markup = `

@@ -607,9 +607,12 @@ const renderSpinner = function(parentEl) {
 const showRecipe = async function() {
     try {
         const id = window.location.hash.slice(1);
+        renderSpinner(recipeContainer);
         if (!id) return;
         // 1) Loading recipe
-        renderSpinner(recipeContainer);
+        // loadRecipe function does not return anything, since I'm not storing any result so I don't need to store it into any new variable
+        await _modelJs.loadRecipe(id);
+        const { recipe } = _modelJs.state;
         // 2) Rendering recipe
         const markup = `
       <figure class="recipe__fig">
@@ -2621,21 +2624,25 @@ const state = {
     recipe: {}
 };
 const loadRecipe = async function(id) {
-    const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
-    const data = await res.json();
-    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
-    const { recipe } = data.data;
-    state.recipe = {
-        id: recipe.id,
-        title: recipe.title,
-        publisher: recipe.publisher,
-        sourceUrl: recipe.source_url,
-        image: recipe.image_url,
-        servings: recipe.servings,
-        cookingTime: recipe.cooking_time,
-        ingredients: recipe.ingredients
-    };
-    console.log(state.recipe);
+    try {
+        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
+        const data = await res.json();
+        if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+        const { recipe } = data.data;
+        state.recipe = {
+            id: recipe.id,
+            title: recipe.title,
+            publisher: recipe.publisher,
+            sourceUrl: recipe.source_url,
+            image: recipe.image_url,
+            servings: recipe.servings,
+            cookingTime: recipe.cooking_time,
+            ingredients: recipe.ingredients
+        };
+        console.log(state.recipe);
+    } catch (err) {
+        alert(err);
+    }
 };
 
 },{"regenerator-runtime":"dXNgZ","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["kYpTN","aenu9"], "aenu9", "parcelRequire3a11")
