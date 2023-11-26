@@ -605,27 +605,10 @@ const renderSpinner = function(parentEl) {
 };
 const showRecipe = async function() {
     try {
-        // get hash from url (window.location -> entire url)
         const id = window.location.hash.slice(1);
         if (!id) return;
-        // When I open the page first time, thre will be no id (#...) and it might be cause of some error kind of "There is no id???". To fix that use guard clause, if there is no id then return immediately
         // 1) Loading recipe
         renderSpinner(recipeContainer);
-        const res = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes/${id}`);
-        const data = await res.json();
-        if (!res.ok) throw new Error(`${data.message} (${res.status})`);
-        let { recipe } = data.data;
-        recipe = {
-            id: recipe.id,
-            title: recipe.title,
-            publisher: recipe.publisher,
-            sourceUrl: recipe.source_url,
-            image: recipe.image_url,
-            servings: recipe.servings,
-            cookingTime: recipe.cooking_time,
-            ingredients: recipe.ingredients
-        };
-        console.log(recipe);
         // 2) Rendering recipe
         const markup = `
       <figure class="recipe__fig">
