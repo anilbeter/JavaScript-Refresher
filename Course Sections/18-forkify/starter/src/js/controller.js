@@ -53,8 +53,13 @@ const controlSearchResults = async function () {
   }
 };
 
+const controlPagination = function () {
+  console.log('Pag controller');
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipes);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
 };
 init();
