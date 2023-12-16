@@ -11,8 +11,29 @@ const timeout = function (s) {
 
 export const getJSON = async function (url) {
   try {
+    const fetchPro = fetch(url);
     // İlk önce hangisi yüklenirse o gözükecek (race), yani 10sn içinde promise'ı çözemezse hata vericek timeout oldu vs
-    const res = await Promise.race([fetch(url), timeout(TIMEOUT_SECONDS)]);
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SECONDS)]);
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+    return data;
+  } catch (err) {
+    throw err;
+  }
+};
+
+export const sendJSON = async function (url, uploadData) {
+  try {
+    const fetchPro = fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(uploadData),
+    });
+
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SECONDS)]);
     const data = await res.json();
 
     if (!res.ok) throw new Error(`${data.message} (${res.status})`);
