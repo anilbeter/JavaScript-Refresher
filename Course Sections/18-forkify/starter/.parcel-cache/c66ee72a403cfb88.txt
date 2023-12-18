@@ -1,4 +1,4 @@
-9616
+9626
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map\dist\source-map.debug.js133453693451403404 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\src\_create_class.mjs133453693460359237 0
 161C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\lib\svgo.d.ts133453693451241777 0
@@ -11,7 +11,7 @@
 192C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\Doxyfile133453693447542458 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\symbol\unscopables.js133453742012256649 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\dom-collections\index.js133453741994071160 0
-134C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist133473970421478867 1
+134C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist133473978109458068 1
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\regions\IT.js133453693461564262 0
 160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules133453693432116351 1
 165C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\parent-module\index.js133453693444275080 0
@@ -28,7 +28,7 @@
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\cjs\syntax\node\Block.cjs133453693447873892 0
 151C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\get-port133453693446045525 1
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\math\cbrt.js133453741978697991 0
-142C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\package.json133473970058048204 0
+142C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\package.json133473977674492411 0
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\utility-types\package.json133453693446867664 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\object\create.js133453741981113545 0
 160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\has-flag\index.js133453693444818827 0
@@ -92,7 +92,7 @@
 187C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\string\virtual\fontcolor.js133453741990400500 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\index.js133453693458168832 0
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@babel\highlight\node_modules\color-name\README.md133453693444904356 0
-142C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules133454540894778517 1
+142C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules133473977674452357 1
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\transformer-babel\src\flow.js133453693448466084 0
 189C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domutils\lib\legacy.js133453693447754894 0
 163C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\map133453742012467678 1
@@ -103,7 +103,7 @@
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\es.date.to-string.js133453741983316753 0
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\number\is-nan.js133453741997287229 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\object\values.js133453742012703271 0
-147C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\package-lock.json133454540895129607 0
+147C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\package-lock.json133473977674881101 0
 166C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\symbol133453742012246657 1
 151C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\sass\_header.scss133289963344390696 0
 183C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\reporter-cli\src\bundleReport.js133453693444544040 0
@@ -194,7 +194,7 @@
 151C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\sass\_recipe.scss133289963344721439 0
 157C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\domelementtype133453693447402103 1
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\regexp\index.js133453741995959341 0
-160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@msgpackr-extract133454540894788517 1
+160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@msgpackr-extract133473977674462372 1
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\lib\svgo\css-select-adapter.d.ts133453693451630900 0
 230C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-select\lib\pseudo-selectors\subselects.d.ts.map133453693451754277 0
 143C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\js\api.js133472289635430291 0
@@ -220,9 +220,9 @@
 155C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\domutils\lib133453693451784379 1
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\cjs\syntax\node\common\feature.cjs133453693453055408 0
 146C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\js\config.js133472999009205214 0
-150C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel133454540894788517 1
+150C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel133473977674462372 1
 147C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\js\helpers.js133473009507932421 0
-148C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@lmdb133454540894788517 1
+148C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@lmdb133473977674462372 1
 195C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\syntax\scope\index.js133453693458105957 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\utils\test\config.test.js133453693448526219 0
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\math-scale.js133453742000260005 0
@@ -299,9 +299,9 @@
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@babel\highlight\node_modules\ansi-styles\index.js133453693444384411 0
 163C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stage\pre.js133453742001830365 0
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\css-case-insensitive.js133453693457107290 0
-156C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\js\views\recipeView.js133473015422838816 0
+156C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\src\js\views\recipeView.js133473977971296440 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\function\expression.js133453693457762472 0
-147C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc133454540894778517 1
+147C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc133473977674462372 1
 214C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\workers\test\integration\workerfarm\resolve-shared-reference.js133453693452427373 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\es.array-buffer.is-view.js133453741982860989 0
 168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\semver\functions\parse.js133453693452292254 0
@@ -338,7 +338,7 @@
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\array\unshift.js133453742012307195 0
 168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\domutils\lib\helpers.d.ts133453693451171777 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\esnext.string.cooked.js133453741987376107 0
-161C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\.package-lock.json133454540895271086 0
+161C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\.package-lock.json133473977675041248 0
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\midl.c133453693454322343 0
 155C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\LICENSE133453693443765939 0
 160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\legacy133453694323664760 1
@@ -554,6 +554,19 @@
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\instance\concat.js133453741979542136 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\plugins\cleanupEnableBackground.js133453693452822495 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\lexer\trace.js133453693458923226 0
+175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\nth-check\lib\esm\compile.js.map133453693448399802 0
+167C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\transformer-json133453693445853919 1
+182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\json-parse-even-better-errors\README.md133453693446075588 0
+173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\value\function.d.ts133453694323514454 0
+178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\instance\includes.js133453741993755969 0
+174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map-js\lib\base64-vlq.js133453693444924339 0
+177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\index.js133453741995159743 0
+182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\string\virtual\repeat.js133453742003245327 0
+149C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty133473977674376329 1
+160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\picomatch\LICENSE133453693443744669 0
+164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\posthtml\lib\index.js133453693444966966 0
+190C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\object\get-own-property-names.js133453741992150426 0
+186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\syntax\scope133453693456631649 1
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\engine-is-ios.js133453741982400261 0
 153C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\json5\dist133453693450731954 1
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\transformer-svg\package.json133453693447712404 0
@@ -803,8 +816,8 @@
 165C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\update-browserslist-db133453693447026365 1
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Selector.cjs133453693456044949 0
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\plugins\cleanupAttrs.js133453693452755819 0
-160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\tslib\LICENSE.txt133453693448675071 0
 191C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\ScopeHoistingPackager.js133453693450997164 0
+160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\tslib\LICENSE.txt133453693448675071 0
 157C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\weak-lru-cache133453693447595343 1
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\array\virtual\push.js133453742002212327 0
 199C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\syntax\atrule\supports.js133453693458819972 0
@@ -904,12 +917,9 @@
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\posthtml-render\package.json133453693444945068 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\css-hyphens.js133453693457772478 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\utility-types\dist\aliases-and-guards.d.ts133453693450721979 0
-184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\object\get-prototype-of.js133453741992241159 0
-182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\array\find-last-index.js133453741988978437 0
-171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\logger\index.d.ts133453694323559618 0
+175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\index.js133453693450576194 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\value\mixin.d.ts133453694323609598 0
 167C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\set\find.js133453741989477645 0
-175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\index.js133453693450576194 0
 167C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\nth-check\lib\compile.js133453693444394370 0
 195C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\css-print-color-adjust.js133453693458343506 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\proposals\array-includes.js133453741976790241 0
@@ -935,6 +945,7 @@
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\lib\esm\sort.js133453693451191809 0
 172C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\utility-types\dist\index.d.ts133453693450954715 0
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\syntax\node\Operator.cjs133453693455515956 0
+162C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty\package.json133473977674296782 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\utility-types\dist\index.js133453693445816246 0
 172C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\is-iterable.js133453741997192073 0
 192C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_wrap_async_generator\package.json133453693459849183 0
@@ -1340,6 +1351,7 @@
 172C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\array\unshift.js133453742012372399 0
 158C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\.bin\semver.cmd133453693467152408 0
 157C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lmdb\native.js133453693456881179 0
+164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty\.gitattributes133473977674321975 0
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\nth-check\lib\parse.d.ts.map133453693450977088 0
 203C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\definition-syntax\generate.js133453693457752502 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\core\test\ParcelConfig.test.js133453693456505185 0
@@ -1514,8 +1526,6 @@
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\cjs\definition-syntax\generate.cjs133453693453442385 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\workers\lib\WorkerFarm.js133453693453462465 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\plugins\removeUnknownsAndDefaults.js133453693455195678 0
-168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\set\index.js133453741995969939 0
-179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lightningcss\node\composeVisitors.js133453693447660480 0
 173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\plugins\removeUnusedNS.js133453693455225705 0
 161C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\callsites\index.js133453693444829768 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\svgo\plugins\removeUselessDefs.js133453693455255938 0
@@ -1651,16 +1661,6 @@
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\lmdb.h133453693456283896 0
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\posthtml-parser\dist\index.d.ts133453693447412106 0
 173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map-js\lib\array-set.js133453693444394370 0
-175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\nth-check\lib\esm\compile.js.map133453693448399802 0
-167C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\transformer-json133453693445853919 1
-182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\json-parse-even-better-errors\README.md133453693446075588 0
-173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\value\function.d.ts133453694323514454 0
-178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\instance\includes.js133453741993755969 0
-174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map-js\lib\base64-vlq.js133453693444924339 0
-160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\picomatch\LICENSE133453693443744669 0
-164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\posthtml\lib\index.js133453693444966966 0
-190C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\object\get-own-property-names.js133453741992150426 0
-186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\syntax\scope133453693456631649 1
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map-js\lib\binary-search.js133453693446272625 0
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\get-substitution.js133453741992346285 0
 168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\source-map-js\lib\util.js133453693448446008 0
@@ -1880,6 +1880,9 @@
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\es.string.at-alternative.js133453741984356926 0
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\util\promise_or.d.ts133453694323654745 0
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\cjs\generator\index.cjs133453693454111297 0
+184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\object\get-prototype-of.js133453741992241159 0
+182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\array\find-last-index.js133453741988978437 0
+171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\logger\index.d.ts133453694323559618 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\async-iterator133453742008192672 1
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\sass\types\logger\source_location.d.ts133453694323674774 0
 203C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\csso\node_modules\css-tree\lib\syntax\function\expression.js133453693457707728 0
@@ -2788,6 +2791,8 @@
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lightningcss\node\ast.d.ts133453693450903901 0
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\array\values.js133453742012716507 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lightningcss\node\browserslistToTargets.js133453693447368391 0
+168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\set\index.js133453741995969939 0
+179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lightningcss\node\composeVisitors.js133453693447660480 0
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\lightningcss\node\flags.js133453693447853889 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\htmlnano\lib\modules\removeComments.mjs133453693455927945 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\transformer-image\src\loadSharp.js133453693446302611 0
@@ -3109,9 +3114,6 @@
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\utils\index.js133453693458228827 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\htmlnano\lib\modules\example.cjs133453693447527365 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\set\index.js133453741996330411 0
-179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\string\virtual\big.js133453741978236483 0
-160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\types\lib133453693447474915 1
-171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\parser\index.js133453693458115923 0
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\htmlnano\lib\modules\mergeStyles.mjs133453693455601260 0
 192C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\es6-string-includes.js133453693459849183 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\es.object.freeze.js133453741983799112 0
@@ -3243,6 +3245,13 @@
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\lib\pseudo-selectors\aliases.js133453693445898109 0
 168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\dotenv-expand\lib\main.js133453693446553111 0
 164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\get-port\package.json133453693443844707 0
+159C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty\fracty.js133473977674356374 0
+176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\to-primitive.js133453742009034559 0
+169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\fails.js133453741988146920 0
+168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\binary-extensions\license133453694319503735 0
+164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty\fracty.test.js133473977674376329 0
+159C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\fracty\readme.md133473977674387233 0
+196C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\browser\html-loader.js133453693451316825 0
 173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\regexp\index.js133453741996320411 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\number\virtual\to-exponential.js133453742008317797 0
 215C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\convertor\create.js133453693451444603 0
@@ -4123,8 +4132,8 @@
 191C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\index-parse-selector.js133453693458007028 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\MediaQuery.js133453693458383668 0
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\NestingSelector.js133453693458474461 0
-178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\bold.js133453741978550624 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\Number.js133453693458504455 0
+178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\bold.js133453741978550624 0
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\workers\src\index.js133453693451484668 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\node\Percentage.js133453693458664775 0
 183C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\instance\copy-within.js133453741980459496 0
@@ -4151,6 +4160,9 @@
 209C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\optimizer-htmlnano\node_modules\csso\lib\replace\Atrule.js133453693448174152 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\proposals\map-upsert-stage-2.js133453741999550325 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\syntax\atrule\page.js133453693458549519 0
+179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\string\virtual\big.js133453741978236483 0
+160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\types\lib133453693447474915 1
+171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\parser\index.js133453693458115923 0
 201C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domutils\lib\esm\querying.d.ts.map133453693452855247 0
 160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\graph\lib133453693451231786 1
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-tree\lib\parser\sequence.js133453693458819972 0
@@ -4552,8 +4564,8 @@
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domhandler\lib133453693450773823 1
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\string-repeat.js133453742007286550 0
 187C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domhandler\readme.md133453693448424034 0
-190C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domhandler\lib\index.js133453693445762873 0
 183C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\ends-with.js133453741982325174 0
+190C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\css-select\node_modules\domhandler\lib\index.js133453693445762873 0
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\es.symbol.key-for.js133453741984789006 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\input-selection.js133453693461404574 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\collection-of.js133453741979446838 0
@@ -4967,7 +4979,6 @@
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\number\virtual\to-fixed.js133453742008432895 0
 167C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\profiler\LICENSE133453693443819656 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\reflect\define-property.js133453741981543842 0
-177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\helpers.js133453693448506176 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\symbol\description.js133453741981836330 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\reflect\delete-property.js133453741981766316 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\stable\reflect\get-prototype-of.js133453741992316295 0
@@ -5522,6 +5533,7 @@
 183C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\instance\code-points.js133453741979366842 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\typed-array\filter.js133453741988632325 0
 192C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\esnext.function.is-constructor.js133453741985956270 0
+152C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.2a7e3a03.js133473978109372964 0
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\esnext.function.metadata.js133453741985966329 0
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\array\keys.js133453741998720551 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\modules\esnext.function.un-this.js133453741985976327 0
@@ -5732,9 +5744,6 @@
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\instance\find-last.js133453741989148988 0
 187C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\error-stack-installable.js133453741982805940 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\export.js133453741988106922 0
-176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\to-primitive.js133453742009034559 0
-169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\fails.js133453741988146920 0
-168C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\binary-extensions\license133453694319503735 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\function-bind-native.js133453741991609279 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\string\virtual\trim-right.js133453742011006912 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\function-bind.js133453741991629244 0
@@ -5821,7 +5830,6 @@
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\schedulers-fix.js133453742003877776 0
 192C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\utils\test\input\sourcemap\source-root.js133453693454854801 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\set-difference.js133453742004121538 0
-185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\code-points.js133453741979416861 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\set-helpers.js133453742004166668 0
 174C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\for-each.js133453741990656797 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\internals\set-is-superset-of.js133453742004297962 0
@@ -5996,6 +6004,7 @@
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\at.js133453741977978434 0
 171C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\date\index.js133453741994046062 0
 187C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\code-point-at.js133453741979321721 0
+185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\code-points.js133453741979416861 0
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\full\string\virtual\fixed.js133453741989598831 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\array\virtual\unshift.js133453742012317186 0
 189C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\src\_async_generator_delegate.mjs133453693460014486 0
@@ -6638,8 +6647,8 @@
 201C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_class_private_field_loose_key\package.json133453693458474461 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\reflect\to-string-tag.js133453742009956870 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\typed-array\reduce.js133453742002878973 0
-182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\promise\all-settled.js133453741976217131 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\CJSOutputFormat.js133453693444524055 0
+182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\promise\all-settled.js133453741976217131 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\promise\finally.js133453741988779116 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\promise\index.js133453741995250585 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\caniuse-lite\data\features\proximity.js133453693463665030 0
@@ -6740,8 +6749,6 @@
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\flat-map.js133453741990014243 0
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\for-each.js133453741990737423 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\from.js133453741991210897 0
-177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\index.js133453741995159743 0
-182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\actual\string\virtual\repeat.js133453742003245327 0
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\indexed.js133453741996470915 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\reporter-dev-server\src\types.js.flow133453693444534057 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\features\iterator\range.js133453742002339464 0
@@ -7078,7 +7085,6 @@
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\string\virtual\strike.js133453742007060938 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_using\package.json133453693459834137 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\string\virtual\sup.js133453742007779410 0
-181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\dev-prelude.js133453693445953254 0
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\string\virtual\to-well-formed.js133453742010498928 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\string\virtual\trim-right.js133453742010976930 0
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\regexp\flags.js133453741989670246 0
@@ -7177,6 +7183,7 @@
 179C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\last-index-of.js133453741998841199 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\match-all.js133453741999904338 0
 173C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\pad-end.js133453742001338437 0
+164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.runtime.c5d83032.js.map133473978109448112 0
 175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\pad-start.js133453742001458647 0
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\push.js133453742002131957 0
 178C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\core-js\es\instance\reduce-right.js133453742002656280 0
@@ -8311,7 +8318,6 @@
 180C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_decorate\package.json133453693458809963 0
 184C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_create_super\package.json133453693458789975 0
 207C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_create_for_of_iterator_helper_loose\package.json133453693458769893 0
-175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\utils.js133453693451211765 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_construct\package.json133453693458734766 0
 203C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_class_static_private_method_get\package.json133453693458714775 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\cjs\_tagged_template_literal.cjs133453693455090480 0
@@ -8329,6 +8335,7 @@
 199C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_check_private_redeclaration\package.json133453693458145937 0
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_await_async_generator\package.json133453693458095937 0
 186C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\_async_iterator\package.json133453693458055871 0
+160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.runtime.c5d83032.js133473978109372964 0
 176C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\_\index\package.json133453693459899291 0
 169C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\src\index.mjs133453693461014724 0
 182C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@swc\helpers\src\_apply_decs_2203_r.mjs133453693459944402 0
@@ -8678,7 +8685,6 @@
 191C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\node\js-loader.js133453693452109463 0
 193C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\node\wasm-loader.js133453693453079249 0
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\browser\esm-js-loader.js133453693450787223 0
-196C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\browser\html-loader.js133453693451316825 0
 198C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax133453693455175675 1
 200C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\browser\import-polyfill.js133453693451645957 0
 200C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\runtime-js\src\helpers\browser\prefetch-loader.js133453693452627980 0
@@ -8735,6 +8741,9 @@
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\CJSOutputFormat.js133453693445143056 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\dev-prelude.js133453693446316395 0
 181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\DevPackager.js133453693447111756 0
+177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\helpers.js133453693448506176 0
+175C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\src\utils.js133453693451211765 0
+181C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\dev-prelude.js133453693445953254 0
 185C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\ESMOutputFormat.js133453693447504924 0
 188C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\GlobalOutputFormat.js133453693447908236 0
 177C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\@parcel\packager-js\lib\helpers.js133453693448310033 0
@@ -9606,9 +9615,10 @@
 170C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\node_modules\.bin\update-browserslist-db133453693467152408 0
 155C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\favicon.42656662.png133473970411895806 0
 156C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.098eecb3.js.map133473970421468841 0
+156C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.2a7e3a03.js.map133473978109448112 0
 153C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.628a78b8.css133473970421413837 0
 157C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.628a78b8.css.map133473970421468841 0
-145C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.html133473970421393697 0
+145C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.html133473978109372964 0
 160C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.runtime.7912d82e.js133473970421413837 0
 164C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\index.runtime.7912d82e.js.map133473970421468841 0
 152C:\Users\anilbeter\Documents\GitHub\GitHub Repositories\JavaScript but this time never gave up\Course Sections\18-forkify\starter\dist\logo.833dfef5.png133473970413970489 0
